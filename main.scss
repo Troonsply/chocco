@@ -1,14 +1,4 @@
-body {
-    height: 1100px;
-    display: flexbox;
-    margin: 0;
-    padding: 0;
-}
-.header {
-    background-color: #61c4d9;
-    display:flex;
-}
-.features {
-    min-height: 650px;
-    background-color: #61c4d9;
-}
+$blue:#61c4d9;
+$gray:#cfdeda;
+
+@import "../css/layout";
