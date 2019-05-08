@@ -1,5 +1,16 @@
+//color
 $blue:#61c4d9;
 $gray:#cfdeda;
+$black:#000000;
+$white:#ffffff;
 
-@import "css/normalize";
-@import "css/layout";
+//setups
+@import "css/misc/layout.scss";
+
+//normalize
+@import "css/misc/normalize.scss";
+
+//blocks
+@import "css/blocks/hero.scss";
+@import "css/blocks/header.scss";
+@import "css/blocks/menu.scss";
