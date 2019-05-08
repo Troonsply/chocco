@@ -13,7 +13,7 @@ body {
 .wrapper {
   position: relative;
   width: 100%;
-  min-width: 1101px;
+  min-width: 1100px;
   min-height: 100%;
   overflow: hidden; }
 
@@ -22,7 +22,7 @@ body {
   min-height: 650px; }
 
 .container {
-  width: 1101px;
+  width: 1100px;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -379,7 +379,14 @@ template {
 .hero {
   background-image: url("./img/layershero5.png");
   background-position: center center;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  position: relative;
+  background-size: contain; }
+
+.container-hero {
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start; }
 
 .header {
   display: -webkit-box;
