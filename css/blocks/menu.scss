@@ -1,7 +1,6 @@
 .menu__list {
     display: flex;
     align-items: center;
-    color:$white;
     font-family: "Alegreya Sans";
     font-size: 18px;
     font-weight: 400;
@@ -9,4 +8,7 @@
 }
 .menu__item {
     padding-left: 10px;
+}
+.menu__link {
+    color:#ffffff;
 }
