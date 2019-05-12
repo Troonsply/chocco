@@ -34,8 +34,13 @@ body {
   justify-content: center;
 }
 .contact-phone,
-.logo {
+.logo-text {
   color: #ffffff;
+  font-family: "AlegreyaSans-Bold";
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 21px;
+  text-transform: uppercase;
 }
 // tag styles reset
 h1,
