@@ -4,7 +4,7 @@
 }
 .container-hero {
     justify-content: flex-start;
-    background-image: url('./img/2-layers.png');
+    background-image: url('./img/layershero.png');
     background-repeat: no-repeat;
     background-position: bottom right;
 }
@@ -22,13 +22,12 @@
     text-transform: uppercase;
 }
 .hero__desc {
-width: 341px;
-height: 45px;
-color: #ffffff;
-font-family: "Alegreya Sans";
-font-size: 21px;
-font-weight: 400;
-margin-bottom: 60px;
+    width: 341px;
+    height: 45px;
+    color: #ffffff;
+    font-family: "Alegreya Sans";
+    font-size: 21px;
+    font-weight: 400;
 }
 .hero__btn {
     border: 1px solid white;

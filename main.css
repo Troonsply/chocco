@@ -71,6 +71,14 @@ footer {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
+.section-title {
+  font-size: 48px;
+  /*@include gagalin();*/
+  line-height: 1;
+  color: #0d0d0d;
+  text-transform: uppercase;
+  text-align: center; }
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -388,7 +396,7 @@ template {
   -webkit-box-pack: start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  background-image: url("./img/2-layers.png");
+  background-image: url("./img/layershero.png");
   background-repeat: no-repeat;
   background-position: bottom right; }
 
@@ -411,8 +419,7 @@ template {
   color: #ffffff;
   font-family: "Alegreya Sans";
   font-size: 21px;
-  font-weight: 400;
-  margin-bottom: 60px; }
+  font-weight: 400; }
 
 .hero__btn {
   border: 1px solid white;
@@ -430,12 +437,12 @@ template {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  justify-content: flex-start; }
+  justify-content: space-between; }
 
 .menu__list {
   display: -webkit-box;
@@ -502,3 +509,11 @@ template {
   background-image: url("./img/icon3.png");
   background-position: center center;
   background-repeat: no-repeat; }
+
+.pretty-text {
+  width: 406px;
+  height: 39px;
+  color: #666666;
+  font-family: "Alegreya Sans";
+  font-size: 18px;
+  font-weight: 400; }
