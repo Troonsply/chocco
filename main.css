@@ -509,7 +509,8 @@ template {
   color: #ffffff;
   font-family: "AlegreyaSans-Black";
   font-size: 21px;
-  font-weight: 400; }
+  font-weight: 400;
+  margin-bottom: 100px; }
 
 .hero__btn {
   border: 1px solid white;
@@ -556,7 +557,7 @@ template {
   line-height: 30px; }
 
 .menu__item {
-  padding-right: 50px; }
+  padding-right: 45px; }
 
 .menu__link {
   color: #ffffff; }
