@@ -1,15 +1,25 @@
 .hero {
-    background-color:$blue;
     position: relative;
+    background: $blue;
 }
 .container-hero {
-    justify-content: flex-start;
-    background-image: url('./img/layershero.png');
+    background-image: url('./img/2-layers.png');
     background-repeat: no-repeat;
-    background-position: bottom right;
+    background-position: center right;
+}
+
+.hero:after {
+    content: "";
+    display: block;
+    background: url('./img/3-layers.png');
+    width: 1056px;
+    height: 353px;
+    position: absolute;
+    bottom: -40px;
+    right: 150px;
 }
 .hero__content {
-    margin-top: 100px;
+    margin-top: 80px;
 }
 .section-title__hero {
     width: 404px;
