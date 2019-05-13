@@ -22,25 +22,32 @@ body {
   height: 100vh;
   min-height: 650px;
   margin: 0 auto;
-  padding-left: 125px; }
-
+  /* padding-left: 125px; } */
+}
 .container {
-  width: 1100px;
+  width: 940px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+/* .container {
+  width: 940px;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
+  /* display: flex; Это лучше повесить на дополнительный класс к каждой секции */
+  /* -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 100%;
-  -webkit-box-pack: center;
+  height: 100%; */ 
+  /* -webkit-box-pack: center;
   -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-pack: start;
+  justify-content: center; */
+  /* -webkit-box-pack: start;
   -ms-flex-pack: start;
-  justify-content: flex-start; }
+  justify-content: flex-start;  */
+}
 
 .contact-phone,
 .logo-text {
@@ -95,85 +102,85 @@ footer {
 
 @font-face {
   font-family: "AlegreyaSans-Black";
-  src: url("../fonts/AlegreyaSans-Black.ttf");
+  src: url("./fonts/AlegreyaSans-Black.ttf");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: "AlegreyaSans-BlackItalic";
-  src: url("../fonts/AlegreyaSans-BlackItalic.ttf");
+  src: url("./fonts/AlegreyaSans-BlackItalic.ttf");
   font-weight: normal;
   font-style: italic; }
 
 @font-face {
   font-family: "AlegreyaSans-Bold";
-  src: url("../fonts/AlegreyaSans-Bold.ttf");
+  src: url("./fonts/AlegreyaSans-Bold.ttf");
   font-weight: bold;
   font-style: normal; }
 
 @font-face {
   font-family: "AlegreyaSans-BoldItalic";
-  src: url("../fonts/AlegreyaSans-BoldItalic.ttf");
+  src: url("./fonts/AlegreyaSans-BoldItalic.ttf");
   font-weight: bold;
   font-style: italic; }
 
 @font-face {
   font-family: "AlegreyaSans-ExtraBold";
-  src: url("../fonts/AlegreyaSans-ExtraBold.ttf");
+  src: url("./fonts/AlegreyaSans-ExtraBold.ttf");
   font-weight: bold;
   font-style: normal; }
 
 @font-face {
   font-family: "AlegreyaSans-ExtraBoldItalic";
-  src: url("../fonts/AlegreyaSans-ExtraBoldItalic.ttf");
+  src: url("./fonts/AlegreyaSans-ExtraBoldItalic.ttf");
   font-weight: bold;
   font-style: italic; }
 
 @font-face {
   font-family: "AlegreyaSans-Italic";
-  src: url("../fonts/AlegreyaSans-Italic.ttf");
+  src: url("./fonts/AlegreyaSans-Italic.ttf");
   font-weight: normal;
   font-style: italic; }
 
 @font-face {
   font-family: "AlegreyaSans-Light";
-  src: url("../fonts/AlegreyaSans-Light.ttf");
+  src: url("./fonts/AlegreyaSans-Light.ttf");
   font-weight: lighter;
   font-style: normal; }
 
 @font-face {
   font-family: "AlegreyaSans-LightItalic";
-  src: url("../fonts/AlegreyaSans-LightItalic.ttf");
+  src: url("./fonts/AlegreyaSans-LightItalic.ttf");
   font-weight: lighter;
   font-style: italic; }
 
 @font-face {
   font-family: "AlegreyaSans-Medium";
-  src: url("../fonts/AlegreyaSans-Medium.ttf");
+  src: url("./fonts/AlegreyaSans-Medium.ttf");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: "AlegreyaSans-MediumItalic";
-  src: url("../fonts/AlegreyaSans-MediumItalic.ttf");
+  src: url("./fonts/AlegreyaSans-MediumItalic.ttf");
   font-weight: normal;
   font-style: italic; }
 
 @font-face {
   font-family: "AlegreyaSans-Regular";
-  src: url("../fonts/AlegreyaSans-Regular.ttf");
+  src: url("./fonts/AlegreyaSans-Regular.ttf");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: "AlegreyaSans-Thin";
-  src: url("../fonts/AlegreyaSans-Thin.ttf");
+  src: url("./fonts/AlegreyaSans-Thin.ttf");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: "AlegreyaSans-ThinItalic";
-  src: url("../fonts/AlegreyaSans-ThinItalic.ttf");
+  src: url("./fonts/AlegreyaSans-ThinItalic.ttf");
   font-weight: normal;
   font-style: italic; }
 
@@ -488,14 +495,21 @@ template {
 
 .hero {
   position: relative;
-  background: #61c4d9; }
-
-.container-hero {
+  background: #61c4d9; 
   background-image: url("./img/2-layers.png");
   background-repeat: no-repeat;
   background-position: center right; }
-
-.hero:after {
+/* Эти картинки проще сделать div + img */
+.hero__picture_position_absolut{
+  width: 100%;
+  position: absolute;
+  bottom: -4rem;
+  text-align: center;
+}
+.hero__picture_position_absolut img{
+  margin: 0 auto;
+}
+/* .hero:after {
   content: "";
   display: block;
   background: url("./img/3-layers.png");
@@ -503,21 +517,25 @@ template {
   height: 353px;
   position: absolute;
   bottom: -40px;
-  right: 150px; }
+  right: 150px; } */
 
 .hero__content {
-  margin-top: 80px; }
+  flex: .8;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around; 
+  width: 50%;
+}
 
 .section-title__hero {
-  width: 404px;
-  height: 160px;
   color: #ffffff;
   font-family: "AlegreyaSans-Bold";
   font-size: 60px;
   font-weight: 700;
   line-height: 60px;
+  text-align: left;
   text-transform: uppercase;
-  margin-bottom: 25px; }
+}
 
 .hero__desc {
   width: 341px;
@@ -531,15 +549,17 @@ template {
 .hero__btn {
   border: 1px solid white;
   background-color: #ffffff;
-  padding: 10px 20px;
-  border-radius: 20px;
+  padding: 20px 30px;
+  border-radius: 50px;
   color: #0f5a47;
   font-family: "AlegreyaSans-ExtraBold";
   font-size: 19px;
   font-weight: bold;
   text-transform: uppercase;
-  text-decoration: none; }
-
+  text-decoration: none;
+  box-shadow: 0 0 10px rgba(63, 63, 63, 0.25);
+}
+/* лучше указывать какой секции header */
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -550,7 +570,8 @@ template {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  background: #61c4d9; }
+  background: #61c4d9;
+  flex: 0.1; }
 
 .header__buttons {
   display: -webkit-box;
@@ -573,7 +594,7 @@ template {
   line-height: 30px; }
 
 .menu__item {
-  padding-right: 45px; }
+  padding-right: 25px; }
 
 .menu__link {
   color: #ffffff;
@@ -632,13 +653,15 @@ template {
   -webkit-box-pack: start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  margin-top: 100px; }
+  margin-top: 100px;
+  background: url("./img/featurespic.png");
+  background-repeat: no-repeat;
+  background-position: center left;
+}
 
 .container-pretty {
   content: "";
-  background: url("./img/featurespic.png");
-  background-repeat: no-repeat;
-  background-position: center left; }
+   }
 
 .pretty-text {
   text-align: center;
