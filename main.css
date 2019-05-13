@@ -90,7 +90,8 @@ footer {
   text-transform: uppercase;
   text-align: center;
   font-family: "AlegreyaSans-Bold";
-  font-weight: 700; }
+  font-weight: 700;
+  margin-bottom: 0; }
 
 @font-face {
   font-family: "AlegreyaSans-Black";
@@ -515,7 +516,8 @@ template {
   font-size: 60px;
   font-weight: 700;
   line-height: 60px;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  margin-bottom: 25px; }
 
 .hero__desc {
   width: 341px;
@@ -632,8 +634,24 @@ template {
   justify-content: flex-start;
   margin-top: 100px; }
 
+.pretty:after {
+  content: "";
+  display: block;
+  background: url("./img/featurespic.png");
+  width: 191px;
+  height: 600px;
+  position: absolute;
+  top: 80px;
+  left: 0px;
+  background-repeat: no-repeat; }
+
 .pretty-text {
-  text-align: center; }
+  text-align: center;
+  margin-bottom: 60px;
+  color: #666666;
+  font-family: "AlegreyaSans-Black";
+  font-size: 18px;
+  font-weight: 500; }
 
 .pretty__list {
   display: -webkit-box;
@@ -658,7 +676,31 @@ template {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  margin-bottom: 40px; }
+  margin-bottom: 40   px;
+  background-color: #f2f5f4;
+  border-radius: 50%;
+  overflow: hidden;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 125px;
+  height: 125px;
+  margin-left: 120px;
+  position: inherit; }
+
+.features__pic-img {
+  width: 70px;
+  height: 69px;
+  /* &:after {
+        content: "";
+        display: block;
+        background: url('./img/1.png');
+        width: 67px;
+        height: 21px;
+        align-items: center;
+    }*/ }
 
 .features__tetle {
   color: #000000;

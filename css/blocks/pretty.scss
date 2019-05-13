@@ -3,13 +3,29 @@
     justify-content: flex-start;
     margin-top: 100px;
 }
+.pretty:after {
+    content: "";
+    display: block;
+    background: url('./img/featurespic.png');
+    width: 191px;
+    height: 600px;
+    position: absolute;
+    top: 80px;
+    left: 0px;
+    background-repeat: no-repeat;
+}
 .pretty-text {
     text-align: center;
+    margin-bottom: 60px;
+    color: #666666;
+    font-family: "AlegreyaSans-Black";
+    font-size: 18px;
+    font-weight: 500;
 }
 .pretty__list {
     display: flex;
-
 }
+
 .pretty__item {
     flex: 1;
     margin-right: 10px;
