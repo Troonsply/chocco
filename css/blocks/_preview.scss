@@ -1,0 +1,31 @@
+.review {
+    display: flex;
+    margin-top: 60px;
+    background: url('./img/reviewbackground.jpg');
+    width: 940px;
+    height: 351px;
+    align-items: center;
+    padding-left: 50px;
+}
+.review__description {
+    padding-left: 20px;
+    font-family: "AlegreyaSans-Black";
+}
+.review-desc {
+    color: #323232;
+    font-size: 30px;
+    font-weight: 500;
+}
+.review-text {
+    width: 433px;
+    height: 103px;
+    color: #666666;
+    font-size: 18px;
+    font-weight: 400;
+}
+.review-signature {
+    margin-top: 30px;
+    color: #666666;
+    font-size: 18px;
+    font-weight: 500;
+}
