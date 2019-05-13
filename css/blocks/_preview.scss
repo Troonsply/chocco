@@ -29,3 +29,21 @@
     font-size: 18px;
     font-weight: 500;
 }
+.preview__photo {
+ display: flex;
+ justify-content: center;
+}
+.preview__avatar {
+    margin-right: 35px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+.border {
+    width: 94px;
+    height: 94px;
+    border: 4px solid #0f5a47;
+    border-radius: 50%;
+    overflow: hidden;
+}
