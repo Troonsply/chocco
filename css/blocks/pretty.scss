@@ -3,16 +3,11 @@
     justify-content: flex-start;
     margin-top: 100px;
 }
-.pretty:after {
+.container-pretty {
     content: "";
-    display: block;
     background: url('./img/featurespic.png');
-    width: 191px;
-    height: 600px;
-    position: absolute;
-    top: 80px;
-    left: 0px;
     background-repeat: no-repeat;
+    background-position: center left;
 }
 .pretty-text {
     text-align: center;
@@ -24,6 +19,7 @@
 }
 .pretty__list {
     display: flex;
+    margin-left: 50px;
 }
 
 .pretty__item {
