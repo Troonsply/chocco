@@ -94,7 +94,7 @@ footer {
   margin-bottom: 0; }
 
 @font-face {
-  font-family: "AlegreyaSans-Black";
+  font-family: " ";
   src: url("../fonts/AlegreyaSans-Black.ttf");
   font-weight: normal;
   font-style: normal; }
@@ -657,8 +657,7 @@ template {
 .pretty__item {
   -webkit-box-flex: 1;
   -ms-flex: 1;
-  flex: 1;
-  margin-right: 10px; }
+  flex: 1; }
   .pretty__item:last-child {
     margin-right: 0; }
 
@@ -683,7 +682,7 @@ template {
   align-items: center;
   width: 125px;
   height: 125px;
-  margin-left: 120px;
+  margin: 0 auto;
   position: inherit; }
 
 .features__pic-img {
@@ -702,13 +701,19 @@ template {
   color: #000000;
   font-family: "AlegreyaSans-Black";
   font-size: 27px;
-  font-weight: 700; }
+  font-weight: 700;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
 
 .features__text {
   color: #666666;
   font-family: "AlegreyaSans-Black";
   font-size: 18px;
-  font-weight: 300; }
+  font-weight: 300;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
 
 .preview {
   -webkit-box-pack: start;

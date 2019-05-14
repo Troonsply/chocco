@@ -13,7 +13,7 @@
     align-items: center;
     width: 125px;
     height: 125px;
-    margin-left: 120px;
+    margin: 0 auto;
     position: inherit;
 
 }
@@ -35,10 +35,12 @@
     font-family: "AlegreyaSans-Black";
     font-size: 27px;
     font-weight: 700;
+    align-items: center;
 }
 .features__text {
     color: #666666;
     font-family: "AlegreyaSans-Black";
     font-size: 18px;
     font-weight: 300;
+    align-items: center;
 }
