@@ -2,12 +2,12 @@
     position: relative;
     justify-content: flex-start;
     margin-top: 100px;
+    background: url("./img/featurespic.png");
+    background-repeat: no-repeat;
+    background-position: center left;
 }
 .container-pretty {
     content: "";
-    background: url('./img/featurespic.png');
-    background-repeat: no-repeat;
-    background-position: center left;
 }
 .pretty-text {
     text-align: center;
