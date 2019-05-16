@@ -1,6 +1,6 @@
 .special {
     position: relative;
-    margin-top: 45px;
+    margin-top: 4em;
 }
 .special-list {
     display: flex;
@@ -17,25 +17,21 @@
     font-weight: 400;
 }
 .special-img {
-    padding-right: 100px;
+    padding-right: 5em;
+    width: 50px;
+    height: 40px;
 }
 .list {
-    width: 44px;
-    height: 41px;
     background-image: url('./img/icon1.png');
     background-position: center center;
     background-repeat: no-repeat;
 }
 .car {
-    width: 50px;
-    height: 40px;
     background-image: url('./img/icon2.png');
     background-position: center center;
     background-repeat: no-repeat;
 }
 .body {
-    width: 42px;
-    height: 42px;
     background-image: url('./img/icon3.png');
     background-position: center center;
     background-repeat: no-repeat;

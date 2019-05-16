@@ -25,6 +25,7 @@ body {
 
 .container {
   width: 1100px;
+  height: 100%;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -33,7 +34,6 @@ body {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 100%;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -528,13 +528,11 @@ template {
   text-align: left; }
 
 .hero__desc {
-  width: 341px;
-  height: 45px;
   color: #ffffff;
   font-family: "AlegreyaSans-Black";
   font-size: 21px;
   font-weight: 400;
-  margin-bottom: 100px; }
+  margin-bottom: 3rem; }
 
 .hero__btn {
   width: 30%;
@@ -580,11 +578,10 @@ template {
   display: flex;
   font-family: "AlegreyaSans-Black";
   font-size: 18px;
-  font-weight: 400;
-  line-height: 30px; }
+  font-weight: 400; }
 
 .menu__item {
-  padding-right: 25px; }
+  padding-right: 2em; }
 
 .menu__link {
   color: #ffffff;
@@ -592,7 +589,7 @@ template {
 
 .special {
   position: relative;
-  margin-top: 45px; }
+  margin-top: 4em; }
 
 .special-list {
   display: -webkit-box;
@@ -615,25 +612,21 @@ template {
   font-weight: 400; }
 
 .special-img {
-  padding-right: 100px; }
+  padding-right: 5em;
+  width: 50px;
+  height: 40px; }
 
 .list {
-  width: 44px;
-  height: 41px;
   background-image: url("./img/icon1.png");
   background-position: center center;
   background-repeat: no-repeat; }
 
 .car {
-  width: 50px;
-  height: 40px;
   background-image: url("./img/icon2.png");
   background-position: center center;
   background-repeat: no-repeat; }
 
 .body {
-  width: 42px;
-  height: 42px;
   background-image: url("./img/icon3.png");
   background-position: center center;
   background-repeat: no-repeat; }
@@ -643,7 +636,7 @@ template {
   -webkit-box-pack: start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  margin-top: 100px;
+  margin-top: 5%;
   background: url("./img/featurespic.png");
   background-repeat: no-repeat;
   background-position: center left; }
@@ -653,7 +646,7 @@ template {
 
 .pretty-text {
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 5%;
   color: #666666;
   font-family: "AlegreyaSans-Black";
   font-size: 18px;
@@ -663,7 +656,9 @@ template {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-left: 50px; }
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
 
 .pretty__item {
   -webkit-box-flex: 1;
@@ -682,7 +677,6 @@ template {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  margin-bottom: 40px;
   background-color: #f2f5f4;
   border-radius: 50%;
   overflow: hidden;
@@ -691,7 +685,7 @@ template {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  width: 125px;
+  width: 35%;
   height: 125px;
   margin: 0 auto;
   position: inherit; }
@@ -740,14 +734,15 @@ template {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 60px;
+  margin-top: 10%;
   background: url("./img/reviewbackground.jpg");
-  width: 940px;
-  height: 351px;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding-left: 50px; }
+  padding-left: 45px; }
 
 .review__description {
   padding-left: 20px;
@@ -759,14 +754,13 @@ template {
   font-weight: 500; }
 
 .review-text {
-  width: 433px;
-  height: 103px;
+  width: 60%;
   color: #666666;
   font-size: 18px;
   font-weight: 400; }
 
 .review-signature {
-  margin-top: 30px;
+  margin-top: 2%;
   color: #666666;
   font-size: 18px;
   font-weight: 500; }
@@ -777,11 +771,10 @@ template {
   display: flex;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
-  justify-content: center;
-  margin-top: 50px; }
+  justify-content: center; }
 
 .preview__avatar {
-  margin-right: 35px; }
+  margin-right: 3%; }
   .preview__avatar:last-child {
     margin-right: 0; }
 
