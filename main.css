@@ -637,9 +637,15 @@ template {
   -ms-flex-pack: start;
   justify-content: flex-start;
   margin-top: 5%;
-  background: url("./img/featurespic.png");
-  background-repeat: no-repeat;
-  background-position: center left; }
+  /*background: url("./img/featurespic.png");
+    background-repeat: no-repeat;
+    background-position: left center;*/ }
+
+.pretty__picture_position_absolut {
+  width: 100%;
+  position: absolute;
+  center: -4rem;
+  text-align: left; }
 
 .container-pretty {
   content: ""; }
