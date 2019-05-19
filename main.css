@@ -787,3 +787,34 @@ template {
   border: 6px solid #0f5a47;
   border-radius: 50%;
   overflow: hidden; }
+
+.sale {
+  position: relative; }
+
+.sale__picpicture_position_absolut {
+  width: 100%;
+  position: absolute;
+  bottom: -4rem;
+  text-align: right; }
+
+.choice {
+  position: relative; }
+
+.container-choice {
+  width: 1032px;
+  height: 655px;
+  opacity: 0.8;
+  background: url("./img/keksiki.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.team {
+  position: relative; }
+
+.team__feature-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
