@@ -8,13 +8,14 @@
 }
 .review {
     display: flex;
-    margin-top: 10%;
     background: url('./img/reviewbackground.jpg');
     background-repeat: no-repeat;
     width: 100%;
-    height: 100%;
     align-items: center;
-    padding-left: 45px;
+    margin:2rem 0;
+}
+.review__pic {
+    padding:2rem 2rem;
 }
 .review__description {
     padding-left: 20px;

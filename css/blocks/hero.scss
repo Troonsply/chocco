@@ -1,8 +1,6 @@
 .hero {
     position: relative;
     background: $blue;
-}
-.container-hero {
     background-image: url('./img/2-layers.png');
     background-repeat: no-repeat;
     background-position: bottom right;
@@ -18,10 +16,10 @@
   }
 
 .hero__content {
-    flex: .8;
+    flex: .9;
     display: flex;
     flex-direction: column;
-    justify-content: space-around; 
+    justify-content: start; 
     width: 50%;
   }
 .section-title__hero {
