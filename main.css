@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,700");
+@import url("https://fonts.googleapis.com/css?family=Alegreya+Sans:400,400i,700,700i&display=swap");
 html,
 body {
   height: 100%; }
@@ -90,7 +90,7 @@ footer {
   margin-bottom: 0; }
 
 @font-face {
-  font-family: " ";
+  font-family: "AlegreyaSans-Black";
   src: url("./fonts/AlegreyaSans-Black.ttf");
   font-weight: normal;
   font-style: normal; }
@@ -525,7 +525,7 @@ template {
 
 .hero__desc {
   color: #ffffff;
-  font-family: "AlegreyaSans-Black";
+  font-family: "Alegreya Sans";
   font-size: 21px;
   font-weight: 400;
   margin-bottom: 3rem; }
@@ -572,7 +572,7 @@ template {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-family: "AlegreyaSans-Black";
+  font-family: "Alegreya Sans";
   font-size: 18px;
   font-weight: 400; }
 
@@ -629,7 +629,7 @@ template {
 
 .pretty {
   position: relative;
-  margin-top: 5%; }
+  margin: 2rem 0; }
 
 .pretty__picture_position_absolut {
   width: 100%;
@@ -644,7 +644,7 @@ template {
   text-align: center;
   margin-bottom: 5%;
   color: #666666;
-  font-family: "AlegreyaSans-Black";
+  font-family: "Alegreya Sans";
   font-size: 18px;
   font-weight: 500; }
 
@@ -700,7 +700,7 @@ template {
 
 .features__tetle {
   color: #000000;
-  font-family: "AlegreyaSans-Black";
+  font-family: "AAlegreya Sans";
   font-size: 27px;
   font-weight: 700;
   -webkit-box-align: center;
@@ -709,7 +709,7 @@ template {
 
 .features__text {
   color: #666666;
-  font-family: "AlegreyaSans-Black";
+  font-family: "Alegreya Sans";
   font-size: 18px;
   font-weight: 300;
   -webkit-box-align: center;
@@ -743,7 +743,7 @@ template {
 
 .review__description {
   padding-left: 20px;
-  font-family: "AlegreyaSans-Black"; }
+  font-family: "Alegreya Sans"; }
 
 .review-desc {
   color: #323232;
@@ -782,14 +782,38 @@ template {
   border-radius: 50%;
   overflow: hidden; }
 
-.sale {
-  position: relative; }
-
-.sale__picpicture_position_absolut {
+.sale__picpicture_position_absolut_berry {
   width: 100%;
   position: absolute;
-  bottom: -4rem;
+  bottom: -8rem;
   text-align: right; }
+
+.sale__picpicture_position_absolut_malina {
+  width: 100%;
+  position: absolute;
+  top: -12rem;
+  text-align: left; }
+
+.sale {
+  position: relative;
+  background-color: #f8faf9; }
+
+.container-sale {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  padding-top: 4rem; }
+
+.section-title__sale {
+  text-align: left;
+  font-family: "Alegreya Sans";
+  font-size: 36px;
+  text-transform: uppercase;
+  font-weight: 400; }
 
 .choice {
   position: relative; }

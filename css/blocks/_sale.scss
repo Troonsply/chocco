@@ -1,9 +1,28 @@
-.sale {
-    position: relative;
-}
-.sale__picpicture_position_absolut {
+.sale__picpicture_position_absolut_berry {
     width: 100%;
     position: absolute;
-    bottom: -4rem;
+    bottom: -8rem;
     text-align: right;
+}
+.sale__picpicture_position_absolut_malina {
+    width: 100%;
+    position: absolute;
+    top: -12rem;
+    text-align: left;
+}
+.sale {
+    position: relative;
+    background-color: #f8faf9;
+}
+.container-sale {
+    justify-content: space-between;
+    flex-direction:row;
+    padding-top:4rem;
+}
+.section-title__sale {
+    text-align: left;
+    font-family:"Alegreya Sans";
+    font-size: 36px;
+    text-transform: uppercase;
+    font-weight: 400;
 }
