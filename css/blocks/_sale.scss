@@ -22,7 +22,65 @@
 .section-title__sale {
     text-align: left;
     font-family:"Alegreya Sans";
-    font-size: 36px;
+    font-size: 2em;
     text-transform: uppercase;
+    font-weight: 600;
+}
+.sale__composition {
+    margin: 2rem 0;
+    color: #323232;
+    font-family: "Alegreya Sans";
+    font-size: 2em;
     font-weight: 400;
+}
+.sale__text {
+    color: #666666;
+    font-family: "Alegreya Sans";
+    font-size: 1.2em;
+    font-weight: 400;
+}
+.sale__pic {
+    padding: 0 2rem;
+}
+.sale-disc {
+    padding: 0 2rem; 
+}
+.sale__composition-list {
+    display: flex;
+    justify-content: start;
+    margin-top: 2rem;
+}
+.composition-item {
+    color: #333333;
+    font-family: "Alegreya Sans";
+    font-size: 1.5em;
+    font-weight: 400;
+    padding-right: 2rem;
+}
+.composition-item__text {
+    font-size: 1em;
+    font-weight: 700;
+}
+.sale-buy {
+    display: flex;
+}
+.sale__price {
+    color: #0d0d0d;
+    font-family: "Alegreya Sans";
+    font-size: 4em;
+    font-weight: 200;
+    padding-right: 0.7em;
+}
+.sale__btn {
+    border: 1px solid white;
+    background-color: #0f5a47;
+    align-items: center;
+    padding: 1.2em 1.8em;
+    border-radius: 5em;
+    color: #ffffff;
+    font-family: "AlegreyaSans-ExtraBold";
+    font-size: 1.3em;
+    font-weight: 200;
+    text-transform: uppercase;
+    text-decoration: none;
 }
