@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Alegreya+Sans:400,400i,700,700i&display=swap");
 html {
   font-size: 16px; }
@@ -953,19 +952,39 @@ template {
 .team {
   position: relative; }
 
-.team__feature-list {
+.team-acco {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between; }
+  @media screen and (max-width: 768px) {
+    .team-acco {
+      padding-bottom: 1.42857rem; } }
 
-.team__signature::after {
-  content: "С радостью поможет подобрать батончики и оформить заказ.";
-  background-image: url("./img/Polygon_1.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  -webkit-transition: 1s;
-  -o-transition: 1s;
-  transition: 1s; }
+.team-acco__item.active .team-acco__trigger {
+  color: #000000; }
+  .team-acco__item.active .team-acco__trigger:before {
+    -webkit-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    transform: rotate(-180deg); }
+
+.team-acco__trigger {
+  color: #000;
+  text-decoration: none;
+  margin-bottom: 0.71429rem; }
+  .team-acco__trigger:before, .team-acco__trigger:after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: -1.28571rem;
+    top: 0.57143rem;
+    width: 0;
+    height: 0; }
+
+.team-acco__desc {
+  display: none; }
+  @media screen and (max-width: 768px) {
+    .team-acco__desc {
+      display: inline; } }

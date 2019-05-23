@@ -1,16 +1,50 @@
 .team {
     position: relative;
 }
-.team__feature-list {
+.team-acco {
     display: flex;
     justify-content: space-between;
+
+    @include tablets {
+        padding-bottom: rem(20px);
+    }
 }
-.team__signature {
-    &::after{
-    content: "С радостью поможет подобрать батончики и оформить заказ.";
-    background-image: url('./img/Polygon_1.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    transition: 1s;
+
+.team-acco__item {
+
+    &.active {
+
+	    .team-acco__trigger {
+		    color: #000000;
+        
+            &:before {
+                transform: rotate(-180deg);
+            }
+        }
+    }
+}
+
+.team-acco__trigger {
+	color: #000;
+	text-decoration: none;
+    margin-bottom: rem(10px);
+    
+
+	&:before, &:after {
+		content: "";
+		display: block;
+		position: absolute;
+		left: rem(-18px);
+		top: rem(8px);
+		width: 0;
+        height: 0;
+	}
+}
+
+.team-acco__desc {
+    display: none;
+
+    @include tablets {
+    display: inline;
     }
 }
