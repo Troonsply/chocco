@@ -970,18 +970,26 @@ template {
     -ms-transform: rotate(-180deg);
     transform: rotate(-180deg); }
 
-.team-acco__trigger {
-  color: #000;
-  text-decoration: none;
-  margin-bottom: 0.71429rem; }
-  .team-acco__trigger:before, .team-acco__trigger:after {
-    content: "";
-    display: block;
-    position: absolute;
-    left: -1.28571rem;
-    top: 0.57143rem;
-    width: 0;
-    height: 0; }
+.team-acco__name {
+  color: #323232;
+  font-size: 1.3125rem;
+  font-weight: 500;
+  position: relative;
+  margin-top: 1.25rem;
+  margin-bottom: 0.625rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto; }
+
+.team-acco__name:after {
+  content: "";
+  border: 5px solid transparent;
+  border-top: 7px solid #0f5a47;
+  position: absolute;
+  right: -16px;
+  top: 11px; }
 
 .team-acco__desc {
   display: none; }
