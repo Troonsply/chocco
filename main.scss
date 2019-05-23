@@ -1,3 +1,7 @@
+//breakponts
+$tablets:768px;
+$phones:480px;
+
 //color
 $blue:#61c4d9;
 $gray:#cfdeda;
@@ -5,6 +9,7 @@ $black:#000000;
 $white:#ffffff;
 
 //setups
+@import "css/misc/mixins.scss";
 @import "css/misc/layout.scss";
 @import "css/misc/section-title.scss";
 @import "css/misc/fonts.scss";
@@ -14,8 +19,9 @@ $white:#ffffff;
 
 //blocks
 @import "css/blocks/hero.scss";
-@import "css/blocks/_header.scss";
+@import "css/blocks/header.scss";
 @import "css/blocks/menu.scss";
+@import "css/blocks/hamburger-menu.scss";
 @import "css/blocks/special.scss";
 @import "css/blocks/pretty.scss";
 @import "css/blocks/_features.scss";

@@ -5,3 +5,12 @@
     display: flex;
     justify-content: space-between;
 }
+.team__signature {
+    &::after{
+    content: "С радостью поможет подобрать батончики и оформить заказ.";
+    background-image: url('./img/Polygon_1.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: 1s;
+    }
+}

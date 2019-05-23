@@ -1,10 +1,20 @@
+html {
+  font-size: 16px;
+    @include tablets {
+    font-size: 15px;
+  }
+  @include phones {
+    font-size: 13px;
+  }
+}
+
 html,
 body {
   height: 100%;
 }
 
 body {
-  font-size: 16px;
+  font-size: rem(16px);
   line-height: 1.42;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -15,19 +25,19 @@ body {
 .wrapper {
   position: relative;
   width: 100%;
-  min-width: 1080px + 20px;
   min-height: 100%;
   overflow: hidden;
 }
 
 .section {
   height: 100vh;
-  min-height: 650px;
+  min-height: rem(650px);
   margin: 0 auto;
 }
 
 .container {
-  width: 940px;
+  max-width: rem(940px);
+  width: 95%;
   height: 100%;
   margin: 0 auto;
   display: flex;
@@ -38,11 +48,17 @@ body {
 .logo-text {
   color: #ffffff;
   font-family: "AlegreyaSans-Bold";
-  font-size: 24px;
+  font-size: rem(24px);
   font-weight: 400;
-  line-height: 21px;
+  line-height: rem(21px);
   text-transform: uppercase;
   text-decoration: none;
+}
+.contact {
+  
+  @include tablets {
+    display: none;
+}
 }
 // tag styles reset
 h1,

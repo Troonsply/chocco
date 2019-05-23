@@ -16,39 +16,56 @@
   }
 
 .hero__content {
-    flex: .9;
-    display: flex;
-    flex-direction: column;
-    justify-content: start; 
-    width: 50%;
+  flex: 1;
+  display: flex;
+  flex-direction: column; 
+  text-align: center;
+
+    @include tablets {
+      text-align: center;
+      width: 100%;
   }
+}
+.hero__content-text {
+  color: #ffffff;
+  text-align: left;
+
+  @include tablets {
+    text-align: center;
+  }
+}
 .section-title__hero {
-    color: #ffffff;
-    font-family: "AlegreyaSans-Bold";
-    font-size: 60px;
-    line-height: inherit;
-    text-transform: uppercase;
-    margin-bottom: 25px;
-    text-align: left;
+  color: #ffffff;
+  font-family: "AlegreyaSans-Bold";
+  font-size: rem(60px);
+  line-height: inherit;
+  text-transform: uppercase;
+  text-align: left;
+  
+  @include tablets {
+    text-align: center;
+  }
 }
 .hero__desc {
-    color: #ffffff;
     font-family: "Alegreya Sans";
-    font-size: 21px;
     font-weight: 400;
     margin-bottom: 3rem;
 }
-.hero__btn {
-    width: 30%;
-    border: 1px solid white;
+
+.hero-button {
+  text-align: left;
+
+  @include tablets {
+    text-align: center;
+ }
+}
+.hero-button__btn {
     background-color: #ffffff;
-    padding: 20px 30px;
-    border-radius: 50px;
+    padding: rem(20px) rem(35px);
+    border-radius: rem(50px);
     color: #0f5a47;
     font-family: "AlegreyaSans-ExtraBold";
-    font-size: 19px;
-    font-weight: bold;
     text-transform: uppercase;
     text-decoration: none;
-    box-shadow: 0 0 10px rgba(63, 63, 63, 0.25);
+    box-shadow: 0 0 rem(10px) rgba(63, 63, 63, 0.25);
 }
