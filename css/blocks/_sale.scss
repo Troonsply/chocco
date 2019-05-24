@@ -62,7 +62,7 @@
     font-weight: 700;
 }
 .sale-buy {
-    display: flex;
+    flex-direction:row;
 }
 .sale__price {
     color: #0d0d0d;
@@ -72,15 +72,15 @@
     padding-right: 0.7em;
 }
 .sale__btn {
-    border: 1px solid white;
     background-color: #0f5a47;
-    align-items: center;
-    padding: 1.2em 1.8em;
-    border-radius: 5em;
     color: #ffffff;
-    font-family: "AlegreyaSans-ExtraBold";
-    font-size: 1.3em;
-    font-weight: 200;
+    font-family: inherit;
+    font-size: 19px;
+    font-weight: 800;
     text-transform: uppercase;
+    border: none;
+    border-radius: 50px;
+    padding: 18px 31px 18px 31px;
+    box-shadow: 0 0 10px rgba(63, 63, 63, 0.25);
     text-decoration: none;
 }
