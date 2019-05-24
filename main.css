@@ -978,15 +978,27 @@ template {
   width: -moz-fit-content;
   width: fit-content;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  text-decoration: none; }
 
 .team-acco__name:after {
   content: "";
   border: 0.35714rem solid transparent;
   border-top: 0.5rem solid #0f5a47;
   position: absolute;
-  right: -rem(16px);
+  right: -1.14286rem;
   top: 0.78571rem; }
+  .team-acco__name:after:hover {
+    content: "";
+    border: 0.35714rem solid transparent;
+    border-bottom: 0.5rem solid #0f5a47;
+    position: absolute;
+    right: -1.14286rem;
+    bottom: 0; }
+
+.team-acco__name:hover .team-acco__desc {
+  height: 100%;
+  display: block; }
 
 .team-acco__title {
   color: #281e1e;
@@ -1003,4 +1015,4 @@ template {
 
 .team-acco__desc {
   height: 0;
-  overflow: hidden; }
+  display: none; }

@@ -23,6 +23,7 @@ padding-top: rem(50px);
     width: fit-content;
     margin-left: auto;
     margin-right: auto;
+    text-decoration: none;
   }
   
 .team-acco__name:after {
@@ -30,8 +31,21 @@ padding-top: rem(50px);
     border: rem(5px) solid transparent;
     border-top: rem(7px) solid #0f5a47;
     position: absolute;
-    right: -rem(16px);
+    right: - rem(16px);
     top: rem(11px);
+
+    &:hover {
+        content: "";
+        border: rem(5px) solid transparent;
+        border-bottom: rem(7px) solid #0f5a47;
+        position: absolute;
+        right:- rem(16px);
+        bottom: 0;
+    }
+}
+.team-acco__name:hover .team-acco__desc {
+    height: 100%;
+    display: block;
 }
 
 .team-acco__title {
@@ -51,5 +65,5 @@ padding-top: rem(50px);
   
   .team-acco__desc {
     height: 0;
-    overflow: hidden;
+    display: none;
   }
