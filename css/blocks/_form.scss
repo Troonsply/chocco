@@ -1,0 +1,60 @@
+.form {
+    background: url('./img/pattern.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+.section__title-form {
+    color: #0f5a47;
+    font-family: "Alegreya Sans";
+    font-size: rem(48px);
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+}
+.form__tag {
+    display: flex;
+}
+.form__row {
+    width: 50%;
+}
+.form__row-input {
+ display: flex;
+ flex-flow: row wrap;
+}
+.form__input {
+    height: rem(49px);
+}
+.form__input#name,
+.form__input#phone {
+width: rem(220px);
+}
+.form__input#street {
+width: rem(460px);
+}
+.form__input#home,
+.form__input#housing,
+.form__input#apartament,
+.form__input#floor {
+    width: rem(100px);
+}
+.form__label {
+    display: flex;
+    flex-flow: column; 
+    padding-left: rem(10px);
+    padding-bottom: rem(10px);
+}
+.form__label-title {
+    color: #0f5a47;
+    font-family: "Alegreya Sans";
+    font-size: rem(18px);
+    font-weight: 400;
+    line-height: rem(30.05px);
+}
+.form__input--textarea {
+    width: rem(460px);
+    height: rem(180px);
+}

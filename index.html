@@ -226,43 +226,72 @@
             </section>
             <section class="section process">
                 <div class="container container-process">
-                    <div class="form">
-                        <form action="url" class="form__tag">
-                            <h2 class="form__title"></h2>
-                            <div class="form__row">
+                    <h2 class="section__title">Как мы работаем</h2>
+                </div>
+            </section>
+            <section class="section form">
+                <div class="container container-form">
+                    <h2 class="section__title section__title-form">Закажите доставку</h2>
+                    <form action="url" class="form__tag"> 
+                        <div class="form__row form__row-input">
                                 <label class="form__label">
-                                    <span class="form__label-title"></span>
-                                    <input type="text" class="form__input " id="name" placeholder="#">
+                                    <span class="form__label-title">Имя</span>
+                                    <input type="text" class="form__input" id="name" placeholder="">
                                 </label>
                                 <label class="form__label">
-                                    <span class="form__label-title"></span>
-                                    <input type="text" class="form__input" id="adress" placeholder="">
+                                    <span class="form__label-title">Телефон</span>
+                                    <input type="text" class="form__input" id="phone" placeholder="89022348912">
+                                </label>
+                                <label class="form__label">
+                                    <span class="form__label-title">Улица</span>
+                                    <input type="text" class="form__input" id="street" placeholder="">
+                                </label>
+                                <label class="form__label">
+                                    <span class="form__label-title">Дом</span>
+                                    <input type="text" class="form__input" id="home" placeholder="">
+                                </label>
+                                <label class="form__label">
+                                    <span class="form__label-title">Корпус</span>
+                                    <input type="text" class="form__input" id="housing" placeholder="">
+                                </label>
+                                <label class="form__label">
+                                    <span class="form__label-title">Квартира</span>
+                                    <input type="text" class="form__input" id="apartament" placeholder="">
+                                </label>
+                                <label class="form__label">
+                                    <span class="form__label-title">Этаж</span>
+                                    <input type="text" class="form__input" id="floor" placeholder="">
                                 </label>
                             </div>
                             <div class="form__row">
                                 <label class="form__label">
-                                    <span class="form__label-title"></span>
-                                    <textarea name="nav__textarea" placeholder="#" class=" form__input form__input--textarea"></textarea>
+                                    <span class="form__label-title">Комментарии</span>
+                                    <textarea name="comment__textarea" placeholder="#" class=" form__input form__input--textarea"></textarea>
                                 </label>
-                            </div>
-                            <div class="form__radio">
+                                <div class="form__radio">
                                 <div class="form__label-title"></div>
                                 <label class="form__radio-btn" tabindex="0">
-                                    <input class="form__answer" type="radio" name="photo" value="yes" checked>
+                                    <input class="form__answer" type="radio" name="sale" value="yes" checked>
                                     <div class="form__radio-custom"></div>
                                     <div class="form__radio-text"></div>
                                 </label>
                                 <label class="form__radio-btn" tabindex="0">
-                                    <input class="form__answer" type="radio" name="photo" value="no" tabindex="0">
+                                    <input class="form__answer" type="radio" name="sale" value="no" tabindex="0">
+                                    <div class="form__radio-custom"></div>
+                                    <div class="form__radio-text"></div>
+                                </label>
+                                <label class="form__radio-btn" tabindex="0">
+                                    <input class="form__answer" type="radio" name="phone" value="no" tabindex="0">
                                     <div class="form__radio-custom"></div>
                                     <div class="form__radio-text"></div>
                                 </label>
                                 <div class="form__buttons">
-                                    <button type="submit" class="form__button">ОТПРАВИТЬ</button>
+                                    <button type="submit" class="form__button">Заказать</button>
+                                    <button type="submit" class="form__button">Очистить</button>
                                 </div>
                             </div>
-                        </form>
-                    </div>
+                        </div>
+                    </form>
                 </div>
             </section>
             <section class="section map">
