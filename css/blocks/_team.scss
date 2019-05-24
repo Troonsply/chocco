@@ -4,26 +4,15 @@
 .team-acco {
     display: flex;
     justify-content: space-between;
+    margin-top: rem(50px);
 
     @include tablets {
         padding-bottom: rem(20px);
     }
 }
-
-.team-acco__item {
-
-    &.active {
-
-	    .team-acco__trigger {
-		    color: #000000;
-        
-            &:before {
-                transform: rotate(-180deg);
-            }
-        }
-    }
+.team-acco__item:nth-child(2n) {
+padding-top: rem(50px);
 }
-
 .team-acco__name {
     color: #323232;
     font-size: 1.3125rem;
@@ -38,17 +27,29 @@
   
 .team-acco__name:after {
     content: "";
-    border: 5px solid transparent;
-    border-top: 7px solid #0f5a47;
+    border: rem(5px) solid transparent;
+    border-top: rem(7px) solid #0f5a47;
     position: absolute;
-    right: -16px;
-    top: 11px;
+    right: -rem(16px);
+    top: rem(11px);
 }
 
-.team-acco__desc {
-    display: none;
-
-    @include tablets {
-    display: inline;
-    }
-}
+.team-acco__title {
+    color: #281e1e;
+    font-size: 1.125rem;
+    font-weight: 400;
+    margin-top: 0;
+    margin-bottom: 0.3125rem;
+  }
+  
+  .team-acco__text {
+    color: #666666;
+    font-size: 1.125rem;
+    font-weight: 300;
+    margin: 0;
+  }
+  
+  .team-acco__desc {
+    height: 0;
+    overflow: hidden;
+  }
