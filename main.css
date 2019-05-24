@@ -1016,3 +1016,11 @@ template {
 .team-acco__desc {
   height: 0;
   display: none; }
+
+.map {
+  background: url("./img/map.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%; }
