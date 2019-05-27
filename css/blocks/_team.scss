@@ -1,6 +1,11 @@
 .team {
     position: relative;
 }
+.container-team {
+  @include tablets {
+    margin-top: 10em;
+}
+}
 .team-acco {
     display: flex;
     justify-content: space-between;
@@ -8,7 +13,20 @@
 
     @include tablets {
         padding-bottom: rem(20px);
+        flex-flow: row wrap;
     }
+}
+
+.team-acco__item {
+  @include tablets {
+    flex-flow: row wrap;
+      height: 50%;
+      width: 50%;
+}
+}
+.team__photo {
+  @include tablets {
+}
 }
 .team-acco__item:nth-child(2n) {
 padding-top: rem(50px);
@@ -18,11 +36,8 @@ padding-top: rem(50px);
     font-size: 1.3125rem;
     font-weight: 500;
     position: relative;
-    margin-top: 1.25rem;
-    margin-bottom: 0.625rem;
+    margin: 1rem auto;
     width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
     text-decoration: none;
   }
   

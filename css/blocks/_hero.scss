@@ -4,12 +4,21 @@
     background-image: url('./img/2-layers.png');
     background-repeat: no-repeat;
     background-position: bottom right;
+
+    @include tablets {
+      background-position: top center;
+      width: 100%;
+  }
 }
 .hero__picture_position_absolut{
     width: 100%;
     position: absolute;
     bottom: -4rem;
     text-align: center;
+
+    @include tablets {
+      width: 50%;
+  }
   }
   .hero__picture_position_absolut img{
     margin: 0 auto;
@@ -32,6 +41,7 @@
 
   @include tablets {
     text-align: center;
+    width: 100%;
   }
 }
 .section-title__hero {
@@ -44,6 +54,7 @@
   
   @include tablets {
     text-align: center;
+    font-size: 48px;
   }
 }
 .hero__desc {
@@ -70,4 +81,5 @@
     border-radius: 50px;
     padding: 18px 31px 18px 31px;
     box-shadow: 0 0 10px rgba(63, 63, 63, 0.25);
+    text-decoration: none;
 }

@@ -20,6 +20,14 @@
     padding-right: 5em;
     width: rem(50px);
     height: rem(40px);
+
+    &:last-child {
+        padding-right: none;
+    }
+    
+    @include tablets {
+        padding-right: 2em;
+    }
 }
 .sheet {
     background-image: url('./img/icon1.png');

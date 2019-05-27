@@ -1,6 +1,7 @@
 .pretty {
     position: relative;
     margin:2rem 0;
+
 }
 .pretty__picture_position_absolut {
     width: 100%;
@@ -10,24 +11,34 @@
 }
 .container-pretty {
     content: "";
+    @include tablets {
+        margin-top: 10em;
+    }
+
 }
 .pretty-text {
     text-align: center;
-    margin-bottom: 5%;
+    margin-bottom: 15%;
     color: #666666;
     font-family: "Alegreya Sans";
     font-size: 18px;
     font-weight: 500;
+    @include tablets {
+        font-size: 14px;
+    }
 }
 .pretty__list {
     display: flex;
     align-items: center;
+
+    @include tablets {
+        flex-flow: column;
+        text-align: center;
+        width: 100%;
+    }
 }
 
 .pretty__item {
     flex: 1;
-    
-    &:last-child {
-        margin-right: 0;
-    }
+
 }

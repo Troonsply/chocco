@@ -10,10 +10,14 @@
     overflow: hidden;
     flex-shrink: 0;
     align-items: center;
-    width: 35%;
-    height: 125px;
+    width: 50%;
     margin: 0 auto;
     position: inherit;
+    padding: 20px 0;
+
+    @include tablets {
+        height: 100%;
+    }
 
 }
 .features__pic-img {
@@ -35,6 +39,9 @@
     font-size: 27px;
     font-weight: 700;
     align-items: center;
+    @include tablets {
+        font-size: 18px;
+    }
 }
 .features__text {
     color: #666666;
@@ -42,4 +49,7 @@
     font-size: 18px;
     font-weight: 300;
     align-items: center;
+    @include tablets {
+        
+    }
 }

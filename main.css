@@ -501,12 +501,19 @@ template {
   background-image: url("./img/2-layers.png");
   background-repeat: no-repeat;
   background-position: bottom right; }
+  @media screen and (max-width: 768px) {
+    .hero {
+      background-position: top center;
+      width: 100%; } }
 
 .hero__picture_position_absolut {
   width: 100%;
   position: absolute;
   bottom: -4rem;
   text-align: center; }
+  @media screen and (max-width: 768px) {
+    .hero__picture_position_absolut {
+      width: 50%; } }
 
 .hero__picture_position_absolut img {
   margin: 0 auto; }
@@ -533,7 +540,8 @@ template {
   text-align: left; }
   @media screen and (max-width: 768px) {
     .hero__content-text {
-      text-align: center; } }
+      text-align: center;
+      width: 100%; } }
 
 .section-title__hero {
   color: #ffffff;
@@ -544,7 +552,8 @@ template {
   text-align: left; }
   @media screen and (max-width: 768px) {
     .section-title__hero {
-      text-align: center; } }
+      text-align: center;
+      font-size: 48px; } }
 
 .hero__desc {
   font-family: "Alegreya Sans";
@@ -568,7 +577,8 @@ template {
   border-radius: 50px;
   padding: 18px 31px 18px 31px;
   -webkit-box-shadow: 0 0 10px rgba(63, 63, 63, 0.25);
-  box-shadow: 0 0 10px rgba(63, 63, 63, 0.25); }
+  box-shadow: 0 0 10px rgba(63, 63, 63, 0.25);
+  text-decoration: none; }
 
 .header {
   display: -webkit-box;
@@ -670,6 +680,11 @@ template {
   padding-right: 5em;
   width: 3.57143rem;
   height: 2.85714rem; }
+  .special-img:last-child {
+    padding-right: none; }
+  @media screen and (max-width: 768px) {
+    .special-img {
+      padding-right: 2em; } }
 
 .sheet {
   background-image: url("./img/icon1.png");
@@ -698,14 +713,20 @@ template {
 
 .container-pretty {
   content: ""; }
+  @media screen and (max-width: 768px) {
+    .container-pretty {
+      margin-top: 10em; } }
 
 .pretty-text {
   text-align: center;
-  margin-bottom: 5%;
+  margin-bottom: 15%;
   color: #666666;
   font-family: "Alegreya Sans";
   font-size: 18px;
   font-weight: 500; }
+  @media screen and (max-width: 768px) {
+    .pretty-text {
+      font-size: 14px; } }
 
 .pretty__list {
   display: -webkit-box;
@@ -714,13 +735,19 @@ template {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center; }
+  @media screen and (max-width: 768px) {
+    .pretty__list {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+      flex-flow: column;
+      text-align: center;
+      width: 100%; } }
 
 .pretty__item {
   -webkit-box-flex: 1;
   -ms-flex: 1;
   flex: 1; }
-  .pretty__item:last-child {
-    margin-right: 0; }
 
 .features__desc {
   text-align: center; }
@@ -740,10 +767,13 @@ template {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  width: 35%;
-  height: 125px;
+  width: 50%;
   margin: 0 auto;
-  position: inherit; }
+  position: inherit;
+  padding: 20px 0; }
+  @media screen and (max-width: 768px) {
+    .features__pic {
+      height: 100%; } }
 
 .features__pic-img {
   width: 70px;
@@ -765,6 +795,9 @@ template {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center; }
+  @media screen and (max-width: 768px) {
+    .features__tetle {
+      font-size: 18px; } }
 
 .features__text {
   color: #666666;
@@ -995,6 +1028,10 @@ template {
 .team {
   position: relative; }
 
+@media screen and (max-width: 768px) {
+  .container-team {
+    margin-top: 10em; } }
+
 .team-acco {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1005,7 +1042,20 @@ template {
   margin-top: 3.57143rem; }
   @media screen and (max-width: 768px) {
     .team-acco {
-      padding-bottom: 1.42857rem; } }
+      padding-bottom: 1.42857rem;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+      flex-flow: row wrap; } }
+
+@media screen and (max-width: 768px) {
+  .team-acco__item {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    height: 50%;
+    width: 50%; } }
 
 .team-acco__item:nth-child(2n) {
   padding-top: 3.57143rem; }
@@ -1015,13 +1065,10 @@ template {
   font-size: 1.3125rem;
   font-weight: 500;
   position: relative;
-  margin-top: 1.25rem;
-  margin-bottom: 0.625rem;
+  margin: 1rem auto;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  margin-left: auto;
-  margin-right: auto;
   text-decoration: none; }
 
 .team-acco__name:after {
