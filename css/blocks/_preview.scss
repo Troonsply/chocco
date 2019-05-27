@@ -5,6 +5,9 @@
     background: url('./img/reviewyagoda.png');
     background-position: right top;
     background-repeat: no-repeat;
+    @include tablets {
+        margin-top: 4em;
+      }
 }
 .review {
     display: flex;
@@ -13,6 +16,10 @@
     width: 100%;
     align-items: center;
     margin:2rem 0;
+    @include tablets {
+        flex-direction: column;
+      }
+
 }
 .review__pic {
     padding:2rem 2rem;
@@ -20,6 +27,9 @@
 .review__description {
     padding-left: 20px;
     font-family: "Alegreya Sans";
+    @include tablets {
+        text-align: center;
+      }
 }
 .review-desc {
     color: #323232;
@@ -31,6 +41,9 @@
     color: #666666;
     font-size: 18px;
     font-weight: 400;
+    @include tablets {
+        width: 100%;
+      }
 }
 .review-signature {
     margin-top: 2%;

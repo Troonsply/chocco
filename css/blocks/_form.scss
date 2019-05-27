@@ -17,6 +17,9 @@
 }
 .form__tag {
     display: flex;
+    @include tablets {
+        flex-direction: column;
+    }
 }
 .form__row {
     width: 50%;

@@ -817,6 +817,9 @@ template {
   background: url("./img/reviewyagoda.png");
   background-position: right top;
   background-repeat: no-repeat; }
+  @media screen and (max-width: 768px) {
+    .container-preview {
+      margin-top: 4em; } }
 
 .review {
   display: -webkit-box;
@@ -829,6 +832,12 @@ template {
   -ms-flex-align: center;
   align-items: center;
   margin: 2rem 0; }
+  @media screen and (max-width: 768px) {
+    .review {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column; } }
 
 .review__pic {
   padding: 2rem 2rem; }
@@ -836,6 +845,9 @@ template {
 .review__description {
   padding-left: 20px;
   font-family: "Alegreya Sans"; }
+  @media screen and (max-width: 768px) {
+    .review__description {
+      text-align: center; } }
 
 .review-desc {
   color: #323232;
@@ -847,6 +859,9 @@ template {
   color: #666666;
   font-size: 18px;
   font-weight: 400; }
+  @media screen and (max-width: 768px) {
+    .review-text {
+      width: 100%; } }
 
 .review-signature {
   margin-top: 2%;
@@ -1136,6 +1151,12 @@ template {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
+  @media screen and (max-width: 768px) {
+    .form__tag {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column; } }
 
 .form__row {
   width: 50%; }
