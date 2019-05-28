@@ -1000,6 +1000,12 @@ template {
   background-repeat: no-repeat;
   background-size: cover; }
 
+.section-title__choice {
+  text-align: center; }
+  @media screen and (max-width: 768px) {
+    .section-title__choice {
+      text-align: left; } }
+
 .choice-list {
   position: absolute;
   display: -webkit-box;
