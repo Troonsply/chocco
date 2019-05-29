@@ -33,6 +33,11 @@ body {
   height: 100vh;
   min-height: rem(650px);
   margin: 0 auto;
+
+  @include tablets {
+    height: auto;
+    padding: 2rem 0;
+}
 }
 
 .container {
@@ -109,4 +114,7 @@ footer {
 
 * {
   box-sizing: border-box;
+}
+img {
+  max-width: 100%;
 }

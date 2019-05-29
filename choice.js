@@ -1,5 +1,5 @@
 
-    const choiceList = document.querySelector('.choice-list')
+    const choiceList =document.querySelector('.choice-list')
 
     choiceList.addEventListener('click', function (e) {
         if (e.target.className === 'choice-list__title') {
@@ -8,13 +8,13 @@
             localStorage.setItem('itenId', e.target.parentElement.id)
 
             if (itenId != e.target.parentElement.id) {
-                document.getElementById(itenId).classList.remove('active')
+                element.getElementById(itenId).classList.remove('active')
                 localStorage.removeItem('itenId')
                 localStorage.setItem('itenId', e.target.parentElement.id)
             }
 
             if (window.innerWidth <= 480 && e.target.parentElement.classList.contains('active')) {
-                //console.log(e.target.parentElement.previousElementSibling);
+                console.log(e.target.parentElement.previousElementSibling);
                 if (!e.target.parentElement.previousElementSibling) {
                     console.log('object')
                     choiceList.style.transform = 'translateX(114px)'

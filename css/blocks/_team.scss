@@ -58,8 +58,11 @@ padding-top: rem(50px);
         bottom: 0;
     }
 }
-.team-acco__name:hover .team-acco__desc {
-    height: 100%;
+  
+.team-acco__desc {
+  display: none;
+}
+.team-acco__item:hover .team-acco__desc {
     display: block;
 }
 
@@ -76,9 +79,4 @@ padding-top: rem(50px);
     font-size: 1.125rem;
     font-weight: 300;
     margin: 0;
-  }
-  
-  .team-acco__desc {
-    height: 0;
-    display: none;
   }

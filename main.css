@@ -30,6 +30,10 @@ body {
   height: 100vh;
   min-height: 46.42857rem;
   margin: 0 auto; }
+  @media screen and (max-width: 768px) {
+    .section {
+      height: auto;
+      padding: 2rem 0; } }
 
 .container {
   max-width: 67.14286rem;
@@ -101,6 +105,9 @@ footer {
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
+
+img {
+  max-width: 100%; }
 
 @font-face {
   font-family: "AlegreyaSans-Black";
@@ -498,9 +505,9 @@ template {
 .hero {
   position: relative;
   background: #61c4d9;
-  background-image: url("./img/2-layers.png");
-  background-repeat: no-repeat;
-  background-position: bottom right; }
+  /*background-image: url('./img/2-layers.png');
+    background-repeat: no-repeat;
+    background-position: bottom right;*/ }
   @media screen and (max-width: 768px) {
     .hero {
       background-position: top center;
@@ -525,15 +532,13 @@ template {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
   text-align: center; }
   @media screen and (max-width: 768px) {
     .hero__content {
       text-align: center;
-      width: 100%; } }
+      width: 100%;
+      -ms-flex-wrap: wrap-reverse;
+      flex-wrap: wrap-reverse; } }
 
 .hero__content-text {
   color: #ffffff;
@@ -1107,8 +1112,10 @@ template {
     right: -1.14286rem;
     bottom: 0; }
 
-.team-acco__name:hover .team-acco__desc {
-  height: 100%;
+.team-acco__desc {
+  display: none; }
+
+.team-acco__item:hover .team-acco__desc {
   display: block; }
 
 .team-acco__title {
@@ -1123,10 +1130,6 @@ template {
   font-size: 1.125rem;
   font-weight: 300;
   margin: 0; }
-
-.team-acco__desc {
-  height: 0;
-  display: none; }
 
 .map {
   background: url("./img/map.jpg");
