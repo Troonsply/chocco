@@ -1,14 +1,23 @@
 .hero {
     position: relative;
     background: $blue;
-    /*background-image: url('./img/2-layers.png');
-    background-repeat: no-repeat;
-    background-position: bottom right;*/
 
     @include tablets {
       background-position: top center;
       width: 100%;
   }
+}
+
+.hero__picture_position_absolut_tablets {
+  display: none;
+  
+  @include tablets {
+    display:inherit;
+    width: 100%;
+    position: absolute;
+    top: 14rem;
+    margin: 0 auto;
+}
 }
 .hero__picture_position_absolut{
     width: 100%;
@@ -17,13 +26,8 @@
     text-align: center;
 
     @include tablets {
-      width: 100%;
-      position: absolute;
-      top: 24rem;
+    display: none;
   }
-  }
-  .hero__picture_position_absolut img{
-    margin: 0 auto;
   }
 
 .hero__content {

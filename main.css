@@ -504,14 +504,21 @@ template {
 
 .hero {
   position: relative;
-  background: #61c4d9;
-  /*background-image: url('./img/2-layers.png');
-    background-repeat: no-repeat;
-    background-position: bottom right;*/ }
+  background: #61c4d9; }
   @media screen and (max-width: 768px) {
     .hero {
       background-position: top center;
       width: 100%; } }
+
+.hero__picture_position_absolut_tablets {
+  display: none; }
+  @media screen and (max-width: 768px) {
+    .hero__picture_position_absolut_tablets {
+      display: inherit;
+      width: 100%;
+      position: absolute;
+      top: 14rem;
+      margin: 0 auto; } }
 
 .hero__picture_position_absolut {
   width: 100%;
@@ -520,12 +527,7 @@ template {
   text-align: center; }
   @media screen and (max-width: 768px) {
     .hero__picture_position_absolut {
-      width: 100%;
-      position: absolute;
-      top: 24rem; } }
-
-.hero__picture_position_absolut img {
-  margin: 0 auto; }
+      display: none; } }
 
 .hero__content {
   -webkit-box-flex: 1;
@@ -797,28 +799,37 @@ template {
   -ms-flex-pack: start;
   justify-content: flex-start; }
 
-.preview__picture_position_absolut {
+.preview__picture_position_absolut_strwberry {
   position: absolute;
-  top: -4rem;
   right: 0; }
 
-.review {
+.preview__picture_position_absolut_berry {
+  position: absolute;
+  bottom: 0; }
+
+.preview .review {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background: url("./img/reviewbackground.jpg");
-  background-repeat: no-repeat;
+  background-color: #f8faf9;
   width: 100%;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   margin: 2rem 0; }
   @media screen and (max-width: 768px) {
-    .review {
+    .preview .review {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
       -ms-flex-direction: column;
       flex-direction: column; } }
+
+.preview .preview__picture_position_absolut_branch {
+  position: absolute;
+  right: 2rem; }
+
+.review {
+  padding: 2rem auto; }
 
 .review__pic {
   padding: 2rem 2rem; }
@@ -1281,9 +1292,11 @@ template {
   padding: 18px 31px 18px 31px;
   -webkit-box-shadow: 0 0 10px rgba(63, 63, 63, 0.25);
   box-shadow: 0 0 10px rgba(63, 63, 63, 0.25);
-  text-decoration: none; }
+  text-decoration: none;
+  margin: 0 2rem; }
 
 .form__button-clear {
   color: #0f5a47;
   text-decoration: none;
-  border: none; }
+  border: none;
+  background: none; }
