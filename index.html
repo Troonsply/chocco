@@ -66,15 +66,27 @@
                             <div class="special">
                                 <ul class="special-list">
                                     <li class="special-item">
-                                        <div class="special-img sheet"></div>
+                                        <div class="special-img">
+                                            <svg class="svg-icon">
+                                                <use xlink:href="./icons/sprite.svg#sheet"></use>
+                                            </svg>
+                                        </div>
                                         <p class="special-text">100% <br>натуральный<br> продукт</p>
                                     </li>
                                     <li class="special-item">
-                                        <div class="special-img machine"></div>
+                                        <div class="special-img">
+                                            <svg class="svg-icon">
+                                                <use xlink:href="./icons/sprite.svg#cars"></use>
+                                            </svg>
+                                        </div>
                                         <p class="special-text">3-5 дней<br> доставка<br> по РФ</p>
                                     </li>
                                     <li class="special-item">
-                                        <div class="special-img body"></div>
+                                        <div class="special-img">
+                                            <svg class="svg-icon">
+                                                <use xlink:href="./icons/sprite.svg#tape"></use>
+                                            </svg>
+                                        </div>
                                         <p class="special-text">Не портит<br> фигуру</p>
                                     </li>
                                 </ul>
@@ -87,48 +99,56 @@
                 </div>
             </section>
             <section class="section pretty">
-                    <div class="pretty__picture_position_absolut">
-                            <img src="./img/prettypic.png">
-                    </div>
+                <div class="pretty__picture_position_absolut">
+                    <img src="./img/prettypic.png">
+                </div>
+                <div class="pretty__picture_position_absolutbottom">
+                    <img src="./img/malina.png">
+                </div>
                 <div class="container container-pretty">
                     <h2 class="section-title">почему chocco?</h2>
-                    <p class="pretty-text">В нашем мире все происходит очень быстро, поэтому мы<br>
-                            делаем батончики, которые удобно взять с собой.</p>
-                        <ul class="pretty__list">
-                            <li class="pretty__item features">
-                                    <svg class="man-icon">
-                                        <use xlink:href="./icons/sprite.svg#man"></use>
-                                    </svg>
-                                <div class="features__desc">
-                                    <h3 class="features__tetle">Полезно</h3>
-                                    <div class="features__text">
-                                        <p>Натуральность - ключевое качествонашей продукции. Мы используем только природные ингредиенты.</p>
-                                    </div>
+                    <p class="pretty-text">В нашем мире все происходит очень быстро, поэтому мы<br> делаем батончики, которые удобно взять с собой.</p>
+                    <ul class="pretty__list">
+                        <li class="pretty__item features">
+                            <div class="features__pic">
+                                <svg class="features-icon">
+                                    <use xlink:href="./icons/sprite.svg#man"></use>
+                                </svg>
+                            </div>
+                            <div class="features__desc">
+                                <h3 class="features__tetle">Полезно</h3>
+                                <div class="features__text">
+                                    <p>Натуральность - ключевое качествонашей продукции. Мы используем только природные ингредиенты.</p>
                                 </div>
-                            </li>
-                            <li class="pretty__item features">
-                                <div class="features__pic">
-                                    <img src="./img/features2.png" alt="Вкусно" class="features__pic-img">
+                            </div>
+                        </li>
+                        <li class="pretty__item features">
+                            <div class="features__pic">
+                                <svg class="features-icon">
+                                    <use xlink:href="./icons/sprite.svg#smile"></use>
+                                </svg>
+                            </div>
+                            <div class="features__desc">
+                                <h3 class="features__tetle">Вкусно</h3>
+                                <div class="features__text">
+                                    <p>Нежный, ненавязчивый, изысканный – так клиенты описывают вкусовые качества наших батончиков.</p>
                                 </div>
-                                <div class="features__desc">
-                                    <h3 class="features__tetle">Вкусно</h3>
-                                    <div class="features__text">
-                                        <p>Нежный, ненавязчивый, изысканный – так клиенты описывают вкусовые качества наших батончиков.</p>
-                                    </div>
+                            </div>
+                        </li>
+                        <li class="pretty__item features">
+                            <div class="features__pic">
+                                <svg class="features-icon">
+                                    <use xlink:href="./icons/sprite.svg#might"></use>
+                                </svg>
+                            </div>
+                            <div class="features__desc">
+                                <h3 class="features__tetle">Питательно</h3>
+                                <div class="features__text">
+                                    <p>Высокое содержание качественного белка, а также всех необходимых витаминов и минералов.</p>
                                 </div>
-                            </li>
-                            <li class="pretty__item features">
-                                <div class="features__pic">
-                                    <img src="./img/features3.png" alt="Питательно" class="features__pic-img">
-                                </div>
-                                <div class="features__desc">
-                                    <h3 class="features__tetle">Питательно</h3>
-                                    <div class="features__text">
-                                        <p>Высокое содержание качественного белка, а также всех необходимых витаминов и минералов.</p>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </section>
             <!--<section class="section sale">
@@ -230,24 +250,28 @@
                 </div>
             </section>
             <section class="section preview">
-                    <div class="container container-preview">
-                        <h1 class="section-title section-title__preview">Отзывы</h1>
-                        <div class="review">
-                            <div class="review__pic">
-                                <img src="./img/photo-1458890715264-db84f7c6ef13.jpg" alt="Алёна Хмельницкая" class="review-avatar">
-                            </div>
-                            <div class="review__description">
-                                <h2 class="review-desc">Лучший перекус</h2>
-                                <p class="review-text">Я ем малыми порциями, но часто. Это повышает мою продуктивность в разы. В течение дня сижу за компьютером и часто отходить в кафе или на кухню просто не могу себе позволить. А батончик – он всегда под рукой. Это приятно и удобно. </p>
-                                <p class="review-signature">Алёна Хмельницкая</p>
-                            </div> 
+                <div class="preview__picture_position_absolut">
+                    <img src="./img/previewsyagoda.png">
+                </div>
+
+                <div class="container container-preview">
+                    <h1 class="section-title section-title__preview">Отзывы</h1>
+                    <div class="review">
+                        <div class="review__pic">
+                            <img src="./img/photo-1458890715264-db84f7c6ef13.jpg" alt="Алёна Хмельницкая" class="review-avatar">
                         </div>
-                        <div class="preview__photo">
-                            <img src="./img/photo-1458890715264-db84f7c6ef13.jpg" alt="Алёна Хмельницкая" class="preview__avatar border ">
-                            <img src="./img/photo-1445404590072-16ef9c18bd83.jpg" alt="lady" class="preview__avatar">
-                            <img src="./img/photo-1468546818829-25bb337b6646.jpg" alt="man" class="preview__avatar">
-                        </div>
+                        <div class="review__description">
+                            <h2 class="review-desc">Лучший перекус</h2>
+                            <p class="review-text">Я ем малыми порциями, но часто. Это повышает мою продуктивность в разы. В течение дня сижу за компьютером и часто отходить в кафе или на кухню просто не могу себе позволить. А батончик – он всегда под рукой. Это приятно и удобно. </p>
+                            <p class="review-signature">Алёна Хмельницкая</p>
+                        </div> 
                     </div>
+                    <div class="preview__photo">
+                        <img src="./img/photo-1458890715264-db84f7c6ef13.jpg" alt="Алёна Хмельницкая" class="preview__avatar border ">
+                        <img src="./img/photo-1445404590072-16ef9c18bd83.jpg" alt="lady" class="preview__avatar">
+                        <img src="./img/photo-1468546818829-25bb337b6646.jpg" alt="man" class="preview__avatar">
+                    </div>
+                </div>
             </section>
             <!--<section class="section process">
                 <div class="container container-process">
@@ -294,8 +318,8 @@
                                     </label>
                                 </div>
                                 <div class="form__buttons">
-                                    <a class="form__button" href="">Заказать</a>
-                                    <a class="form__button-clear" href="">Очистить</a>
+                                    <button type="submit" class="form__button">Заказать</button>
+                                    <button type="submit" class="form__button-clear">Очистить</button>
                                 </div>
                             </div>
                         </div>
@@ -305,7 +329,7 @@
             <section class="section map">
             </section>   
             <footer class="footer">
-                <div class="contact">
+                <div class="footer__contact">
                 <div class="contact__address">Москва, ул.Новый Арбат, д.31/12</div>
                 <address class="contact__phone">
                     <a class="contact__link" href="tel:+88009039090">8 800 903 90 90</a>

@@ -1,13 +1,10 @@
 .preview {
     justify-content: flex-start;
 }
-.container-preview {
-    background: url('./img/reviewyagoda.png');
-    background-position: right top;
-    background-repeat: no-repeat;
-    @include tablets {
-        margin-top: 4em;
-      }
+.preview__picture_position_absolut {
+    position: absolute;
+    top: -4rem;
+    right:0;
 }
 .review {
     display: flex;

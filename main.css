@@ -100,7 +100,7 @@ p {
 
 footer {
   position: relative;
-  width: 100%; }
+  height: 100%; }
 
 * {
   -webkit-box-sizing: border-box;
@@ -520,7 +520,9 @@ template {
   text-align: center; }
   @media screen and (max-width: 768px) {
     .hero__picture_position_absolut {
-      width: 50%; } }
+      width: 100%;
+      position: absolute;
+      top: 24rem; } }
 
 .hero__picture_position_absolut img {
   margin: 0 auto; }
@@ -682,7 +684,6 @@ template {
   font-weight: 400; }
 
 .special-img {
-  padding-right: 5em;
   width: 3.57143rem;
   height: 2.85714rem; }
   .special-img:last-child {
@@ -691,36 +692,28 @@ template {
     .special-img {
       padding-right: 2em; } }
 
-.sheet {
-  background-image: url("./img/icon1.png");
-  background-position: center center;
-  background-repeat: no-repeat; }
-
-.machine {
-  background-image: url("./img/icon2.png");
-  background-position: center center;
-  background-repeat: no-repeat; }
-
-.body {
-  background-image: url("./img/icon3.png");
-  background-position: center center;
-  background-repeat: no-repeat; }
-
 .pretty {
-  position: relative;
-  margin: 2rem 0; }
+  position: relative; }
 
 .pretty__picture_position_absolut {
   width: 100%;
   position: absolute;
-  center: -4rem;
+  top: 4rem;
   text-align: left; }
-
-.container-pretty {
-  content: ""; }
   @media screen and (max-width: 768px) {
-    .container-pretty {
-      margin-top: 10em; } }
+    .pretty__picture_position_absolut {
+      width: 40%;
+      top: 8rem; } }
+
+.pretty__picture_position_absolutbottom {
+  width: 100%;
+  position: absolute;
+  bottom: -6rem;
+  text-align: left; }
+  @media screen and (max-width: 768px) {
+    .pretty__picture_position_absolutbottom {
+      width: 40%;
+      bottom: -15rem; } }
 
 .pretty-text {
   text-align: center;
@@ -754,6 +747,9 @@ template {
   -ms-flex: 1;
   flex: 1; }
 
+.features-icon {
+  fill: #b0f7ff; }
+
 .features__desc {
   text-align: center; }
 
@@ -761,36 +757,19 @@ template {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   background-color: #f2f5f4;
   border-radius: 50%;
-  overflow: hidden;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 50%;
-  margin: 0 auto;
-  position: inherit;
-  padding: 20px 0; }
-  @media screen and (max-width: 768px) {
-    .features__pic {
-      height: 100%; } }
+  margin-left: auto;
+  margin-right: auto;
+  height: 125px;
+  width: 125px; }
 
-.features__pic-img {
-  width: 70px;
-  height: 69px;
-  /* &:after {
-        content: "";
-        display: block;
-        background: url('./img/1.png');
-        width: 67px;
-        height: 21px;
-        align-items: center;
-    }*/ }
+.features-icon {
+  height: 64px;
+  margin: auto; }
 
 .features__tetle {
   color: #000000;
@@ -818,13 +797,10 @@ template {
   -ms-flex-pack: start;
   justify-content: flex-start; }
 
-.container-preview {
-  background: url("./img/reviewyagoda.png");
-  background-position: right top;
-  background-repeat: no-repeat; }
-  @media screen and (max-width: 768px) {
-    .container-preview {
-      margin-top: 4em; } }
+.preview__picture_position_absolut {
+  position: absolute;
+  top: -4rem;
+  right: 0; }
 
 .review {
   display: -webkit-box;
@@ -997,9 +973,7 @@ template {
   position: relative;
   overflow: hidden;
   width: 100%;
-  height: 100vh; }
-
-.container-choice {
+  height: 100vh;
   opacity: 0.8;
   background: url("./img/keksiki.jpg");
   background-repeat: no-repeat;
@@ -1083,8 +1057,15 @@ template {
     height: 50%;
     width: 50%; } }
 
+@media screen and (max-width: 768px) {
+  .team__photo {
+    padding: 0 1rem; } }
+
 .team-acco__item:nth-child(2n) {
   padding-top: 3.57143rem; }
+  @media screen and (max-width: 768px) {
+    .team-acco__item:nth-child(2n) {
+      padding-top: inherit; } }
 
 .team-acco__name {
   color: #323232;
@@ -1214,8 +1195,7 @@ template {
   justify-content: space-between; }
 
 .form__row-comment {
-  width: 100%;
-  height: 100%; }
+  width: 100%; }
 
 .form__row-input {
   display: -webkit-box;
@@ -1305,4 +1285,5 @@ template {
 
 .form__button-clear {
   color: #0f5a47;
-  text-decoration: none; }
+  text-decoration: none;
+  border: none; }

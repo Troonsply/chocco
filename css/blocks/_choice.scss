@@ -3,13 +3,12 @@
     overflow: hidden;
     width: 100%;
     height: 100vh;
-}
-.container-choice {
     opacity: 0.8;
     background: url('./img/keksiki.jpg');
     background-repeat: no-repeat;
     background-size: cover;
 }
+
 .section-title__choice {
     text-align: center;
     @include tablets {

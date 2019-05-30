@@ -17,7 +17,9 @@
     text-align: center;
 
     @include tablets {
-      width: 50%;
+      width: 100%;
+      position: absolute;
+      top: 24rem;
   }
   }
   .hero__picture_position_absolut img{

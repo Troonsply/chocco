@@ -26,10 +26,16 @@
 }
 .team__photo {
   @include tablets {
+    padding: 0 1rem;
 }
 }
 .team-acco__item:nth-child(2n) {
 padding-top: rem(50px);
+@include tablets {
+  padding-top:inherit;
+}
+
+
 }
 .team-acco__name {
     color: #323232;
