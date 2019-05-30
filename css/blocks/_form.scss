@@ -15,52 +15,53 @@
     text-transform: uppercase;
     text-align: center;
 }
+.form .form__row-adress label input {
+    margin-top: 0.3125rem;
+    width: 100%;
+}
 .form__tag {
     display: flex;
     @include tablets {
         flex-direction: column;
     }
 }
-.form__row {
-    width: 50%;
-}
-.form__row-input {
- display: flex;
- flex-flow: row wrap;
-}
-.form__input {
-    height: rem(49px);
-}
-.form__input#name,
-.form__input#phone {
-width: rem(220px);
-}
-.form__input#street {
-width: rem(460px);
-}
-.form__input#home,
-.form__input#housing,
-.form__input#apartament,
-.form__input#floor {
-    width: rem(100px);
-}
 .form__label {
     display: flex;
     flex-flow: column; 
     padding-left: rem(15px);
     padding-bottom: rem(10px);
-}
-.form__label-title {
     color: #0f5a47;
     font-family: "Alegreya Sans";
     font-size: rem(18px);
     font-weight: 400;
     line-height: rem(30.05px);
 }
-.form__input--textarea {
-    width: rem(460px);
-    height: rem(180px);
+.form__row-left, .form__row-right {
+    flex-basis: 49%;
+    flex-shrink: 0;
+  }
+.form__row-name {
+    display: flex;
+    justify-content: space-between;
 }
+.form__row-street {
+    width: 100%;
+}
+.form__row-adress {
+   display: flex;
+   justify-content: space-between; 
+}
+.form__row-comment {
+    width: 100%;
+    height: 100%;
+ }
+.form__row-input {
+ display: flex;
+}
+.form__input {
+    height: rem(49px);
+}
+
 .form__radio,
 .form__radio-btn {
     display: flex;
