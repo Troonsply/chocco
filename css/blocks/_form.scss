@@ -83,7 +83,7 @@
     border-radius: 50%;
     background-color: #ffffff;
     opacity: 0.5;
-    margin-right: 10px;
+    margin-right: rem(10px);
     position: relative;
     cursor: pointer;
 }
@@ -108,10 +108,10 @@
 .form__radio-custom-phone:after {
 content: "\2713";
 text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
-font-size: 15px;
+font-size: rem(15px);
 color: #0f5a47;
 text-align: center;
-line-height: 15px;
+line-height: rem(15px);
 background-color:inherit;
 }
 .form__answer:checked +.form__radio-custom:after {
@@ -123,13 +123,13 @@ background-color:inherit;
 }
 
 .form__buttons {
-    margin-top: 40px;
+    margin-top: rem(40px);
 }
 .form__button {
     background-color: #0f5a47;
     color: #ffffff;
     font-family: inherit;
-    font-size: 19px;
+    font-size: rem(19px);
     font-weight: 800;
     text-transform: uppercase;
     border: none;

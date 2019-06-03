@@ -3,16 +3,14 @@
     background-color: #f8faf9;
 
     @include tablets{
-        height: 100vh;
+        height: 100%;
       }
 }
 .container-sale {
     justify-content: space-between;
     flex-direction:row;
     padding-top:4rem;
-    @include tablets{
-        height: 100vh;
-      }
+
 }
 .sale__picpicture_position_absolut_berry {
     width: 100%;
@@ -96,7 +94,7 @@
     background-color: #0f5a47;
     color: #ffffff;
     font-family: inherit;
-    font-size: 19px;
+    font-size: rem(19px);
     font-weight: 800;
     text-transform: uppercase;
     border: none;

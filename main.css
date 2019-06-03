@@ -1,12 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=Alegreya+Sans:400,400i,700,700i&display=swap");
 html {
-  font-size: 16px; }
+  font-size: 1.28571rem; }
   @media screen and (max-width: 768px) {
     html {
-      font-size: 15px; } }
+      font-size: 1.07143rem; } }
   @media screen and (max-width: 480px) {
     html {
-      font-size: 13px; } }
+      font-size: 0.92857rem; } }
 
 html,
 body {
@@ -562,7 +562,7 @@ template {
   @media screen and (max-width: 768px) {
     .section-title__hero {
       text-align: center;
-      font-size: 48px; } }
+      font-size: 3.42857rem; } }
 
 .hero__desc {
   font-family: "Alegreya Sans";
@@ -579,7 +579,7 @@ template {
   background-color: #ffffff;
   color: #0f5a47;
   font-family: inherit;
-  font-size: 19px;
+  font-size: 1.35714rem;
   font-weight: 800;
   text-transform: uppercase;
   border: none;
@@ -610,8 +610,8 @@ template {
     display: block;
     border: 1px solid #fff;
     border-radius: 50%;
-    width: 12px;
-    height: 12px;
+    width: 0.85714rem;
+    height: 0.85714rem;
     position: absolute;
     top: -0.28571rem;
     left: -0.28571rem; }
@@ -749,7 +749,6 @@ template {
   margin-bottom: 15%;
   color: #666666;
   font-family: "Alegreya Sans";
-  font-size: 18px;
   font-weight: 500; }
   @media screen and (max-width: 768px) {
     .pretty-text {
@@ -790,29 +789,29 @@ template {
   border-radius: 50%;
   margin-left: auto;
   margin-right: auto;
-  height: 125px;
-  width: 125px; }
+  height: 8.92857rem;
+  width: 8.92857rem; }
 
 .features-icon {
-  height: 64px;
+  height: 4.57143rem;
   margin: auto; }
 
 .features__tetle {
   color: #000000;
   font-family: "AAlegreya Sans";
-  font-size: 27px;
+  font-size: 1.92857rem;
   font-weight: 700;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center; }
   @media screen and (max-width: 768px) {
     .features__tetle {
-      font-size: 18px; } }
+      font-size: 1.28571rem; } }
 
 .features__text {
   color: #666666;
   font-family: "Alegreya Sans";
-  font-size: 18px;
+  font-size: 1.28571rem;
   font-weight: 300;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -856,7 +855,7 @@ template {
   padding: 2rem 2rem; }
 
 .review__description {
-  padding-left: 20px;
+  padding-left: 1.42857rem;
   font-family: "Alegreya Sans"; }
   @media screen and (max-width: 768px) {
     .review__description {
@@ -864,13 +863,13 @@ template {
 
 .review-desc {
   color: #323232;
-  font-size: 30px;
+  font-size: 2.14286rem;
   font-weight: 500; }
 
 .review-text {
   width: 60%;
   color: #666666;
-  font-size: 18px;
+  font-size: 1.28571rem;
   font-weight: 400; }
   @media screen and (max-width: 768px) {
     .review-text {
@@ -879,7 +878,7 @@ template {
 .review-signature {
   margin-top: 2%;
   color: #666666;
-  font-size: 18px;
+  font-size: 1.28571rem;
   font-weight: 500; }
 
 .preview__photo {
@@ -896,8 +895,8 @@ template {
     margin-right: 0; }
 
 .border {
-  width: 94px;
-  height: 94px;
+  width: 6.71429rem;
+  height: 6.71429rem;
   border: 6px solid #0f5a47;
   border-radius: 50%;
   overflow: hidden; }
@@ -958,7 +957,7 @@ template {
   background-color: #f8faf9; }
   @media screen and (max-width: 768px) {
     .sale {
-      height: 100vh; } }
+      height: 100%; } }
 
 .container-sale {
   -webkit-box-pack: justify;
@@ -969,9 +968,6 @@ template {
   -ms-flex-direction: row;
   flex-direction: row;
   padding-top: 4rem; }
-  @media screen and (max-width: 768px) {
-    .container-sale {
-      height: 100vh; } }
 
 .sale__picpicture_position_absolut_berry {
   width: 100%;
@@ -1060,7 +1056,7 @@ template {
   background-color: #0f5a47;
   color: #ffffff;
   font-family: inherit;
-  font-size: 19px;
+  font-size: 1.35714rem;
   font-weight: 800;
   text-transform: uppercase;
   border: none;
@@ -1101,7 +1097,7 @@ template {
 
 .choice-list__item {
   display: inherit;
-  width: 57px; }
+  width: 4.07143rem; }
 
 .choice-list__item.active {
   width: auto; }
@@ -1117,7 +1113,7 @@ template {
   padding: 2rem 1rem;
   color: #fff;
   font-weight: 700;
-  font-size: 20px;
+  font-size: 1.42857rem;
   text-transform: uppercase;
   cursor: pointer;
   margin: 0; }
@@ -1128,7 +1124,7 @@ template {
   display: none; }
 
 .choice-list__item.active .block-list__desc {
-  width: 450px; }
+  width: 32.14286rem; }
 
 .team {
   position: relative; }
@@ -1336,7 +1332,7 @@ template {
   border-radius: 50%;
   background-color: #ffffff;
   opacity: 0.5;
-  margin-right: 10px;
+  margin-right: 0.71429rem;
   position: relative;
   cursor: pointer; }
 
@@ -1361,10 +1357,10 @@ template {
 .form__radio-custom-phone:after {
   content: "\2713";
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
-  font-size: 15px;
+  font-size: 1.07143rem;
   color: #0f5a47;
   text-align: center;
-  line-height: 15px;
+  line-height: 1.07143rem;
   background-color: inherit; }
 
 .form__answer:checked + .form__radio-custom:after {
@@ -1374,13 +1370,13 @@ template {
   opacity: 1; }
 
 .form__buttons {
-  margin-top: 40px; }
+  margin-top: 2.85714rem; }
 
 .form__button {
   background-color: #0f5a47;
   color: #ffffff;
   font-family: inherit;
-  font-size: 19px;
+  font-size: 1.35714rem;
   font-weight: 800;
   text-transform: uppercase;
   border: none;

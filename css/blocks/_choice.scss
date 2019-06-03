@@ -25,7 +25,7 @@
 
 .choice-list__item {
     display: inherit;
-    width: 57px;
+    width: rem(57px);
 }
 
 .choice-list__item.active {
@@ -39,7 +39,7 @@
     padding: 2rem 1rem;
     color: #fff;
     font-weight: 700;
-    font-size: 20px;
+    font-size: rem(20px);
     text-transform: uppercase;
     cursor: pointer;
     margin: 0;
@@ -52,5 +52,5 @@
 }
 
 .choice-list__item.active .block-list__desc {
-    width: 450px;
+    width:rem(450px);
 }

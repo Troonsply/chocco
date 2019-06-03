@@ -60,7 +60,7 @@
   
   @include tablets {
     text-align: center;
-    font-size: 48px;
+    font-size: rem(48px);
   }
 }
 .hero__desc {
@@ -80,7 +80,7 @@
     background-color: #ffffff;
     color: #0f5a47;
     font-family: inherit;
-    font-size: 19px;
+    font-size: rem(19px);
     font-weight: 800;
     text-transform: uppercase;
     border: none;

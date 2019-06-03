@@ -31,7 +31,7 @@
     padding:2rem 2rem;
 }
 .review__description {
-    padding-left: 20px;
+    padding-left: rem(20px);
     font-family: "Alegreya Sans";
     @include tablets {
         text-align: center;
@@ -39,13 +39,13 @@
 }
 .review-desc {
     color: #323232;
-    font-size: 30px;
+    font-size: rem(30px);
     font-weight: 500;
 }
 .review-text {
     width: 60%;
     color: #666666;
-    font-size: 18px;
+    font-size: rem(18px);
     font-weight: 400;
     @include tablets {
         width: 100%;
@@ -54,7 +54,7 @@
 .review-signature {
     margin-top: 2%;
     color: #666666;
-    font-size: 18px;
+    font-size: rem(18px);
     font-weight: 500;
 }
 .preview__photo {
@@ -69,8 +69,8 @@
     }
 }
 .border {
-    width: 94px;
-    height: 94px;
+    width: rem(94px);
+    height: rem(94px);
     border: 6px solid #0f5a47;
     border-radius: 50%;
     overflow: hidden;
