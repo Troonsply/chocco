@@ -14,6 +14,7 @@
     font-weight: 700;
     text-transform: uppercase;
     text-align: center;
+    margin-top: 2em;
 }
 .form .form__row-adress label input {
     margin-top: 0.3125rem;
@@ -43,6 +44,7 @@
 .form__row-name {
     display: flex;
     justify-content: space-between;
+    padding: 0 auto;
 }
 .form__row-street {
     width: 100%;

@@ -1,9 +1,10 @@
 .team {
     position: relative;
+
 }
 .container-team {
   @include tablets {
-    margin-top: 10em;
+    margin-top: 5em;
 }
 }
 .team-acco {

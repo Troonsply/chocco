@@ -12,24 +12,19 @@
 
 .preview .review {
     display: flex;
-    // background: url('./img/reviewbackground.jpg');
-    // background-repeat: no-repeat;
-    background-color: #f8faf9;
+    background: url('./img/reviewbackground.jpg');
+    background-repeat: no-repeat;
     width: 100%;
     align-items: center;
     margin:2rem 0;
+    padding: 2rem 0;
 
     @include tablets {
+        height: 100%;
         flex-direction: column;
+        background-color: #f8faf9;
       }
 
-}
-.preview .preview__picture_position_absolut_branch {
-    position: absolute;
-    right:2rem;
-}
-.review {
-    padding: 2rem auto;
 }
 
 .review__pic {
