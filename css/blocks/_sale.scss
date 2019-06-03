@@ -13,6 +13,9 @@
 .sale {
     position: relative;
     background-color: #f8faf9;
+    @include tablets{
+        height: 100vh;
+      }
 }
 .container-sale {
     justify-content: space-between;
@@ -63,7 +66,7 @@
     font-weight: 700;
 }
 .sale-buy {
-    flex-direction:row;
+    flex-flow:row nowrap;
 }
 .sale__price {
     color: #0d0d0d;
@@ -84,4 +87,8 @@
     padding: 18px 31px 18px 31px;
     box-shadow: 0 0 10px rgba(63, 63, 63, 0.25);
     text-decoration: none;
+}
+.two-slide,
+.last-slide {
+    display: none;
 }

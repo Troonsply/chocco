@@ -589,6 +589,33 @@ template {
   box-shadow: 0 0 10px rgba(63, 63, 63, 0.25);
   text-decoration: none; }
 
+.sidebar {
+  position: fixed;
+  right: 3.64286rem;
+  top: 15.5rem;
+  z-index: 100; }
+  @media screen and (max-width: 768px) {
+    .sidebar {
+      display: none; } }
+
+.nav__item {
+  height: 6px;
+  width: 6px;
+  border-radius: 50%;
+  background-color: #fff;
+  margin-bottom: 1.07143rem;
+  position: relative; }
+  .nav__item:first-child::before {
+    content: "";
+    display: block;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    top: -0.28571rem;
+    left: -0.28571rem; }
+
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -878,6 +905,57 @@ template {
   border-radius: 50%;
   overflow: hidden; }
 
+.slider__screen {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%; }
+  @media screen and (max-width: 768px) {
+    .slider__screen {
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap; } }
+
+.sale-content {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column;
+  flex-flow: column; }
+
+.arrow-previos {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-image: url("./img/arrow-scroll1.png");
+  background-position: 75% 50%; }
+  .arrow-previos:hover {
+    background-color: #fff;
+    opacity: 0.6; }
+  @media screen and (max-width: 768px) {
+    .arrow-previos {
+      background-position: 100% 20%; } }
+
+.arrow-next {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-image: url("./img/arrow-scroll2.png");
+  background-position: 25% 50%; }
+  .arrow-next:hover {
+    background-color: #fff;
+    opacity: 0.6; }
+  @media screen and (max-width: 768px) {
+    .arrow-next {
+      background-position: 0% 20%; } }
+
+.slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  margin: 0 auto; }
+
 .sale__picpicture_position_absolut_berry {
   width: 100%;
   position: absolute;
@@ -893,6 +971,9 @@ template {
 .sale {
   position: relative;
   background-color: #f8faf9; }
+  @media screen and (max-width: 768px) {
+    .sale {
+      height: 100vh; } }
 
 .container-sale {
   -webkit-box-pack: justify;
@@ -954,8 +1035,8 @@ template {
 .sale-buy {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row; }
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap; }
 
 .sale__price {
   color: #0d0d0d;
@@ -977,6 +1058,10 @@ template {
   -webkit-box-shadow: 0 0 10px rgba(63, 63, 63, 0.25);
   box-shadow: 0 0 10px rgba(63, 63, 63, 0.25);
   text-decoration: none; }
+
+.two-slide,
+.last-slide {
+  display: none; }
 
 .choice {
   position: relative;
