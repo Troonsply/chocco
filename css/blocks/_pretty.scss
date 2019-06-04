@@ -28,6 +28,7 @@
     color: #666666;
     font-family: "Alegreya Sans";
     font-weight: 500;
+    z-index: 100;
     @include tablets {
         font-size: 14px;
     }
@@ -40,6 +41,7 @@
         flex-flow: column;
         text-align: center;
         width: 100%;
+        margin-bottom: 4rem;
     }
 }
 

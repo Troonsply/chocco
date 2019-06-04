@@ -20,7 +20,7 @@
     @include tablets {
     width: 100%;
     height: 50%;
-    bottom: -8rem;
+    bottom: -15rem;
     }
 }
 .sale__picpicture_position_absolut_malina {
@@ -81,7 +81,8 @@
     font-weight: 700;
 }
 .sale-buy {
-    flex-flow:row nowrap;
+    display: flex;
+
 }
 .sale__price {
     color: #0d0d0d;
@@ -94,7 +95,7 @@
     background-color: #0f5a47;
     color: #ffffff;
     font-family: inherit;
-    font-size: rem(19px);
+    font-size: 1.35714rem;
     font-weight: 800;
     text-transform: uppercase;
     border: none;

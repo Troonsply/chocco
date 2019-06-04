@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Alegreya+Sans:400,400i,700,700i&display=swap");
 html {
-  font-size: 1.28571rem; }
+  font-size: 1.14286rem; }
   @media screen and (max-width: 768px) {
     html {
-      font-size: 1.07143rem; } }
+      font-size: 1rem; } }
   @media screen and (max-width: 480px) {
     html {
       font-size: 0.92857rem; } }
@@ -50,6 +50,9 @@ body {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center; }
+  @media screen and (max-width: 768px) {
+    .container {
+      margin: 0; } }
 
 .contact-phone,
 .logo-text {
@@ -70,6 +73,9 @@ body {
   font-family: "AlegreyaSans-Bold";
   font-weight: 700;
   margin-bottom: 0; }
+  @media screen and (max-width: 768px) {
+    .section-title {
+      font-size: 2.85714rem; } }
 
 @media screen and (max-width: 768px) {
   .contact {
@@ -562,7 +568,7 @@ template {
   @media screen and (max-width: 768px) {
     .section-title__hero {
       text-align: center;
-      font-size: 3.42857rem; } }
+      font-size: 3.28571rem; } }
 
 .hero__desc {
   font-family: "Alegreya Sans";
@@ -749,7 +755,8 @@ template {
   margin-bottom: 15%;
   color: #666666;
   font-family: "Alegreya Sans";
-  font-weight: 500; }
+  font-weight: 500;
+  z-index: 100; }
   @media screen and (max-width: 768px) {
     .pretty-text {
       font-size: 14px; } }
@@ -768,7 +775,8 @@ template {
       -ms-flex-flow: column;
       flex-flow: column;
       text-align: center;
-      width: 100%; } }
+      width: 100%;
+      margin-bottom: 4rem; } }
 
 .pretty__item {
   -webkit-box-flex: 1;
@@ -915,7 +923,8 @@ template {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-flow: column;
-  flex-flow: column; }
+  flex-flow: column;
+  z-index: 100; }
 
 .arrow-previos {
   width: 100%;
@@ -978,7 +987,7 @@ template {
     .sale__picpicture_position_absolut_berry {
       width: 100%;
       height: 50%;
-      bottom: -8rem; } }
+      bottom: -15rem; } }
 
 .sale__picpicture_position_absolut_malina {
   width: 100%;
@@ -1040,10 +1049,9 @@ template {
   font-weight: 700; }
 
 .sale-buy {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-flow: row nowrap;
-  flex-flow: row nowrap; }
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
 
 .sale__price {
   color: #0d0d0d;
@@ -1239,6 +1247,9 @@ template {
   text-transform: uppercase;
   text-align: center;
   margin-top: 2em; }
+  @media screen and (max-width: 768px) {
+    .section__title-form {
+      margin-top: 0; } }
 
 .form .form__row-adress label input {
   margin-top: 0.3125rem;

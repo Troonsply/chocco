@@ -1,7 +1,7 @@
 html {
-  font-size: rem(18px);
+  font-size: rem(16px);
     @include tablets {
-    font-size: rem(15px);
+    font-size: rem(14px);
   }
   @include phones {
     font-size: rem(13px);
@@ -48,6 +48,9 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  @include tablets {
+    margin: 0;
+  }
 
 }
 .contact-phone,
@@ -69,6 +72,9 @@ body {
   font-family: "AlegreyaSans-Bold";
   font-weight: 700;
   margin-bottom: 0;
+   @include tablets {
+     font-size: rem(40px);
+   }
 } 
 
 .contact {
