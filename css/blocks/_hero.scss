@@ -24,6 +24,7 @@
     position: absolute;
     bottom: -4rem;
     text-align: center;
+    z-index: 100;
 
     @include tablets {
     display: none;
@@ -39,6 +40,13 @@
       text-align: center;
       width: 100%;
       flex-wrap: wrap-reverse;
+  }
+}
+.hero__content-left,
+.hero__content-right {
+  width: 50%;
+  @include tablets {
+    width: 100%;
   }
 }
 .hero__content-text {
@@ -57,6 +65,7 @@
   line-height: inherit;
   text-transform: uppercase;
   text-align: left;
+  z-index: 100;
   
   @include tablets {
     text-align: center;
@@ -88,4 +97,12 @@
     padding: 18px 31px 18px 31px;
     box-shadow: 0 0 10px rgba(63, 63, 63, 0.25);
     text-decoration: none;
+}
+.hero__content-pic {
+  position: absolute;
+  right: 0;
+
+  @include tablets {
+    position: inherit;
+  }
 }

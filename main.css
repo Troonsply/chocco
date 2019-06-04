@@ -90,6 +90,12 @@ h6 {
   margin-top: 0;
   font-weight: normal; }
 
+.svg-icon {
+  fill: none;
+  stroke: #b0f7ff;
+  stroke-width: 0.8;
+  stroke-miterlimit: 10; }
+
 table {
   border-collapse: collapse;
   border-spacing: 0; }
@@ -530,7 +536,8 @@ template {
   width: 100%;
   position: absolute;
   bottom: -4rem;
-  text-align: center; }
+  text-align: center;
+  z-index: 100; }
   @media screen and (max-width: 768px) {
     .hero__picture_position_absolut {
       display: none; } }
@@ -550,6 +557,14 @@ template {
       -ms-flex-wrap: wrap-reverse;
       flex-wrap: wrap-reverse; } }
 
+.hero__content-left,
+.hero__content-right {
+  width: 50%; }
+  @media screen and (max-width: 768px) {
+    .hero__content-left,
+    .hero__content-right {
+      width: 100%; } }
+
 .hero__content-text {
   color: #ffffff;
   text-align: left; }
@@ -564,7 +579,8 @@ template {
   font-size: 4.28571rem;
   line-height: inherit;
   text-transform: uppercase;
-  text-align: left; }
+  text-align: left;
+  z-index: 100; }
   @media screen and (max-width: 768px) {
     .section-title__hero {
       text-align: center;
@@ -594,6 +610,13 @@ template {
   -webkit-box-shadow: 0 0 10px rgba(63, 63, 63, 0.25);
   box-shadow: 0 0 10px rgba(63, 63, 63, 0.25);
   text-decoration: none; }
+
+.hero__content-pic {
+  position: absolute;
+  right: 0; }
+  @media screen and (max-width: 768px) {
+    .hero__content-pic {
+      position: inherit; } }
 
 .sidebar {
   position: fixed;
@@ -707,7 +730,6 @@ template {
   justify-content: flex-start; }
 
 .special-item {
-  padding-right: 1.42857rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
@@ -718,14 +740,12 @@ template {
   font-size: 1.14286rem;
   font-weight: 400; }
 
-.special-img {
-  width: 3.57143rem;
-  height: 2.85714rem; }
-  .special-img:last-child {
-    padding-right: none; }
-  @media screen and (max-width: 768px) {
-    .special-img {
-      padding-right: 2em; } }
+.special-img:last-child {
+  padding-right: none; }
+
+@media screen and (max-width: 768px) {
+  .special-img {
+    padding-right: 2em; } }
 
 .pretty {
   position: relative; }

@@ -7,7 +7,6 @@
     justify-content: flex-start;
 }
 .special-item {
-    padding-right: rem(20px);
     display: flex;
 }
 .special-text {
@@ -17,8 +16,6 @@
     font-weight: 400;
 }
 .special-img {
-    width: rem(50px);
-    height: rem(40px);
 
     &:last-child {
         padding-right: none;
