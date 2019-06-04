@@ -1,10 +1,10 @@
 html {
-  font-size: rem(16px);
+  font-size: 16px;
     @include tablets {
-    font-size: rem(14px);
+    font-size: 14px;
   }
   @include phones {
-    font-size: rem(13px);
+    font-size: 13px;
   }
 }
 
@@ -98,6 +98,8 @@ h6 {
   stroke: #b0f7ff;
   stroke-width: 0.8;
   stroke-miterlimit: 10;
+  height: 3rem;
+  width: 50%;
 }
 table {
   border-collapse: collapse;

@@ -48,9 +48,8 @@
 .choice-list__desc {
     background-color: rgb(121, 118, 118);
     width: 0;
-    display: none;
 }
 
-.choice-list__item.active .block-list__desc {
+.choice-list__item.active .choice-list__desc {
     width:rem(450px);
 }

@@ -1,12 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=Alegreya+Sans:400,400i,700,700i&display=swap");
 html {
-  font-size: 1.14286rem; }
+  font-size: 16px; }
   @media screen and (max-width: 768px) {
     html {
-      font-size: 1rem; } }
+      font-size: 14px; } }
   @media screen and (max-width: 480px) {
     html {
-      font-size: 0.92857rem; } }
+      font-size: 13px; } }
 
 html,
 body {
@@ -94,7 +94,9 @@ h6 {
   fill: none;
   stroke: #b0f7ff;
   stroke-width: 0.8;
-  stroke-miterlimit: 10; }
+  stroke-miterlimit: 10;
+  height: 3rem;
+  width: 50%; }
 
 table {
   border-collapse: collapse;
@@ -576,11 +578,10 @@ template {
 .section-title__hero {
   color: #ffffff;
   font-family: "AlegreyaSans-Bold";
-  font-size: 4.28571rem;
+  font-size: 3.5rem;
   line-height: inherit;
   text-transform: uppercase;
-  text-align: left;
-  z-index: 100; }
+  text-align: left; }
   @media screen and (max-width: 768px) {
     .section-title__hero {
       text-align: center;
@@ -601,7 +602,7 @@ template {
   background-color: #ffffff;
   color: #0f5a47;
   font-family: inherit;
-  font-size: 1.35714rem;
+  font-size: 1rem;
   font-weight: 800;
   text-transform: uppercase;
   border: none;
@@ -732,7 +733,11 @@ template {
 .special-item {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  width: 33%;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
 
 .special-text {
   color: #ffffff;
@@ -1071,7 +1076,10 @@ template {
 .sale-buy {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
 
 .sale__price {
   color: #0d0d0d;
@@ -1148,10 +1156,9 @@ template {
 
 .choice-list__desc {
   background-color: #797676;
-  width: 0;
-  display: none; }
+  width: 0; }
 
-.choice-list__item.active .block-list__desc {
+.choice-list__item.active .choice-list__desc {
   width: 32.14286rem; }
 
 .team {

@@ -1,6 +1,7 @@
 const choiceList = document.querySelector('.choice-list')
 
 choiceList.addEventListener ('click', function (e) {
+    e.preventDefault()
     if (e.target.className === 'choice-list__title') {
         e.target.parentElement.classList.toggle('active')
         const itenId = localStorage.getItem('itenId')
@@ -22,6 +23,7 @@ choiceList.addEventListener ('click', function (e) {
         } else {
             choiceList.style.transform = 'translateX(57px)'
         }
+        e.target.nextElementSibling.style.width = `${window.innerWidth - 57}px`;
     } else {
             choiceList.style.transform = 'translateX(0)'
         }

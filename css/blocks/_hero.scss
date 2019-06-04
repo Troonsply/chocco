@@ -61,11 +61,10 @@
 .section-title__hero {
   color: #ffffff;
   font-family: "AlegreyaSans-Bold";
-  font-size: rem(60px);
+  font-size: 3.5rem;
   line-height: inherit;
   text-transform: uppercase;
   text-align: left;
-  z-index: 100;
   
   @include tablets {
     text-align: center;
@@ -89,7 +88,7 @@
     background-color: #ffffff;
     color: #0f5a47;
     font-family: inherit;
-    font-size: rem(19px);
+    font-size: 1rem;
     font-weight: 800;
     text-transform: uppercase;
     border: none;
