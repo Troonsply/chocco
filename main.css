@@ -853,7 +853,8 @@ template {
 .preview {
   -webkit-box-pack: start;
   -ms-flex-pack: start;
-  justify-content: flex-start; }
+  justify-content: flex-start;
+  position: relative; }
 
 .preview__picture_position_absolut_strwberry {
   position: absolute;
@@ -861,7 +862,7 @@ template {
 
 .preview__picture_position_absolut_berry {
   position: absolute;
-  bottom: 0; }
+  bottom: -8rem; }
 
 .preview .review {
   display: -webkit-box;
@@ -923,7 +924,11 @@ template {
   justify-content: center; }
 
 .preview__avatar {
-  margin-right: 3%; }
+  margin-right: 3rem;
+  width: 10%;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
   .preview__avatar:last-child {
     margin-right: 0; }
 
@@ -1139,7 +1144,8 @@ template {
 
 .choice-list__item {
   display: inherit;
-  width: 4.07143rem; }
+  width: 4.07143rem;
+  padding-bottom: 2em; }
 
 .choice-list__item.active {
   width: auto; }
@@ -1151,18 +1157,40 @@ template {
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
-  background-color: #393838;
-  padding: 2rem 1rem;
   color: #fff;
   font-weight: 700;
   font-size: 1.42857rem;
   text-transform: uppercase;
   cursor: pointer;
-  margin: 0; }
+  margin: 0 auto; }
+
+#choice-list__item_1 {
+  background-image: url("./img/milk.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 100; }
+
+#choice-list__item_2 {
+  background-image: url("./img/honey.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 100; }
+
+#choice-list__item_3 {
+  background-image: url("./img/berrymenu.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 100; }
 
 .choice-list__desc {
-  background-color: #797676;
-  width: 0; }
+  background-color: #000000;
+  width: 0;
+  opacity: 0.9;
+  color: #fff;
+  font-size: 1rem;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
 
 .choice-list__item.active .choice-list__desc {
   width: 32.14286rem; }
@@ -1307,11 +1335,11 @@ template {
   -webkit-box-direction: normal;
   -ms-flex-flow: column;
   flex-flow: column;
-  padding-left: 1.07143rem;
+  padding-left: 1.5rem;
   padding-bottom: 0.71429rem;
   color: #0f5a47;
   font-family: "Alegreya Sans";
-  font-size: 1.28571rem;
+  font-size: 1.5rem;
   font-weight: 400;
   line-height: 2.14643rem; }
 
@@ -1327,8 +1355,7 @@ template {
   display: flex;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
-  justify-content: space-between;
-  padding: 0 auto; }
+  justify-content: space-between; }
 
 .form__row-street {
   width: 100%; }

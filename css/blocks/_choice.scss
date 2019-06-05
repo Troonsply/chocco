@@ -26,6 +26,7 @@
 .choice-list__item {
     display: inherit;
     width: rem(57px);
+    padding-bottom: 2em;
 }
 
 .choice-list__item.active {
@@ -35,19 +36,38 @@
 .choice-list__title {
     writing-mode: vertical-lr;
     transform: rotate(180deg);
-    background-color: rgb(57, 56, 56);
-    padding: 2rem 1rem;
     color: #fff;
     font-weight: 700;
     font-size: rem(20px);
     text-transform: uppercase;
     cursor: pointer;
-    margin: 0;
+    margin: 0 auto;
 }
-
+#choice-list__item_1 {
+    background-image: url('./img/milk.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 100;
+}
+#choice-list__item_2 {
+    background-image: url('./img/honey.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 100;
+}
+#choice-list__item_3 {
+    background-image: url('./img/berrymenu.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 100;
+}
 .choice-list__desc {
-    background-color: rgb(121, 118, 118);
+    background-color: #000000;
     width: 0;
+    opacity: 0.9;
+    color: #fff;
+    font-size: 1rem;
+    align-items: center;
 }
 
 .choice-list__item.active .choice-list__desc {

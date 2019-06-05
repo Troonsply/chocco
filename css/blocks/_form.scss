@@ -32,11 +32,11 @@
 .form__label {
     display: flex;
     flex-flow: column; 
-    padding-left: rem(15px);
+    padding-left: 1.5rem;
     padding-bottom: rem(10px);
     color: #0f5a47;
     font-family: "Alegreya Sans";
-    font-size: rem(18px);
+    font-size: 1.5rem;
     font-weight: 400;
     line-height: rem(30.05px);
 }
@@ -47,7 +47,6 @@
 .form__row-name {
     display: flex;
     justify-content: space-between;
-    padding: 0 auto;
 }
 .form__row-street {
     width: 100%;

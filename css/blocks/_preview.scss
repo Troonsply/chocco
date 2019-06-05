@@ -1,5 +1,6 @@
 .preview {
     justify-content: flex-start;
+    position: relative;
 }
 .preview__picture_position_absolut_strwberry {
     position: absolute;
@@ -7,7 +8,7 @@
 }
 .preview__picture_position_absolut_berry {
     position: absolute;
-    bottom: 0;
+    bottom: -8rem;
 }
 
 .preview .review {
@@ -61,7 +62,9 @@
  justify-content: center;
 }
 .preview__avatar {
-    margin-right: 3%;
+    margin-right: 3rem;
+    width: 10%;
+    align-items: center;
 
     &:last-child {
         margin-right: 0;
