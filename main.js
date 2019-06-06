@@ -33,22 +33,34 @@ choiceList.addEventListener ('click', function (e) {
 
 //слайдер
 
-const left = document.querySelector("#left");
-const right = document.querySelector("#right");
-const items = document.querySelector("#items");
-const firstSlide = document.getElementsByClassName('first-slide');
-const lastSlide = document.getElementsByClassName('last-slide');
-const firstStep = 0;
-const lastStep = document.body.clientWidth;
-let currentStep = 0;
+var slides = document.getElementsByClassName("slider__screen"),
+    prev = document.querySelector(".sale__arrow-previos"),
+    next =  document.querySelector(".sale__arrow-next");
+    
+var slideIndex = 1; 
+showElem(slideIndex);
+prev.addEventListener('click', (e) => {
+  e.preventDefault()
+  showElem(slideIndex -=1)
+})
+next.addEventListener('click', (e) => {
+  e.preventDefault()
+  showElem(slideIndex += 1)
+})
 
-items.style.right = currentStep;
+function showElem(n) {
+  var i;
+  if (n > slides.length) {
+      slideIndex = 1
+    }
+    if (n < 1) {
+        slideIndex = slides.length
+    }
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display ="none";
+    }
+    slides[slideIndex-1].style.display ="flex";   
+    
+  }
 
-right.addEventListener("click", function(){
-    firstSlide.style.display = 'flex';
-    lastSlide.style.display = 'none';
-    console.log(firstSlide);
 
-  
- 
-});

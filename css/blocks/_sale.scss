@@ -7,6 +7,7 @@
       }
 }
 .container-sale {
+    display: flex;
     justify-content: space-between;
     flex-direction:row;
     padding-top:4rem;
@@ -43,7 +44,7 @@
     margin: 2rem 0;
     color: #323232;
     font-family: "Alegreya Sans";
-    font-size: 2em;
+    font-size: 2rem;
     font-weight: 400;
 }
 .sale__text {
@@ -53,7 +54,6 @@
     font-weight: 400;
 }
 .sale__pic {
-    padding: 0 2rem;
     width: 100%;
 }
 .sale-disc {
@@ -102,7 +102,4 @@
     padding: 18px 31px 18px 31px;
     box-shadow: 0 0 10px rgba(63, 63, 63, 0.25);
     text-decoration: none;
-}
-.last-slide {
-    display: none;
 }
