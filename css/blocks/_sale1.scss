@@ -1,7 +1,6 @@
 .slider__screen {
   display: flex;
   height: 100%;
-  flex-direction: row;
   @include tablets {
     flex-wrap: wrap;
   }

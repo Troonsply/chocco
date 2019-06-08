@@ -1,3 +1,5 @@
+
+//меню
 const choiceList = document.querySelector('.choice-list')
 
 choiceList.addEventListener ('click', function (e) {
@@ -63,4 +65,79 @@ function showElem(n) {
     
   }
 
+//форма
+
+const form = document.querySelector('.form__tag')
+const send = document.querySelector('.form__button')
+const modal = document.querySelector('.modal')
+const modalText = document.querySelector('.modal__title')
+const modalExit = document.querySelector('.modal__btn')
+const modalWindow = document.querySelector('.modal__window')
+ 
+function validateForm(form) {
+    let valid = true;
+
+        if (!validateField(form.elements.name)) {
+        valid = false;
+    }
+        if (!validateField(form.elements.phone)) {
+        valid = false;
+    }
+        if (!validateField(form.elements.comment)) {
+        valid = false;
+    }
+    return valid;
+}
+
+function validateField(field) {
+  field.nextElementSibling.textContent = field.validationMessage;
+  return field.checkValidity();
+
+}
+
+send.addEventListener('click', function (e) {
+  e.preventDefault();
+  let formData = new FormData();
+
+  if (validateForm(form)) {
+
+    formData.append("name", form.elements.name.value);
+    formData.append("phone", form.elements.phone.value);
+    formData.append("comment", form.elements.comment.value);
+
+    const xhr = new XMLHttpRequest();
+    xhr.responseType = 'json';
+    xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
+    xhr.setRequestHeader("X-Requested-Width", "XMLHttpRequest");
+    xhr.send(formData);
+    xhr.addEventListener('load', () => {
+      if (xhr.response.status) {
+        console.log(xhr.response);
+        modal.style.display = "block";
+        modalWindow.style.opacity = "1";
+        document.body.style.overflow = "hidden";
+        modalText.textContent = "Отправлено";
+      } else {
+        modal.style.display = "block";
+        modalWindow.style.opacity = "1";
+        document.body.style.overflow = "hidden";
+        modalText.textContent = "Ошибка";
+
+      }
+    });
+  }
+});
+modalExit.addEventListener('click', function(e){
+  e.preventDefault();
+  modal.style.display = 'none';
+  document.body.style.overflow = "auto";
+  
+});
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+    document.body.style.overflow = "auto";
+   
+  }
+}
 
