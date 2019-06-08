@@ -1,5 +1,16 @@
+//полноэкранное меню
 
+const menuOpen = document.getElementById('menuOpen');
+const menuModal = document.getElementById('menuModal');
+const menuClose = document.getElementById('menuClose');
+    menuOpen.onclick = function () {
+    menuModal.style.display = "flex";
+};
+    menuClose.onclick = function () {
+    menuModal.style.display = "none";
+};
 //меню
+
 const choiceList = document.querySelector('.choice-list')
 
 choiceList.addEventListener ('click', function (e) {
