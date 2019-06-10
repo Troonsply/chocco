@@ -152,3 +152,11 @@ window.onclick = function(event) {
   }
 }
 
+//команда 
+var acc = document.getElementsByClassName("team-acco__name");
+
+for (var i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function () {
+    this.classList.toggle("team-acco__name--active");
+  });
+}

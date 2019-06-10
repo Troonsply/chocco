@@ -1320,28 +1320,22 @@ template {
   width: -moz-fit-content;
   width: fit-content;
   text-decoration: none; }
-
-.team-acco__name:after {
-  content: "";
-  border: 0.35714rem solid transparent;
-  border-top: 0.5rem solid #0f5a47;
-  position: absolute;
-  right: -1.14286rem;
-  top: 0.78571rem; }
-  .team-acco__name:after:hover {
+  .team-acco__name:after {
     content: "";
     border: 0.35714rem solid transparent;
-    border-bottom: 0.5rem solid #0f5a47;
+    border-top: 0.5rem solid #0f5a47;
     position: absolute;
     right: -1.14286rem;
-    bottom: 0; }
+    top: 0.78571rem; }
 
 .team-acco__desc {
-  display: none;
-  text-align: center; }
-
-.team-acco__item:hover .team-acco__desc {
-  display: block; }
+  text-align: center;
+  height: 0;
+  opacity: 0;
+  font-weight: lighter;
+  -webkit-transition: all 0.4s ease-out;
+  -o-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out; }
 
 .team-acco__title {
   color: #281e1e;
@@ -1355,6 +1349,18 @@ template {
   font-size: 1.125rem;
   font-weight: 300;
   margin: 0; }
+
+.team-acco__name--active h3:after {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg); }
+
+.team-acco__name--active + .team-acco__desc {
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+  opacity: 1;
+  height: 10%; }
 
 .map {
   background: url("./img/map.jpg");

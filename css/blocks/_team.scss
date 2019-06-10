@@ -46,32 +46,22 @@ padding-top: rem(50px);
     margin: 1rem auto;
     width: fit-content;
     text-decoration: none;
-  }
-  
-.team-acco__name:after {
+    
+   &:after {
     content: "";
     border: rem(5px) solid transparent;
     border-top: rem(7px) solid #0f5a47;
     position: absolute;
     right: - rem(16px);
     top: rem(11px);
-
-    &:hover {
-        content: "";
-        border: rem(5px) solid transparent;
-        border-bottom: rem(7px) solid #0f5a47;
-        position: absolute;
-        right:- rem(16px);
-        bottom: 0;
-    }
+   }
 }
-  
 .team-acco__desc {
-  display: none;
   text-align: center;
-}
-.team-acco__item:hover .team-acco__desc {
-    display: block;
+  height: 0;
+  opacity: 0;
+  font-weight: lighter;
+  transition: all 0.4s ease-out;
 }
 
 .team-acco__title {
@@ -88,3 +78,17 @@ padding-top: rem(50px);
     font-weight: 300;
     margin: 0;
   }
+  .team-acco__name--active {
+  
+    & h3:after{
+      transform: rotate(180deg);
+      
+    }
+  }
+  .team-acco__name--active + .team-acco__desc{
+    transition: 0.4s;
+    opacity: 1;
+    height: 10%;
+      
+  }
+  
