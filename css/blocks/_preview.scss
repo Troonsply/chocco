@@ -1,79 +1,150 @@
 .preview {
-    justify-content: flex-start;
     position: relative;
-}
-.preview__picture_position_absolut_strwberry {
-    position: absolute;
-    right:0;
-}
-.preview__picture_position_absolut_berry {
-    position: absolute;
-    bottom: -8rem;
-}
-
-.preview .review {
     display: flex;
-    background: url('./img/reviewbackground.jpg');
+    flex-direction: column;
+    background-image: url('./img/reviewyagoda.png');
     background-repeat: no-repeat;
+    background-position: 100% 5%;
+    
+    @include tablets{
+      background-position: 115% 3%;
+      background-size: 33%;
+    }
+  }
+  
+  .container-preview{
+    @include tablets{
+      min-height: 100vh;
+    }
+  }
+  .preview-picture__position__absolute {
+     
+    &-sheet{
+    position: absolute;
+    bottom: rem(-262px);
+    left: 0;
+    right: 0;
+    z-index: 0;
+    @include tablets{
+      width: 20%;
+     }
+    }
+    &-berries{
+    position: absolute;
+    bottom: rem(-192px);
+    left: 0;
+    right: 0;
+    z-index: 1;
+    
+    @include tablets{
+     width: 25%;
+     bottom: rem(-170px);
+     left: -5%;
+    }
+  }
+  }
+  
+  .preview__title {
+    font-weight: 700;
+    font-size: rem(48px);
+    text-align: center;
+    margin-top: rem(30px);
+    text-transform: uppercase;
+  
+    @include tablets{
+      margin-top: 10%;
+    }
+  }
+  
+  .preview__body{
+    height: 80%;
+    position: relative;
+  }
+  .preview__slider {
+    position: absolute;
+    display: none;
+    opacity: 0;
+    transition: 0.3s ease;
+    margin-top: rem(30px);
+    display: flex;
+    height: rem(350px);
     width: 100%;
-    align-items: center;
-    margin:2rem 0;
-    padding: 2rem 0;
-
-    @include tablets {
-        height: 100%;
-        flex-direction: column;
-        background-color: #f8faf9;
-      }
-}
-
-.review__pic {
-    padding:2rem 2rem;
-}
-.review__description {
-    padding-left: rem(20px);
-    font-family: "Alegreya Sans";
-    @include tablets {
-        text-align: center;
-      }
-}
-.review-desc {
-    color: #323232;
+    background-color: #f8faf9;
+    background-image: url('./img/branch.png');
+    background-repeat: no-repeat;
+    background-position: 100% 0%;
+    @include tablets{
+      flex-direction: column;
+      align-items: center;
+      height: rem(600px);
+      width:75%;
+      margin-top: 10%;
+      left: 13%;
+    }
+    @include tablets{
+      width: 100%;
+      height: rem(700px);
+      
+    }
+  }
+  .preview__slider--active{
+    display: flex;
+    opacity: 1;
+    transition: 0.3s ease;
+  }
+  .preview__avatars{
+    position: absolute;
+    bottom: 5%;
+    left: 30%;
+    @include tablets{
+      left: 26%;
+    }
+  }
+  
+  .preview__avatar {
+    background-position: center center;
+    margin-top: rem(50px);
+    margin-left: rem(45px);
+  }
+  .preview__pic{
+    min-width: rem(254px);
+  
+    @include tablets{
+      width: 80%;
+      margin-bottom: 10%;
+    }
+  }
+  
+  .preview__desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: rem(20px);
+    font-weight: normal;
+  
+    @include tablets{
+      text-align: center;
+    }
+  }
+  
+  .preview__desc-title {
     font-size: rem(30px);
     font-weight: 500;
-}
-.review-text {
-    width: 60%;
-    color: #666666;
+    margin-bottom: rem(20px);
+  }
+  
+  .preview__desc-text {
+    width: 70%;
+    margin-bottom: rem(20px);
+    line-height: 1.3;
     font-size: rem(18px);
-    font-weight: 400;
-    @include tablets {
-        width: 100%;
-      }
-}
-.review-signature {
-    margin-top: 2%;
-    color: #666666;
-    font-size: rem(18px);
-    font-weight: 500;
-}
-.preview__photo {
- display: flex;
- justify-content: center;
-}
-.preview__avatar {
-    margin-right: 3rem;
-    width: 10%;
-    align-items: center;
-
-    &:last-child {
-        margin-right: 0;
+  
+    @include tablets{
+      width: 100%;
+      padding: 0 rem(50px);
     }
-}
-.border {
-    width: rem(94px);
-    height: rem(94px);
-    border: 6px solid #0f5a47;
-    border-radius: 50%;
-    overflow: hidden;
-}
+  }
+  
+  .preview__desc-username {
+    font-size: rem(18px);
+  }

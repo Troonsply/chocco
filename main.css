@@ -924,95 +924,6 @@ template {
   -ms-flex-align: center;
   align-items: center; }
 
-.preview {
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  position: relative; }
-
-.preview__picture_position_absolut_strwberry {
-  position: absolute;
-  right: 0; }
-
-.preview__picture_position_absolut_berry {
-  position: absolute;
-  bottom: -8rem; }
-
-.preview .review {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  background: url("./img/reviewbackground.jpg");
-  background-repeat: no-repeat;
-  width: 100%;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin: 2rem 0;
-  padding: 2rem 0; }
-  @media screen and (max-width: 768px) {
-    .preview .review {
-      height: 100%;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-      flex-direction: column;
-      background-color: #f8faf9; } }
-
-.review__pic {
-  padding: 2rem 2rem; }
-
-.review__description {
-  padding-left: 1.42857rem;
-  font-family: "Alegreya Sans"; }
-  @media screen and (max-width: 768px) {
-    .review__description {
-      text-align: center; } }
-
-.review-desc {
-  color: #323232;
-  font-size: 2.14286rem;
-  font-weight: 500; }
-
-.review-text {
-  width: 60%;
-  color: #666666;
-  font-size: 1.28571rem;
-  font-weight: 400; }
-  @media screen and (max-width: 768px) {
-    .review-text {
-      width: 100%; } }
-
-.review-signature {
-  margin-top: 2%;
-  color: #666666;
-  font-size: 1.28571rem;
-  font-weight: 500; }
-
-.preview__photo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center; }
-
-.preview__avatar {
-  margin-right: 3rem;
-  width: 10%;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center; }
-  .preview__avatar:last-child {
-    margin-right: 0; }
-
-.border {
-  width: 6.71429rem;
-  height: 6.71429rem;
-  border: 6px solid #0f5a47;
-  border-radius: 50%;
-  overflow: hidden; }
-
 .sale {
   position: relative;
   background-color: #f8faf9; }
@@ -1190,84 +1101,6 @@ template {
   overflow: hidden;
   margin: 0 auto; }
 
-.choice {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  height: 100vh;
-  opacity: 0.8;
-  background: url("./img/keksiki.jpg");
-  background-repeat: no-repeat;
-  background-size: cover; }
-
-.section-title__choice {
-  text-align: center; }
-  @media screen and (max-width: 768px) {
-    .section-title__choice {
-      text-align: left; } }
-
-.choice-list {
-  position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  right: 0;
-  height: 100%;
-  margin: 0; }
-
-.choice-list__item {
-  display: inherit;
-  width: 4.07143rem;
-  padding-bottom: 2em; }
-
-.choice-list__item.active {
-  width: auto; }
-
-.choice-list__title {
-  -webkit-writing-mode: vertical-lr;
-  -ms-writing-mode: tb-lr;
-  writing-mode: vertical-lr;
-  -webkit-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  transform: rotate(180deg);
-  color: #fff;
-  font-weight: 700;
-  font-size: 1.42857rem;
-  text-transform: uppercase;
-  cursor: pointer;
-  margin: 0 auto; }
-
-#choice-list__item_1 {
-  background-image: url("./img/milk.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  z-index: 100; }
-
-#choice-list__item_2 {
-  background-image: url("./img/honey.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  z-index: 100; }
-
-#choice-list__item_3 {
-  background-image: url("./img/berrymenu.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  z-index: 100; }
-
-.choice-list__desc {
-  background-color: #000000;
-  width: 0;
-  opacity: 0.9;
-  color: #fff;
-  font-size: 1rem;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center; }
-
-.choice-list__item.active .choice-list__desc {
-  width: 32.14286rem; }
-
 .team {
   position: relative; }
 
@@ -1361,6 +1194,275 @@ template {
   transition: 0.4s;
   opacity: 1;
   height: 10%; }
+
+.choice {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  opacity: 0.8;
+  background: url("./img/keksiki.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.section-title__choice {
+  text-align: center; }
+  @media screen and (max-width: 768px) {
+    .section-title__choice {
+      text-align: left; } }
+
+.choice-list {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  right: 0;
+  height: 100%;
+  margin: 0; }
+
+.choice-list__item {
+  display: inherit;
+  width: 4.07143rem;
+  padding-bottom: 2em; }
+
+.choice-list__item.active {
+  width: auto; }
+
+.choice-list__title {
+  -webkit-writing-mode: vertical-lr;
+  -ms-writing-mode: tb-lr;
+  writing-mode: vertical-lr;
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.42857rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin: 0 auto; }
+
+#choice-list__item_1 {
+  background-image: url("./img/milk.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 100; }
+
+#choice-list__item_2 {
+  background-image: url("./img/honey.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 100; }
+
+#choice-list__item_3 {
+  background-image: url("./img/berrymenu.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 100; }
+
+.choice-list__desc {
+  background-color: #000000;
+  width: 0;
+  opacity: 0.9;
+  color: #fff;
+  font-size: 1rem;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.choice-list__item.active .choice-list__desc {
+  width: 32.14286rem; }
+
+.preview {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background-image: url("./img/reviewyagoda.png");
+  background-repeat: no-repeat;
+  background-position: 100% 5%; }
+  @media screen and (max-width: 768px) {
+    .preview {
+      background-position: 115% 3%;
+      background-size: 33%; } }
+
+@media screen and (max-width: 768px) {
+  .container-preview {
+    min-height: 100vh; } }
+
+.preview-picture__position__absolute-sheet {
+  position: absolute;
+  bottom: -18.71429rem;
+  left: 0;
+  right: 0;
+  z-index: 0; }
+  @media screen and (max-width: 768px) {
+    .preview-picture__position__absolute-sheet {
+      width: 20%; } }
+
+.preview-picture__position__absolute-berries {
+  position: absolute;
+  bottom: -13.71429rem;
+  left: 0;
+  right: 0;
+  z-index: 1; }
+  @media screen and (max-width: 768px) {
+    .preview-picture__position__absolute-berries {
+      width: 25%;
+      bottom: -12.14286rem;
+      left: -5%; } }
+
+.preview__title {
+  font-weight: 700;
+  font-size: 3.42857rem;
+  text-align: center;
+  margin-top: 2.14286rem;
+  text-transform: uppercase; }
+  @media screen and (max-width: 768px) {
+    .preview__title {
+      margin-top: 10%; } }
+
+.preview__body {
+  height: 80%;
+  position: relative; }
+
+.preview__slider {
+  position: absolute;
+  display: none;
+  opacity: 0;
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
+  margin-top: 2.14286rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 25rem;
+  width: 100%;
+  background-color: #f8faf9;
+  background-image: url("./img/branch.png");
+  background-repeat: no-repeat;
+  background-position: 100% 0%; }
+  @media screen and (max-width: 768px) {
+    .preview__slider {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      height: 42.85714rem;
+      width: 75%;
+      margin-top: 10%;
+      left: 13%; } }
+  @media screen and (max-width: 768px) {
+    .preview__slider {
+      width: 100%;
+      height: 50rem; } }
+
+.preview__slider--active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  opacity: 1;
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease; }
+
+.preview__avatars {
+  position: absolute;
+  bottom: 5%;
+  left: 30%; }
+  @media screen and (max-width: 768px) {
+    .preview__avatars {
+      left: 26%; } }
+
+.preview__avatar {
+  background-position: center center;
+  margin-top: 3.57143rem;
+  margin-left: 3.21429rem; }
+
+.preview__pic {
+  min-width: 18.14286rem; }
+  @media screen and (max-width: 768px) {
+    .preview__pic {
+      width: 80%;
+      margin-bottom: 10%; } }
+
+.preview__desc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-left: 1.42857rem;
+  font-weight: normal; }
+  @media screen and (max-width: 768px) {
+    .preview__desc {
+      text-align: center; } }
+
+.preview__desc-title {
+  font-size: 2.14286rem;
+  font-weight: 500;
+  margin-bottom: 1.42857rem; }
+
+.preview__desc-text {
+  width: 70%;
+  margin-bottom: 1.42857rem;
+  line-height: 1.3;
+  font-size: 1.28571rem; }
+  @media screen and (max-width: 768px) {
+    .preview__desc-text {
+      width: 100%;
+      padding: 0 3.57143rem; } }
+
+.preview__desc-username {
+  font-size: 1.28571rem; }
+
+.avatars {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+.avatar__img {
+  width: 6.78571rem;
+  height: 6.78571rem;
+  border-radius: 50%;
+  margin-right: 2.85714rem;
+  margin-top: 2.85714rem; }
+
+.avatar_one {
+  background-image: url("./img/alenah.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%; }
+
+.avatar_two {
+  background-image: url("./img/mariyao.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 15%; }
+
+.avatar_three {
+  background-image: url("./img/vadimg.jpg");
+  background-repeat: no-repeat;
+  background-position: 45% 35%;
+  margin-right: 0; }
+
+.avatar__img_active {
+  border: 8px solid #0f5a47;
+  border-radius: 50%; }
 
 .map {
   background: url("./img/map.jpg");

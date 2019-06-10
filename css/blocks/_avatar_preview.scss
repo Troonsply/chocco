@@ -1,0 +1,32 @@
+.avatars{
+    display: flex;
+    justify-content: center;
+  }
+  .avatar__img{
+    width: rem(95px);
+    height: rem(95px);
+    border-radius: 50%;
+    margin-right: rem(40px);
+    margin-top: rem(40px);
+  }
+  
+  .avatar_one{
+    background-image: url('./img/alenah.jpg');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+  .avatar_two{
+    background-image: url('./img/mariyao.jpg');
+    background-repeat: no-repeat;
+    background-position: 50% 15%;
+  }
+  .avatar_three{
+    background-image: url('./img/vadimg.jpg');
+    background-repeat: no-repeat;
+    background-position: 45% 35%;
+    margin-right: 0;
+  }
+  .avatar__img_active{
+    border: 8px solid #0f5a47;
+    border-radius: 50%;
+  }

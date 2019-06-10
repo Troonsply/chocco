@@ -43,7 +43,6 @@ choiceList.addEventListener ('click', function (e) {
     }
 
 })
-
 //слайдер
 
 var slides = document.getElementsByClassName("slider__screen"),
@@ -76,6 +75,69 @@ function showElem(n) {
     
   }
 
+//команда 
+var acc = document.getElementsByClassName("team-acco__name");
+
+for (var i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function () {
+    this.classList.toggle("team-acco__name--active");
+  });
+}
+
+//отзывы
+const previewSliderOne = document.querySelector('.slider_one');
+const previewSliderTwo = document.querySelector('.slider_two');
+const previewSliderThree = document.querySelector('.slider_three');
+
+const avatarOne = document.querySelector('.avatar_one');
+const avatarTwo = document.querySelector('.avatar_two');
+const avatarThree = document.querySelector('.avatar_three');
+let numClick = 1;
+var slideInterval_1 = setInterval(autoClick, 6000);
+
+autoClick();
+
+function deleteClassActive() {
+  for (let i = 0; i < document.querySelectorAll('.avatar__img').length; i++) {
+    document.querySelectorAll('.avatar__img')[i].classList.remove('avatar__img_active');
+    document.querySelectorAll('.preview__slider')[i].classList.remove('preview__slider--active');
+  }
+}
+
+function autoClick() {
+  deleteClassActive();
+  switch (numClick) {
+    case 1: previewSliderOne.classList.add('preview__slider--active');
+      avatarOne.classList.add('avatar__img_active');
+      numClick++;
+      break;
+    case 2: previewSliderTwo.classList.add('preview__slider--active');
+      avatarTwo.classList.add('avatar__img_active');
+      numClick++;
+      break;
+    case 3:
+      previewSliderThree.classList.add('preview__slider--active');
+      avatarThree.classList.add('avatar__img_active');
+      numClick = 1;
+      break;
+  }
+}
+
+
+avatarOne.addEventListener('click', function (e) {
+  numClick = 1;
+  autoClick();
+});
+
+avatarTwo.addEventListener('click', function (e) {
+  numClick = 2;
+  autoClick();
+});
+
+avatarThree.addEventListener('click', function (e) {
+  numClick = 3;
+  autoClick();
+});
 //форма
 
 const form = document.querySelector('.form__tag')
@@ -115,6 +177,7 @@ send.addEventListener('click', function (e) {
     formData.append("name", form.elements.name.value);
     formData.append("phone", form.elements.phone.value);
     formData.append("comment", form.elements.comment.value);
+    formData.append("to", "katyusha.buslova@gmail.com");
 
     const xhr = new XMLHttpRequest();
     xhr.responseType = 'json';
@@ -127,12 +190,12 @@ send.addEventListener('click', function (e) {
         modal.style.display = "block";
         modalWindow.style.opacity = "1";
         document.body.style.overflow = "hidden";
-        modalText.textContent = "Отправлено";
+        modalText.textContent = "Отправка удалась";
       } else {
         modal.style.display = "block";
         modalWindow.style.opacity = "1";
         document.body.style.overflow = "hidden";
-        modalText.textContent = "Ошибка";
+        modalText.textContent = "Произошла ошибка";
 
       }
     });
@@ -152,11 +215,4 @@ window.onclick = function(event) {
   }
 }
 
-//команда 
-var acc = document.getElementsByClassName("team-acco__name");
 
-for (var i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function () {
-    this.classList.toggle("team-acco__name--active");
-  });
-}
