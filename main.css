@@ -1285,14 +1285,13 @@ template {
   background-image: url("./img/reviewyagoda.png");
   background-repeat: no-repeat;
   background-position: 100% 5%; }
-  @media screen and (max-width: 768px) {
-    .preview {
-      background-position: 115% 3%;
-      background-size: 33%; } }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 480px) {
   .container-preview {
-    min-height: 100vh; } }
+    width: 100%;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start; } }
 
 .preview-picture__position__absolute-sheet {
   position: absolute;
@@ -1435,30 +1434,40 @@ template {
   display: flex;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
-  justify-content: center; }
+  justify-content: center;
+  margin-top: 4rem; }
 
-.avatar__img {
+.avatar__item {
   width: 6.78571rem;
   height: 6.78571rem;
+  margin-right: 2rem; }
+
+.avatar__img {
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
   margin-right: 2.85714rem;
-  margin-top: 2.85714rem; }
+  margin-top: 2.85714rem;
+  display: block; }
 
 .avatar_one {
   background-image: url("./img/alenah.jpg");
   background-repeat: no-repeat;
-  background-position: 50% 50%; }
+  background-position: 50% 50%;
+  background-size: cover; }
 
 .avatar_two {
   background-image: url("./img/mariyao.jpg");
   background-repeat: no-repeat;
-  background-position: 50% 15%; }
+  background-position: 50% 15%;
+  background-size: cover; }
 
 .avatar_three {
   background-image: url("./img/vadimg.jpg");
   background-repeat: no-repeat;
   background-position: 45% 35%;
-  margin-right: 0; }
+  margin-right: 0;
+  background-size: cover; }
 
 .avatar__img_active {
   border: 8px solid #0f5a47;
