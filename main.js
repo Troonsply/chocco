@@ -167,6 +167,7 @@ orderBtn.addEventListener('click', function (event) {
   formData.append('name', formElems.name.value);
   formData.append('phone', formElems.phone.value);
   formData.append('comment', formElems.comment.value);
+  formData.append('to', 'email@address.com');
 
   function showWarning(elem) {
     var warnMessage = document.createElement('div');
