@@ -338,3 +338,38 @@ if (isMobile) {
   });
 }
 
+//карта
+ymaps.ready(function () {
+  var myMap = new ymaps.Map('map', {
+    center: [59.941861, 30.321988],
+    zoom: 13
+
+  });
+  myMap.behaviors.disable('scrollZoom')
+  MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+    '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+  ),
+    myPlacemark = new ymaps.Placemark([59.943477, 30.324360], {
+      hintContent: 'CHOCCO',
+      balloonContent: 'график: пн-пт, выходные: сб,вс <br> часы работы: с 10-00 до 18-00',
+    }, {
+        iconLayout: 'default#imageWithContent',
+        iconImageHref: './img/marker.png'',
+        iconImageSize: [46, 57],
+        iconImageOffset: [-24, -24],
+        iconContentLayout: MyIconContentLayout
+      })
+  myPlacemark2 = new ymaps.Placemark([59.932323, 30.303289], {
+    hintContent: 'CHOCCO',
+    balloonContent: 'график: пн-пт, выходные: сб,вс <br> часы работы: с 10-00 до 18-00',
+  }, {
+      iconLayout: 'default#imageWithContent',
+      iconImageHref: './img/marker.png',
+      iconImageSize: [46, 57],
+      iconImageOffset: [-24, -24],
+      iconContentLayout: MyIconContentLayout
+    })
+  myMap.geoObjects
+    .add(myPlacemark)
+    .add(myPlacemark2)
+})

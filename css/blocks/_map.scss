@@ -1,8 +1,4 @@
-.map {
-    background: url('./img/map.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat; 
+#map {
     height: 100%;
-    width: 100%;
-}
+    overflow: hidden;
+  }
