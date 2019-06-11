@@ -13,7 +13,7 @@
             <div id="modal">
                 <div class="modal-header">
                     <span id="modalText"></span>
-                    <span id="modalClose">+</span>
+                    <span id="modalClose"></span>
                 </div>
                 <div id="modalContent" class="content"></div>
             </div>
@@ -426,13 +426,13 @@
                 <section class="section form">
                     <div class="container container-form">
                         <h2 class="section__title section__title-form">Закажите доставку</h2>
-                        <form action="" class="form__tag" method="POST">
+                        <form action="" class="form__tag" method="POST" name="orderForm" >
                             <div class="form__row-left">
                                 <div class="form__row-name">
-                                    <label class="form__label">Имя<input type="text" class="form__input" id="name" placeholder=""required>
+                                    <label class="form__label">Имя<input type="text" class="form__input" id="name" name="name"placeholder=""required>
                                         <div class="error"></div>
                                     </label>
-                                    <label class="form__label">Телефон<input type="text" class="form__input" id="phone" placeholder=""required>
+                                    <label class="form__label">Телефон<input type="text" class="form__input" id="phone" name="phone" placeholder=""required>
                                         <div class="error"></div>
                                     </label>
                                 </div>
@@ -448,7 +448,7 @@
                             </div>
                             <div class="form__row-right">
                                 <div class="form__row-comment">
-                                    <label class="form__label">Комментарии<textarea type="text" name="comment" placeholder="" class=" form__input form__input--textarea" required></textarea>
+                                    <label class="form__label">Комментарии<textarea type="text" name="comment" name="comment" placeholder="" class=" form__input form__input--textarea" required></textarea>
                                         <div class="error"></div>
                                     </label>
                                     <div class="form__radio">
@@ -469,7 +469,7 @@
                                         </label>
                                     </div>
                                     <div class="form__buttons">
-                                        <button type="submit" class="form__button">Заказать</button>
+                                        <button type="submit" class="form__button" name="orderBtn">Заказать</button>
                                         <button type="reset" class="form__button-clear">Очистить</button>
                                     </div>
                                 </div>

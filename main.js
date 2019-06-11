@@ -164,9 +164,9 @@ var orderBtn = document.forms[0].elements.orderBtn;
 orderBtn.addEventListener('click', function (event) {
   event.preventDefault();
   var formData = new FormData();
-  formData.append('name', formElems.userName.value);
-  formData.append('phone', formElems.userPhone.value);
-  formData.append('comment', formElems.userComment.value);
+  formData.append('name', formElems.name.value);
+  formData.append('phone', formElems.phone.value);
+  formData.append('comment', formElems.comment.value);
 
   function showWarning(elem) {
     var warnMessage = document.createElement('div');
@@ -209,7 +209,7 @@ orderBtn.addEventListener('click', function (event) {
         if (xhr.readyState === 4) {
           if (xhr.status < 400) {
             var response = JSON.parse(xhr.response);
-            modal.querySelector('#modalText').innerText = 'Норм';
+            modal.querySelector('#modalText').innerText = 'Хорошо';
             modal.querySelector('#modalContent').innerText = response.message;
             modal.style.display = 'block';
             overlay.style.display = 'block';
