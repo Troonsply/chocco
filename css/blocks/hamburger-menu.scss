@@ -8,6 +8,8 @@
     
     @include tablets {
         display: inline-flex;
+        position: absolute;
+        right: 2rem;
     }
 }
     
