@@ -48,36 +48,36 @@
             <div class="sidebar">
                 <ul class="fixed-menu">
                     <li class="fixed-menu__item active">
-                        <a href="#" class="fixed-menu__link"></a>
+                        <a href="#" class="fixed-menu__link" data-scroll-to="1"></a>
                     </li>
                     <li class="fixed-menu__item">
-                        <a href="#" class="fixed-menu__link"></a>
+                        <a href="#" class="fixed-menu__link"data-scroll-to="2"></a>
                     </li>
                     <li class="fixed-menu__item">
-                        <a href="#" class="fixed-menu__link"></a>
+                        <a href="#" class="fixed-menu__link"data-scroll-to="3"></a>
                     </li>
                     <li class="fixed-menu__item">
-                        <a href="#" class="fixed-menu__link"></a>
+                        <a href="#" class="fixed-menu__link"data-scroll-to="4"></a>
                     </li>
                     <li class="fixed-menu__item">
-                        <a href="#" class="fixed-menu__link"></a>
+                        <a href="#" class="fixed-menu__link"data-scroll-to="5"></a>
                     </li>
                     <li class="fixed-menu__item">
-                        <a href="#" class="fixed-menu__link"></a>
+                        <a href="#" class="fixed-menu__link"data-scroll-to="6"></a>
                     </li>
                     <li class="fixed-menu__item">
-                        <a href="#" class="fixed-menu__link"></a>
+                        <a href="#" class="fixed-menu__link"data-scroll-to="7"></a>
                     </li>
                     <li class="fixed-menu__item">
-                        <a href="#" class="fixed-menu__link"></a>
+                        <a href="#" class="fixed-menu__link"data-scroll-to="8"></a>
                     </li>
                     <li class="fixed-menu__item">
-                        <a href="#" class="fixed-menu__link"></a>
+                        <a href="#" class="fixed-menu__link"data-scroll-to="9"></a>
                     </li>
                 </ul>
             </div>
             <div class="maincontent">
-                <section class="section hero active">
+                <section class="section hero active" id="1">
                     <div class="hero__picture_position_absolut">
                         <img src="./img/3-layers.png">
                     </div>
@@ -162,7 +162,7 @@
                         </div>
                     </div>
                 </section>
-                <section class="section pretty">
+                <section class="section pretty" id="2">
                     <div class="pretty__picture_position_absolut">
                         <img src="./img/prettypic.png">
                     </div>
@@ -215,7 +215,7 @@
                         </ul>
                     </div>
                 </section>
-                <section class="section sale">
+                <section class="section sale" id="3">
                     <div class="sale__picpicture_position_absolut_berry">
                         <img src="./img/berry.png" alt="salechoccoberry" class="sale__pic-img">
                     </div>
@@ -283,7 +283,7 @@
                         </div>
                     </div>
                 </section>
-                <section class="section team">
+                <section class="section team" id="4">
                     <div class="container container-team">
                         <h2 class="section-title">Команда</h2>
                         <div class="team__feature">
@@ -326,7 +326,7 @@
                         </div>
                     </div>
                 </section>
-                <section class="section choice">
+                <section class="section choice" id="5">
                     <div class="container container-choice">
                     <h2 class="section-title section-title__choice">Меню</h2> 
                     <ul class="choice-list" id="accordeon">
@@ -352,7 +352,7 @@
                         </ul>    
                     </div>
                 </section>
-                <section class="section preview">
+                <section class="section preview" id="6">
                     <div class="preview-picture__position__absolute">
                         <img class="preview-picture__position__absolute-sheet" src="./img/sheetpreview.png">
                         <img class="preview-picture__position__absolute-berries" src="./img/berries.png">
@@ -418,12 +418,30 @@
                             </div>
                         </div>
                     </section>
-                <!--<section class="section process">
-                    <div class="container container-process">
-                        <h2 class="section__title">Как мы работаем</h2>
-                    </div>
-                </section>-->
-                <section class="section form">
+                    <section class="section player" id="7">
+                        <div class="player-picture__position__absolute">
+                            <img class="player-picture__position__absolute-leaf1" src="./images/how_we_work/big_leaf.png">
+                            <img class="player-picture__position__absolute-leaf2" src="./images/how_we_work/small_leaf.png">
+                        </div>
+                        <div class="container container--player">
+                            <h2 class="player__title">Как мы работаем</h2>
+                            <div class="video_player">
+                                <div class="player__wrapper">
+                                    <div id="player"></div>
+                                    <div class="player__image"></div>
+                                </div>
+                                <div class="panel">
+                                    <button class="play"></button>
+                                    <div class="player__time">00:00</div>
+                                    <div class="player__line">
+                                        <div class="player__fader"></div>
+                                    </div>
+                                    <button class="player__volume">&#128266</button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                <section class="section form" id="8">
                     <div class="container container-form">
                         <h2 class="section__title section__title-form">Закажите доставку</h2>
                         <form action="" class="form__tag" method="POST" name="orderForm" >
@@ -477,7 +495,7 @@
                         </form>
                     </div>
                 </section>
-                <section class="section contacts" id="s9">
+                <section class="section contacts" id="9">
                     <div class="contacts__map" id="map"></div>
                     <footer class="footer">
                         <div class="container container--footer">
