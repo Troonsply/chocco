@@ -1348,30 +1348,30 @@ template {
 
 .preview {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
   background-image: url("./img/reviewyagoda.png");
   background-repeat: no-repeat;
   background-position: 100% 5%; }
+  @media screen and (max-width: 768px) {
+    .preview {
+      background-position: 120% 2%; } }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
   .container-preview {
-    width: 100%;
-    -webkit-box-pack: start;
-    -ms-flex-pack: start;
-    justify-content: flex-start; } }
+    height: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column wrap;
+    flex-flow: column wrap; } }
 
 .preview-picture__position__absolute-sheet {
   position: absolute;
   bottom: -18.71429rem;
   left: 0;
   right: 0;
-  z-index: 0; }
+  z-index: 1; }
 
 .preview-picture__position__absolute-berries {
   position: absolute;
@@ -1386,28 +1386,40 @@ template {
   text-align: center;
   margin-top: 2.14286rem;
   text-transform: uppercase; }
+  @media screen and (max-width: 768px) {
+    .preview__title {
+      font-size: 2.57143rem; } }
 
 .preview__body {
   height: 80%;
-  position: relative; }
+  position: relative;
+  margin-bottom: 2rem; }
 
 .preview__slider {
-  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   display: none;
   opacity: 0;
   -webkit-transition: 0.3s ease;
   -o-transition: 0.3s ease;
   transition: 0.3s ease;
-  margin-top: 2.14286rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   height: 25rem;
   width: 100%;
   background-color: #f8faf9;
   background-image: url("./img/branch.png");
   background-repeat: no-repeat;
   background-position: 100% 0%; }
+  @media screen and (max-width: 768px) {
+    .preview__slider {
+      height: 100%;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      background-color: #f8faf9;
+      padding: 4rem 0;
+      margin-left: 0.8rem; } }
 
 .preview__slider--active {
   display: -webkit-box;
@@ -1419,17 +1431,31 @@ template {
   transition: 0.3s ease; }
 
 .preview__avatars {
-  position: absolute;
-  bottom: 5%;
-  left: 30%; }
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+  @media screen and (max-width: 768px) {
+    .preview__avatars {
+      margin-left: 3rem;
+      margin-bottom: 2rem; } }
 
 .preview__avatar {
   background-position: center center;
   margin-top: 3.57143rem;
   margin-left: 3.21429rem; }
+  @media screen and (max-width: 768px) {
+    .preview__avatar {
+      text-align: center;
+      margin-left: inherit; } }
 
 .preview__pic {
   min-width: 18.14286rem; }
+  @media screen and (max-width: 768px) {
+    .preview__pic {
+      min-width: 10.71429rem; } }
 
 .preview__desc {
   display: -webkit-box;
@@ -1444,6 +1470,9 @@ template {
   justify-content: center;
   margin-left: 1.42857rem;
   font-weight: normal; }
+  @media screen and (max-width: 768px) {
+    .preview__desc {
+      text-align: center; } }
 
 .preview__desc-title {
   font-size: 2.14286rem;
@@ -1455,6 +1484,9 @@ template {
   margin-bottom: 1.42857rem;
   line-height: 1.3;
   font-size: 1.28571rem; }
+  @media screen and (max-width: 768px) {
+    .preview__desc-text {
+      width: 100%; } }
 
 .preview__desc-username {
   font-size: 1.28571rem; }

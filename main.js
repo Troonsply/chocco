@@ -354,7 +354,7 @@ ymaps.ready(function () {
       balloonContent: 'график: пн-пт, выходные: сб,вс <br> часы работы: с 10-00 до 18-00',
     }, {
         iconLayout: 'default#imageWithContent',
-        iconImageHref: './img/marker.png'',
+        iconImageHref: './img/marker.png',
         iconImageSize: [46, 57],
         iconImageOffset: [-24, -24],
         iconContentLayout: MyIconContentLayout
