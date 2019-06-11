@@ -139,80 +139,202 @@ avatarThree.addEventListener('click', function (e) {
   autoClick();
 });
 //форма
+var orderForm = document.forms.orderForm,
+    formElems = orderForm.elements;
 
-const form = document.querySelector('.form__tag')
-const send = document.querySelector('.form__button')
-const modal = document.querySelector('.modal')
-const modalText = document.querySelector('.modal__title')
-const modalExit = document.querySelector('.modal__btn')
-const modalWindow = document.querySelector('.modal__window')
- 
-function validateForm(form) {
-    let valid = true;
+var _loop = function _loop(_i2) {
+  if (formElems[_i2].hasAttribute('required')) {
+    formElems[_i2].addEventListener('keydown', function () {
+      var nextElem = formElems[_i2].nextElementSibling;
 
-        if (!validateField(form.elements.name)) {
-        valid = false;
-    }
-        if (!validateField(form.elements.phone)) {
-        valid = false;
-    }
-        if (!validateField(form.elements.comment)) {
-        valid = false;
-    }
-    return valid;
-}
+      if (nextElem && nextElem.classList.contains('warn-message')) {
+        nextElem.remove();
 
-function validateField(field) {
-  field.nextElementSibling.textContent = field.validationMessage;
-  return field.checkValidity();
-
-}
-
-send.addEventListener('click', function (e) {
-  e.preventDefault();
-  let formData = new FormData();
-
-  if (validateForm(form)) {
-
-    formData.append("name", form.elements.name.value);
-    formData.append("phone", form.elements.phone.value);
-    formData.append("comment", form.elements.comment.value);
-    formData.append("to", "katyusha.buslova@gmail.com");
-
-    const xhr = new XMLHttpRequest();
-    xhr.responseType = 'json';
-    xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
-    xhr.setRequestHeader("X-Requested-Width", "XMLHttpRequest");
-    xhr.send(formData);
-    xhr.addEventListener('load', () => {
-      if (xhr.response.status) {
-        console.log(xhr.response);
-        modal.style.display = "block";
-        modalWindow.style.opacity = "1";
-        document.body.style.overflow = "hidden";
-        modalText.textContent = "Отправка удалась";
-      } else {
-        modal.style.display = "block";
-        modalWindow.style.opacity = "1";
-        document.body.style.overflow = "hidden";
-        modalText.textContent = "Произошла ошибка";
-
+        formElems[_i2].classList.remove('invalid');
       }
     });
   }
-});
-modalExit.addEventListener('click', function(e){
-  e.preventDefault();
-  modal.style.display = 'none';
-  document.body.style.overflow = "auto";
-  
-});
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-    document.body.style.overflow = "auto";
-   
-  }
+};
+
+for (var _i2 = 0; _i2 < formElems.length; _i2++) {
+  _loop(_i2);
 }
 
+var orderBtn = document.forms[0].elements.orderBtn;
+orderBtn.addEventListener('click', function (event) {
+  event.preventDefault();
+  var formData = new FormData();
+  formData.append('name', formElems.userName.value);
+  formData.append('phone', formElems.userPhone.value);
+  formData.append('comment', formElems.userComment.value);
+
+  function showWarning(elem) {
+    var warnMessage = document.createElement('div');
+    warnMessage.classList.add('warn-message');
+    warnMessage.textContent = elem.validationMessage;
+    elem.classList.add('invalid');
+    elem.insertAdjacentElement('afterEnd', warnMessage);
+  }
+
+  function checkForm(form) {
+    var result = true;
+
+    for (var _i3 = 0; _i3 < form.length; _i3++) {
+      var nextElem = form[_i3].nextElementSibling;
+
+      if (nextElem) {
+        if (nextElem.classList.contains('warn-message')) {
+          nextElem.remove();
+        }
+
+        form[_i3].classList.remove('invalid');
+      }
+
+      if (!form[_i3].checkValidity()) {
+        result = false;
+        showWarning(form[_i3]);
+      }
+    }
+
+    return result;
+  }
+
+  function sendForm() {
+    if (checkForm(orderForm)) {
+      var xhr = new XMLHttpRequest();
+      xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
+      xhr.send(formData);
+
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4) {
+          if (xhr.status < 400) {
+            var response = JSON.parse(xhr.response);
+            modal.querySelector('#modalText').innerText = 'Норм';
+            modal.querySelector('#modalContent').innerText = response.message;
+            modal.style.display = 'block';
+            overlay.style.display = 'block';
+
+            document.onwheel = function () {
+              return false;
+            };
+          } else if (xhr.status > 400) {
+            modal.querySelector('#modalText').innerText = 'Ошибка';
+            modal.querySelector('#modalContent').innerText = 'При отправке сообщения возникла ошибка!';
+            modal.style.display = 'block';
+            overlay.style.display = 'block';
+
+            document.onwheel = function () {
+              return true;
+            };
+          }
+        }
+      };
+    }
+  }
+
+  sendForm(orderForm);
+});
+
+
+//скролл
+const sections = $(".section");
+const display = $(".maincontent");
+
+let inscroll = false;
+
+const md = new MobileDetect(window.navigator.userAgent);
+
+const isMobile = md.mobile();
+
+const switchActiveClassInSideMenu = menuItemIndex => {
+  $(".fixed-menu__item")
+    .eq(menuItemIndex)
+    .addClass("active")
+    .siblings()
+    .removeClass("active");
+};
+
+const performTransition = sectionEq => {
+  if (inscroll) return;
+
+  const sectionEqNum = parseInt(sectionEq);
+
+  if (!!sectionEqNum === false)
+    console.error("не верное значение для аргуемента sectionEq");
+
+  inscroll = true;
+
+  const position = sectionEqNum * -100 + "%";
+
+  sections
+    .eq(sectionEq)
+    .addClass("active")
+    .siblings()
+    .removeClass("active");
+
+  display.css({
+    transform: `translateY(${position})`
+  });
+
+  setTimeout(() => {
+    inscroll = false;
+    switchActiveClassInSideMenu(sectionEq);
+  }, 1000 + 300);
+};
+
+const scrollToSection = direction => {
+  const activeSection = sections.filter(".active");
+  const nextSection = activeSection.next();
+  const prevSection = activeSection.prev();
+
+  if (direction === "next" && nextSection.length) {
+    performTransition(nextSection.index());
+  }
+
+  if (direction === "prev" && prevSection.length) {
+    performTransition(prevSection.index());
+  }
+};
+
+$(".wrapper").on("wheel", e => {
+  const deltaY = e.originalEvent.deltaY;
+
+  if (deltaY > 0) {
+    scrollToSection("next");
+  }
+  if (deltaY < 0) {
+    scrollToSection("prev");
+  }
+});
+
+$('.wrapper').on('touchmove', e => {
+  e.preventDefault();
+});
+
+$(document).on("keydown", e => {
+  switch (e.keyCode) {
+    case 38:
+      scrollToSection("prev");
+      break;
+    case 40:
+      scrollToSection("next");
+      break;
+  }
+});
+
+$("[data-scroll-to]").on("click", e => {
+  e.preventDefault();
+  const target = $(e.currentTarget).attr("data-scroll-to");
+
+  performTransition(target);
+});
+
+if (isMobile) {
+  $(window).swipe({
+    swipe: function(event, direction) {
+      const nextOrPrev = direction === "up" ? "next" : "prev";
+      scrollToSection(nextOrPrev);
+    }
+  });
+}
 

@@ -9,6 +9,15 @@
     </head>
     
     <body>
+        <div id="overlay">
+            <div id="modal">
+                <div class="modal-header">
+                    <span id="modalText"></span>
+                    <span id="modalClose">+</span>
+                </div>
+                <div id="modalContent" class="content"></div>
+            </div>
+        </div>
         <div class="wrapper">
             <div class="menu-adaptive" id="menuModal">
                 <a class="menu-adaptive__cross-close" id="menuClose"></a>
@@ -49,7 +58,7 @@
                         <header class="header">
                             <p class="header-logo logo-text">CHO<br>CCO</p>
                             <div class="header__buttons">
-                                <nav class="menu">
+                                <fixed-menu class="menu">
                                     <ul class="menu__list">
                                         <li class="menu__item">
                                             <a href="#" class="menu__link">О нас</a>
@@ -73,7 +82,7 @@
                                             <a href="#" class="menu__link">Контакты</a>
                                         </li>
                                     </ul>
-                                </nav>
+                                </fixed-menu>
                                 <div>
                                     <a class="hamburger-menu-link" href="#">
                                         <div class="hamburger-menu-link__bars" id="menuOpen"></div>
@@ -84,37 +93,35 @@
                                 </div>
                             </div>
                             <div class="sidebar">
-                                <nav class="nav">
-                                    <ul class="nav__list">
-                                        <li class="nav__item">
-                                            <a href="#" class="nav__link"></a>
-                                        </li>
-                                        <li class="nav__item">
-                                            <a href="#" class="nav__link"></a>
-                                        </li>
-                                        <li class="nav__item">
-                                            <a href="#" class="nav__link"></a>
-                                        </li>
-                                        <li class="nav__item">
-                                            <a href="#" class="nav__link"></a>
-                                        </li>
-                                        <li class="nav__item">
-                                            <a href="#" class="nav__link"></a>
-                                        </li>
-                                        <li class="nav__item">
-                                            <a href="#" class="nav__link"></a>
-                                        </li>
-                                        <li class="nav__item">
-                                            <a href="#" class="nav__link"></a>
-                                        </li>
-                                        <li class="nav__item">
-                                            <a href="#" class="nav__link"></a>
-                                        </li>
-                                        <li class="nav__item">
-                                            <a href="#" class="nav__link"></a>
-                                        </li>
-                                    </ul>
-                                </nav>
+                                <ul class="fixed-menu">
+                                    <li class="fixed-menu__item active">
+                                        <a href="#" class="fixed-menu__link"></a>
+                                    </li>
+                                    <li class="fixed-menu__item">
+                                        <a href="#" class="fixed-menu__link"></a>
+                                    </li>
+                                    <li class="fixed-menu__item">
+                                        <a href="#" class="fixed-menu__link"></a>
+                                    </li>
+                                    <li class="fixed-menu__item">
+                                        <a href="#" class="fixed-menu__link"></a>
+                                    </li>
+                                    <li class="fixed-menu__item">
+                                        <a href="#" class="fixed-menu__link"></a>
+                                    </li>
+                                    <li class="fixed-menu__item">
+                                        <a href="#" class="fixed-menu__link"></a>
+                                    </li>
+                                    <li class="fixed-menu__item">
+                                        <a href="#" class="fixed-menu__link"></a>
+                                    </li>
+                                    <li class="fixed-menu__item">
+                                        <a href="#" class="fixed-menu__link"></a>
+                                    </li>
+                                    <li class="fixed-menu__item">
+                                        <a href="#" class="fixed-menu__link"></a>
+                                    </li>
+                                </ul>
                             </div>
                         </header>
                         <div class="hero__content">
@@ -456,7 +463,7 @@
                                             <div class="form__radio-text">Оплата по карте</div>
                                         </label>
                                         <label class="form__radio-btn" tabindex="0">
-                                            <input class="form__answer form__answer-phone" type="radio" name="nocall" value="nophone" checked>
+                                            <input class="form__answer form__answer-phone" type="radio" name="nocall" value="nophone">
                                             <div class="form__radio-custom form__radio-custom-phone"></div>
                                             <div class="form__radio-text">Не перезванивать</div>
                                         </label>
@@ -469,43 +476,41 @@
                             </div>
                         </form>
                     </div>
-                    <div class="modal">
-                        <div class="modal__window">
-                            <h4 class="modal__title"></h4>
-                            <a href="" class="btn modal__btn">Закрыть</a>
-                        </div>
-                    </div>
                 </section>
-                <section class="section map">
-                </section>   
-                <footer class="footer">
-                    <div class="container container-footer ">
-                        <div class="footer__contact">
-                        <div class="contact__address">Москва, ул.Новый Арбат, д.31/12</div>
-                        <address class="address">
-                            <a class="contact__link" href="tel:+88009039090">8 800 903 90 90</a>
-                        </address>
-                        </div>
-                        <div class="network">
-                            <ul class="network__list">
-                                <li class="network__item">
-                                    <a class="network__link network__link--vk" href="#"></a> 
-                                </li>
-                                <li class="network__item">
-                                    <a class="network__link network__link--facebook" href="#"></a> 
-                                </li>
-                                <li class="network__item">
-                                    <a class="network__link network__link--insta" href="#"></a> 
-                                </li>
-                                <li class="network__item">
-                                    <a class="network__link network__link--twitter" href="#"></a> 
-                                </li>
-                            </ul>
-                        </div>
-                    </div>   
-                </footer>
+                <section class="section map"> 
+                    <div class="yandex-map" id="map"></div>  
+                    <footer class="footer">
+                        <div class="container container-footer ">
+                            <div class="footer__contact">
+                            <div class="contact__address">Москва, ул.Новый Арбат, д.31/12</div>
+                            <address class="address">
+                                <a class="contact__link" href="tel:+88009039090">8 800 903 90 90</a>
+                            </address>
+                            </div>
+                            <div class="network">
+                                <ul class="network__list">
+                                    <li class="network__item">
+                                        <a class="network__link network__link--vk" href="#"></a> 
+                                    </li>
+                                    <li class="network__item">
+                                        <a class="network__link network__link--facebook" href="#"></a> 
+                                    </li>
+                                    <li class="network__item">
+                                        <a class="network__link network__link--insta" href="#"></a> 
+                                    </li>
+                                    <li class="network__item">
+                                        <a class="network__link network__link--twitter" href="#"></a> 
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>   
+                    </footer>
+                </section>
             </div> 
         </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.3.6/mobile-detect.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js"></script>
         <script src="./main.js"></script>
     </body>
 </html>

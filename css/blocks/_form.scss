@@ -104,18 +104,20 @@
     margin: auto;
     opacity: 0;
 }
+.form__radio-custom-phone:after {
+        content: '';
+        display: block;
+        background-color: inherit;
+        width: 11px;
+        height: 9px;
+        background-image: url('../../img/checked.png');
+        background-position: center center;
+        background-size: cover;
+}
 .form__radio-custom-phone {
     border-radius: inherit;
 }
-.form__radio-custom-phone:after {
-content: "\2713";
-text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
-font-size: rem(15px);
-color: #0f5a47;
-text-align: center;
-line-height: rem(15px);
-background-color:inherit;
-}
+
 .form__answer:checked +.form__radio-custom:after {
     opacity: 1;
 }

@@ -17,6 +17,8 @@ $white:#ffffff;
 @import "css/misc/normalize.scss";
 
 //blocks
+@import "css/blocks/_overlay.scss";
+
 @import "css/blocks/hero.scss";
 @import "css/blocks/sidebar.scss";
 @import "css/blocks/menu_adaptive.scss";

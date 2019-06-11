@@ -1,33 +1,64 @@
-.sidebar {
+  .fixed-menu {
     position: fixed;
-    right: rem(51px);
-    top: rem(217px);
-    z-index: 100;
-    
-    @include tablets{
+    top: rem(90px);
+    right: rem(40px);
+    z-index: 1;
+    @include tablets {
       display: none;
     }
   }
   
-  .nav__item {
-    height: 6px;
-    width: 6px;
-    border-radius: 50%;
-    background-color: #fff;
-    margin-bottom: rem(15px);
+  .fixed-menu__link {
+    width: rem(17px);
+    height: rem(17px);
+    display: block;
     position: relative;
   
-  
-    &:first-child::before {
+    &:after, &:before {
       content: "";
       display: block;
-      border: 1px solid #fff;
-      border-radius: 50%;
-      width: rem(12px);
-      height: rem(12px);
       position: absolute;
-      top: rem(-4px);
-      left: rem(-4px);
-  
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
     }
+  
+    &:after {
+      width: rem(8px);
+      height: rem(8px);
+      background: #0F5A47;
+    }
+  
+    &:before {
+      width: rem(0px);
+      height: rem(0px);
+      border-radius: 50%;
+      border: rem(2px) solid #0F5A47;
+      opacity: 0;
+      transition: .3s;
+    }
+  
+    &:hover {
+      &:before {
+        width: rem(14px);
+        height: rem(14px);
+        opacity: 1;
+      }
+    }
+  }
+  
+  .fixed-menu__item {
+    &.active {
+      .fixed-menu__link {
+        &:before {
+          width: rem(14px);
+          height: rem(14px);
+          opacity: 1;
+        }
+      }
+    }
+  } 
+  .fixed-menu__item {
+    margin-bottom: rem(5px);
   }
