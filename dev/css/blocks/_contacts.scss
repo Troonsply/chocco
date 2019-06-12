@@ -47,7 +47,7 @@
     display: inline-flex;
     background-repeat: no-repeat;
     background-position: center center;
-    background-image: url('./img/phone.png');
+    background-image: url('../../img/phone.png');
 
     @include phones{
       background-size: cover;
@@ -87,24 +87,24 @@
 .socials__icon--vk{
   width: rem(23px);
   height: rem(13px);
-  background-image: url('./img/vk.png');
+  background-image: url('../../img/vk.png');
   background-repeat: no-repeat;
 }
 .socials__icon--fb{
   width: rem(20px);
   height: rem(20px);
-  background-image: url('./img/fb.png');
+  background-image: url('../../img/fb.png');
   background-repeat: no-repeat;
 }
 .socials__icon--inst{
   width: rem(20px);
   height: rem(20px);
-  background-image: url('./img/inst.png');
+  background-image: url('../../img/inst.png');
   background-repeat: no-repeat;
 }
 .socials__icon--twit{
   width: rem(20px);
   height: rem(16px);
-  background-image: url('./img/twitter.png');
+  background-image: url('../../img/twitter.png');
   background-repeat: no-repeat;
 }

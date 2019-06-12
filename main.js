@@ -375,124 +375,124 @@ ymaps.ready(function () {
     .add(myPlacemark2)
 })
 //плеер
-var tag = document.createElement('script');
+// var tag = document.createElement('script');
 
-tag.src = "https://www.youtube.com/iframe_api";
-var firstScriptTag = document.getElementsByTagName('script')[0];
-firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+// tag.src = "https://www.youtube.com/iframe_api";
+// var firstScriptTag = document.getElementsByTagName('script')[0];
+// firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-let player;
-console.log(player)
-function onYouTubeIframeAPIReady() {
-  player = new YT.Player('player', {
-    height: '370',
-    width: '660',
-    videoId: 'OHoRhdPNqpQ',
-    playerVars: {
-      controls: 0,
-      disablekb: 0,
-      showinfo: 0,
-      rel: 0,
-      autoplay: 0,
-      modestbranding: 0
-    },
-    events: {
-      'onReady': onPlayerReady,
-      'onStateChange': onPlayerStateChange
-    }
-  });
-}
+// let player;
+// console.log(player)
+// function onYouTubeIframeAPIReady() {
+//   player = new YT.Player('player', {
+//     height: '370',
+//     width: '660',
+//     videoId: 'OHoRhdPNqpQ',
+//     playerVars: {
+//       controls: 0,
+//       disablekb: 0,
+//       showinfo: 0,
+//       rel: 0,
+//       autoplay: 0,
+//       modestbranding: 0
+//     },
+//     events: {
+//       'onReady': onPlayerReady,
+//       'onStateChange': onPlayerStateChange
+//     }
+//   });
+// }
 
-$('.play').on('click', e =>{
+// $('.play').on('click', e =>{
   
-  const btn = $(e.currentTarget);
+//   const btn = $(e.currentTarget);
 
-  if (btn.hasClass('paused')) {
-    player.pauseVideo();
-    btn.removeClass('paused');
-  } else {
+//   if (btn.hasClass('paused')) {
+//     player.pauseVideo();
+//     btn.removeClass('paused');
+//   } else {
 
-  player.playVideo();
-  btn.addClass('paused');
-  }
-});
+//   player.playVideo();
+//   btn.addClass('paused');
+//   }
+// });
 
 
 
-function formatTime(time) {
-  const roundTime = Math.round(time);
+// function formatTime(time) {
+//   const roundTime = Math.round(time);
 
-  const minutes = Math.floor(roundTime / 60);
-  const seconds = roundTime - minutes * 60;
-  const formatedSeconds = seconds < 10 ? `0${seconds}` : seconds;
+//   const minutes = Math.floor(roundTime / 60);
+//   const seconds = roundTime - minutes * 60;
+//   const formatedSeconds = seconds < 10 ? `0${seconds}` : seconds;
 
-  return minutes + ":" + formatedSeconds;
-}
+//   return minutes + ":" + formatedSeconds;
+// }
 
-function onPlayerReady(event) {
+// function onPlayerReady(event) {
 
-  const duration = player.getDuration();
-  let interval;
+//   const duration = player.getDuration();
+//   let interval;
  
-  clearInterval(interval);
+//   clearInterval(interval);
 
-  interval = setInterval(() => {
-    const completed = player.getCurrentTime();
-    const percents = (completed / duration) * 100;
+//   interval = setInterval(() => {
+//     const completed = player.getCurrentTime();
+//     const percents = (completed / duration) * 100;
 
-    $('.player__fader').css({
-      left: `${percents}%`
-    });
+//     $('.player__fader').css({
+//       left: `${percents}%`
+//     });
 
-    $(".player__time").text(formatTime(completed));
+//     $(".player__time").text(formatTime(completed));
 
-  }, 1000);
-}
+//   }, 1000);
+// }
   
 
-$(".player__line").on("click", e => {
-  console.log(e)
-  e.preventDefault();
-  const bar = $(e.currentTarget);
-  const newButtonPosition = e.pageX - bar.offset().left;
-  const clickedPercents = (newButtonPosition / bar.width()) * 100;
-  const newPlayerTime = (player.getDuration() / 100) * clickedPercents;
+// $(".player__line").on("click", e => {
+//   console.log(e)
+//   e.preventDefault();
+//   const bar = $(e.currentTarget);
+//   const newButtonPosition = e.pageX - bar.offset().left;
+//   const clickedPercents = (newButtonPosition / bar.width()) * 100;
+//   const newPlayerTime = (player.getDuration() / 100) * clickedPercents;
 
-  $('.player__fader').css({
-    left: `${clickedPercents}%`
-  });
+//   $('.player__fader').css({
+//     left: `${clickedPercents}%`
+//   });
 
-  player.seekTo(newPlayerTime);
+//   player.seekTo(newPlayerTime);
 
-});
+// });
 
-$(".player__image").on("click", e => {
-  player.playVideo();
-});
+// $(".player__image").on("click", e => {
+//   player.playVideo();
+// });
 
-function onPlayerStateChange(event) {
-  const playerButton = $(".play");
-  switch (event.data) {
-    case 1:
-      $(".player__wrapper").addClass("active");
-      playerButton.addClass("paused");
-      break;
-    case 2: 
-      playerButton.removeClass("paused");
-      break;
-  }
-}
+// function onPlayerStateChange(event) {
+//   const playerButton = $(".play");
+//   switch (event.data) {
+//     case 1:
+//       $(".player__wrapper").addClass("active");
+//       playerButton.addClass("paused");
+//       break;
+//     case 2: 
+//       playerButton.removeClass("paused");
+//       break;
+//   }
+// }
 
 
-$('.player__volume').on('click', e =>{
-  const btn_vol = $(e.currentTarget);
+// $('.player__volume').on('click', e =>{
+//   const btn_vol = $(e.currentTarget);
 
-  if (btn_vol.hasClass('volume__active')) {
-    player.unMute();
-    btn_vol.removeClass('volume__active');
-  } else {
+//   if (btn_vol.hasClass('volume__active')) {
+//     player.unMute();
+//     btn_vol.removeClass('volume__active');
+//   } else {
 
-  player.mute();
-  btn_vol.addClass('volume__active');
-  }
-});
+//   player.mute();
+//   btn_vol.addClass('volume__active');
+//   }
+// });

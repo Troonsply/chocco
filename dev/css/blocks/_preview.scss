@@ -1,7 +1,7 @@
 .preview {
   position: relative;
   justify-content: flex-start;
-  background-image: url('./img/reviewyagoda.png');
+  background-image: url('../../img/reviewyagoda.png');
   background-repeat: no-repeat;
   background-position: 100% 5%;
   @include tablets {
@@ -58,7 +58,7 @@
   height: rem(350px);
   width: 100%;
   background-color: #f8faf9;
-  background-image: url('./img/branch.png');
+  background-image: url('../../img/branch.png');
   background-repeat: no-repeat;
   background-position: 100% 0%;
 
