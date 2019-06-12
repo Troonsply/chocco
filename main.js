@@ -9,6 +9,107 @@ const menuClose = document.getElementById('menuClose');
     menuClose.onclick = function () {
     menuModal.style.display = "none";
 };
+//скролл
+const sections = $(".section");
+const display = $(".maincontent");
+
+let inscroll = false;
+
+const md = new MobileDetect(window.navigator.userAgent);
+
+const isMobile = md.mobile();
+
+const switchActiveClassInSideMenu = menuItemIndex => {
+  $(".fixed-menu__item")
+    .eq(menuItemIndex)
+    .addClass("active")
+    .siblings()
+    .removeClass("active");
+};
+
+const performTransition = sectionEq => {
+  if (inscroll) return;
+
+  const sectionEqNum = parseInt(sectionEq);
+
+  if (!!sectionEqNum === false)
+    console.error("не верное значение для аргуемента sectionEq");
+
+  inscroll = true;
+
+  const position = sectionEqNum * -100 + "%";
+
+  sections
+    .eq(sectionEq)
+    .addClass("active")
+    .siblings()
+    .removeClass("active");
+
+  display.css({
+    transform: `translateY(${position})`
+  });
+
+  setTimeout(() => {
+    inscroll = false;
+    switchActiveClassInSideMenu(sectionEq);
+  }, 1000 + 300);
+};
+
+const scrollToSection = direction => {
+  const activeSection = sections.filter(".active");
+  const nextSection = activeSection.next();
+  const prevSection = activeSection.prev();
+
+  if (direction === "next" && nextSection.length) {
+    performTransition(nextSection.index());
+  }
+
+  if (direction === "prev" && prevSection.length) {
+    performTransition(prevSection.index());
+  }
+};
+
+$(".wrapper").on("wheel", e => {
+  const deltaY = e.originalEvent.deltaY;
+
+  if (deltaY > 0) {
+    scrollToSection("next");
+  }
+  if (deltaY < 0) {
+    scrollToSection("prev");
+  }
+});
+
+$('.wrapper').on('touchmove', e => {
+  e.preventDefault();
+});
+
+$(document).on("keydown", e => {
+  switch (e.keyCode) {
+    case 38:
+      scrollToSection("prev");
+      break;
+    case 40:
+      scrollToSection("next");
+      break;
+  }
+});
+
+$("[data-scroll-to]").on("click", e => {
+  e.preventDefault();
+  const target = $(e.currentTarget).attr("data-scroll-to");
+
+  performTransition(target);
+});
+
+if (isMobile) {
+  $(window).swipe({
+    swipe: function(event, direction) {
+      const nextOrPrev = direction === "up" ? "next" : "prev";
+      scrollToSection(nextOrPrev);
+    }
+  });
+}
 //меню
 
 const choiceList = document.querySelector('.choice-list')
@@ -138,242 +239,6 @@ avatarThree.addEventListener('click', function (e) {
   numClick = 3;
   autoClick();
 });
-//форма
-var orderForm = document.forms.orderForm,
-    formElems = orderForm.elements;
-
-var _loop = function _loop(_i2) {
-  if (formElems[_i2].hasAttribute('required')) {
-    formElems[_i2].addEventListener('keydown', function () {
-      var nextElem = formElems[_i2].nextElementSibling;
-
-      if (nextElem && nextElem.classList.contains('warn-message')) {
-        nextElem.remove();
-
-        formElems[_i2].classList.remove('invalid');
-      }
-    });
-  }
-};
-
-for (var _i2 = 0; _i2 < formElems.length; _i2++) {
-  _loop(_i2);
-}
-
-var orderBtn = document.forms[0].elements.orderBtn;
-orderBtn.addEventListener('click', function (event) {
-  event.preventDefault();
-  var formData = new FormData();
-  formData.append('name', formElems.name.value);
-  formData.append('phone', formElems.phone.value);
-  formData.append('comment', formElems.comment.value);
-  formData.append('to', 'email@address.com');
-
-  function showWarning(elem) {
-    var warnMessage = document.createElement('div');
-    warnMessage.classList.add('warn-message');
-    warnMessage.textContent = elem.validationMessage;
-    elem.classList.add('invalid');
-    elem.insertAdjacentElement('afterEnd', warnMessage);
-  }
-
-  function checkForm(form) {
-    var result = true;
-
-    for (var _i3 = 0; _i3 < form.length; _i3++) {
-      var nextElem = form[_i3].nextElementSibling;
-
-      if (nextElem) {
-        if (nextElem.classList.contains('warn-message')) {
-          nextElem.remove();
-        }
-
-        form[_i3].classList.remove('invalid');
-      }
-
-      if (!form[_i3].checkValidity()) {
-        result = false;
-        showWarning(form[_i3]);
-      }
-    }
-
-    return result;
-  }
-
-  function sendForm() {
-    if (checkForm(orderForm)) {
-      var xhr = new XMLHttpRequest();
-      xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
-      xhr.send(formData);
-
-      xhr.onreadystatechange = function () {
-        if (xhr.readyState === 4) {
-          if (xhr.status < 400) {
-            var response = JSON.parse(xhr.response);
-            modal.querySelector('#modalText').innerText = 'Хорошо';
-            modal.querySelector('#modalContent').innerText = response.message;
-            modal.style.display = 'block';
-            overlay.style.display = 'block';
-
-            document.onwheel = function () {
-              return false;
-            };
-          } else if (xhr.status > 400) {
-            modal.querySelector('#modalText').innerText = 'Ошибка';
-            modal.querySelector('#modalContent').innerText = 'При отправке сообщения возникла ошибка!';
-            modal.style.display = 'block';
-            overlay.style.display = 'block';
-
-            document.onwheel = function () {
-              return true;
-            };
-          }
-        }
-      };
-    }
-  }
-
-  sendForm(orderForm);
-});
-
-
-//скролл
-const sections = $(".section");
-const display = $(".maincontent");
-
-let inscroll = false;
-
-const md = new MobileDetect(window.navigator.userAgent);
-
-const isMobile = md.mobile();
-
-const switchActiveClassInSideMenu = menuItemIndex => {
-  $(".fixed-menu__item")
-    .eq(menuItemIndex)
-    .addClass("active")
-    .siblings()
-    .removeClass("active");
-};
-
-const performTransition = sectionEq => {
-  if (inscroll) return;
-
-  const sectionEqNum = parseInt(sectionEq);
-
-  if (!!sectionEqNum === false)
-    console.error("не верное значение для аргуемента sectionEq");
-
-  inscroll = true;
-
-  const position = sectionEqNum * -100 + "%";
-
-  sections
-    .eq(sectionEq)
-    .addClass("active")
-    .siblings()
-    .removeClass("active");
-
-  display.css({
-    transform: `translateY(${position})`
-  });
-
-  setTimeout(() => {
-    inscroll = false;
-    switchActiveClassInSideMenu(sectionEq);
-  }, 1000 + 300);
-};
-
-const scrollToSection = direction => {
-  const activeSection = sections.filter(".active");
-  const nextSection = activeSection.next();
-  const prevSection = activeSection.prev();
-
-  if (direction === "next" && nextSection.length) {
-    performTransition(nextSection.index());
-  }
-
-  if (direction === "prev" && prevSection.length) {
-    performTransition(prevSection.index());
-  }
-};
-
-$(".wrapper").on("wheel", e => {
-  const deltaY = e.originalEvent.deltaY;
-
-  if (deltaY > 0) {
-    scrollToSection("next");
-  }
-  if (deltaY < 0) {
-    scrollToSection("prev");
-  }
-});
-
-$('.wrapper').on('touchmove', e => {
-  e.preventDefault();
-});
-
-$(document).on("keydown", e => {
-  switch (e.keyCode) {
-    case 38:
-      scrollToSection("prev");
-      break;
-    case 40:
-      scrollToSection("next");
-      break;
-  }
-});
-
-$("[data-scroll-to]").on("click", e => {
-  e.preventDefault();
-  const target = $(e.currentTarget).attr("data-scroll-to");
-
-  performTransition(target);
-});
-
-if (isMobile) {
-  $(window).swipe({
-    swipe: function(event, direction) {
-      const nextOrPrev = direction === "up" ? "next" : "prev";
-      scrollToSection(nextOrPrev);
-    }
-  });
-}
-
-//карта
-ymaps.ready(function () {
-  var myMap = new ymaps.Map('map', {
-    center: [59.941861, 30.321988],
-    zoom: 13
-
-  });
-  myMap.behaviors.disable('scrollZoom')
-  MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-    '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
-  ),
-    myPlacemark = new ymaps.Placemark([59.943477, 30.324360], {
-      hintContent: 'CHOCCO',
-      balloonContent: 'график: пн-пт, выходные: сб,вс <br> часы работы: с 10-00 до 18-00',
-    }, {
-        iconLayout: 'default#imageWithContent',
-        iconImageHref: './img/marker.png',
-        iconImageSize: [46, 57],
-        iconImageOffset: [-24, -24],
-        iconContentLayout: MyIconContentLayout
-      })
-  myPlacemark2 = new ymaps.Placemark([59.932323, 30.303289], {
-    hintContent: 'CHOCCO',
-    balloonContent: 'график: пн-пт, выходные: сб,вс <br> часы работы: с 10-00 до 18-00',
-  }, {
-      iconLayout: 'default#imageWithContent',
-      iconImageHref: './img/marker.png',
-      iconImageSize: [46, 57],
-      iconImageOffset: [-24, -24],
-      iconContentLayout: MyIconContentLayout
-    })
-  myMap.geoObjects
-    .add(myPlacemark)
-    .add(myPlacemark2)
-})
 //плеер
 var tag = document.createElement('script');
 
@@ -496,3 +361,137 @@ $('.player__volume').on('click', e =>{
   btn_vol.addClass('volume__active');
   }
 });
+//форма
+var orderForm = document.forms.orderForm,
+    formElems = orderForm.elements;
+
+var _loop = function _loop(_i2) {
+  if (formElems[_i2].hasAttribute('required')) {
+    formElems[_i2].addEventListener('keydown', function () {
+      var nextElem = formElems[_i2].nextElementSibling;
+
+      if (nextElem && nextElem.classList.contains('warn-message')) {
+        nextElem.remove();
+
+        formElems[_i2].classList.remove('invalid');
+      }
+    });
+  }
+};
+
+for (var _i2 = 0; _i2 < formElems.length; _i2++) {
+  _loop(_i2);
+}
+
+var orderBtn = document.forms[0].elements.orderBtn;
+orderBtn.addEventListener('click', function (event) {
+  event.preventDefault();
+  var formData = new FormData();
+  formData.append('name', formElems.name.value);
+  formData.append('phone', formElems.phone.value);
+  formData.append('comment', formElems.comment.value);
+  formData.append('to', 'email@address.com');
+
+  function showWarning(elem) {
+    var warnMessage = document.createElement('div');
+    warnMessage.classList.add('warn-message');
+    warnMessage.textContent = elem.validationMessage;
+    elem.classList.add('invalid');
+    elem.insertAdjacentElement('afterEnd', warnMessage);
+  }
+
+  function checkForm(form) {
+    var result = true;
+
+    for (var _i3 = 0; _i3 < form.length; _i3++) {
+      var nextElem = form[_i3].nextElementSibling;
+
+      if (nextElem) {
+        if (nextElem.classList.contains('warn-message')) {
+          nextElem.remove();
+        }
+
+        form[_i3].classList.remove('invalid');
+      }
+
+      if (!form[_i3].checkValidity()) {
+        result = false;
+        showWarning(form[_i3]);
+      }
+    }
+
+    return result;
+  }
+
+  function sendForm() {
+    if (checkForm(orderForm)) {
+      var xhr = new XMLHttpRequest();
+      xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
+      xhr.send(formData);
+
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4) {
+          if (xhr.status < 400) {
+            var response = JSON.parse(xhr.response);
+            modal.querySelector('#modalText').innerText = 'Хорошо';
+            modal.querySelector('#modalContent').innerText = response.message;
+            modal.style.display = 'block';
+            overlay.style.display = 'block';
+
+            document.onwheel = function () {
+              return false;
+            };
+          } else if (xhr.status > 400) {
+            modal.querySelector('#modalText').innerText = 'Ошибка';
+            modal.querySelector('#modalContent').innerText = 'При отправке сообщения возникла ошибка!';
+            modal.style.display = 'block';
+            overlay.style.display = 'block';
+
+            document.onwheel = function () {
+              return true;
+            };
+          }
+        }
+      };
+    }
+  }
+
+  sendForm(orderForm);
+});
+
+
+//карта
+ymaps.ready(function () {
+  var myMap = new ymaps.Map('map', {
+    center: [59.941861, 30.321988],
+    zoom: 13
+
+  });
+  myMap.behaviors.disable('scrollZoom')
+  MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+    '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+  ),
+    myPlacemark = new ymaps.Placemark([59.943477, 30.324360], {
+      hintContent: 'CHOCCO',
+      balloonContent: 'график: пн-пт, выходные: сб,вс <br> часы работы: с 10-00 до 18-00',
+    }, {
+        iconLayout: 'default#imageWithContent',
+        iconImageHref: './img/marker.png',
+        iconImageSize: [46, 57],
+        iconImageOffset: [-24, -24],
+        iconContentLayout: MyIconContentLayout
+      })
+  myPlacemark2 = new ymaps.Placemark([59.932323, 30.303289], {
+    hintContent: 'CHOCCO',
+    balloonContent: 'график: пн-пт, выходные: сб,вс <br> часы работы: с 10-00 до 18-00',
+  }, {
+      iconLayout: 'default#imageWithContent',
+      iconImageHref: './img/marker.png',
+      iconImageSize: [46, 57],
+      iconImageOffset: [-24, -24],
+      iconContentLayout: MyIconContentLayout
+    })
+  myMap.geoObjects
+    .add(myPlacemark)
+    .add(myPlacemark2)
+})
