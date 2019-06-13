@@ -21,10 +21,10 @@ $white:#ffffff;
 
 @import "css/blocks/hero.scss";
 @import "css/blocks/sidebar.scss";
-@import "css/blocks/menu_adaptive.scss";
+@import "css/blocks/_menu_adaptive.scss";
 @import "css/blocks/header.scss";
 @import "css/blocks/menu.scss";
-@import "css/blocks/hamburger-menu.scss";
+@import "css/blocks/_hamburger-menu.scss";
 @import "css/blocks/special.scss";
 
 @import "css/blocks/pretty.scss";
@@ -40,7 +40,7 @@ $white:#ffffff;
 @import "css/blocks/preview.scss";
 @import "css/blocks/avatar_preview.scss";
 
-@import "css/blocks/plaer.scss";
+@import "css/blocks/_plaer.scss";
 
 @import "css/blocks/form.scss";
 
