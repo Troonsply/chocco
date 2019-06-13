@@ -146,6 +146,7 @@ choiceList.addEventListener ('click', function (e) {
     }
 
 })
+
 //слайдер
 
 var slides = document.getElementsByClassName("slider__screen"),
@@ -241,6 +242,7 @@ avatarThree.addEventListener('click', function (e) {
   numClick = 3;
   autoClick();
 });
+
 //плеер
 var tag = document.createElement('script');
 
