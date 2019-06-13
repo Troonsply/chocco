@@ -1,5 +1,5 @@
 .form {
-    background: url('../../img/pattern.jpg');
+    background: url('./img/pattern.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat; 
@@ -110,7 +110,7 @@
         background-color: inherit;
         width: 11px;
         height: 9px;
-        background-image: url('../../img/checked.png');
+        background-image: url('./img/checked.png');
         background-position: center center;
         background-size: cover;
 }

@@ -43,7 +43,7 @@
       display: inline-flex;
       background-repeat: no-repeat;
       background-position: center center;
-      background-image: url(./img/phone.png);
+      background-image: url('./img/phone.png');
   
       @include tablets {
         background-size: cover;
