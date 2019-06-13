@@ -1,5 +1,5 @@
 //полноэкранное меню
-
+window.onload   = function(){
 const menuOpen = document.getElementById('menuOpen');
 const menuModal = document.getElementById('menuModal');
 const menuClose = document.getElementById('menuClose');
@@ -495,3 +495,4 @@ ymaps.ready(function () {
     .add(myPlacemark)
     .add(myPlacemark2)
 })
+}
