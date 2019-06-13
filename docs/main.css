@@ -1321,19 +1321,19 @@ template {
   margin: 0 auto; }
 
 #choice-list__item_1 {
-  background-image: url("../../img/milk.jpg");
+  background-image: url("./img/milk.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   z-index: 100; }
 
 #choice-list__item_2 {
-  background-image: url("../../img/honey.jpg");
+  background-image: url("./img/honey.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   z-index: 100; }
 
 #choice-list__item_3 {
-  background-image: url("../../img/berrymenu.jpg");
+  background-image: url("./img/berrymenu.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   z-index: 100; }
