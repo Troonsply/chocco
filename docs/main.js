@@ -1,5 +1,6 @@
 //полноэкранное меню
-window.onload   = function(){
+window.onload = function(){
+
 const menuOpen = document.getElementById('menuOpen');
 const menuModal = document.getElementById('menuModal');
 const menuClose = document.getElementById('menuClose');
@@ -10,6 +11,7 @@ const menuClose = document.getElementById('menuClose');
     menuModal.style.display = "none";
 };
 //скролл
+
 const sections = $(".section");
 const display = $(".maincontent");
 
@@ -494,5 +496,4 @@ ymaps.ready(function () {
   myMap.geoObjects
     .add(myPlacemark)
     .add(myPlacemark2)
-})
-}
+})}
