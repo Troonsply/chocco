@@ -251,11 +251,13 @@ var firstScriptTag = document.getElementsByTagName('script')[0];
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
 let player;
-console.log(player)
+var playerWidth = '660';
+var playerHeight = '370';
+
 function onYouTubeIframeAPIReady() {
   player = new YT.Player('player', {
-    height: '370',
-    width: '660',
+    height: playerHeight,
+    width: playerWidth,
     videoId: 'OHoRhdPNqpQ',
     playerVars: {
       controls: 0,
@@ -272,8 +274,28 @@ function onYouTubeIframeAPIReady() {
   });
 }
 
-$('.play').on('click', e =>{
-  
+
+var panel = $('.panel');
+var playerImageWidth = $('.player__image');
+
+if ((screenWidth <= 768) && (screenWidth > 480)) {
+  playerWidth = '600';
+  playerHeight = '330';
+  playerImageWidth.css('width', '600');
+  panel.css('width', '600');
+} else {
+  if (screenWidth <= 480) {
+    playerWidth = '400';
+    playerHeight = '220';
+    playerImageWidth.css('width', '400');
+    panel.css('width', '400')
+  }
+
+}
+
+
+$('.play').on('click', e => {
+
   const btn = $(e.currentTarget);
 
   if (btn.hasClass('paused')) {
@@ -281,8 +303,8 @@ $('.play').on('click', e =>{
     btn.removeClass('paused');
   } else {
 
-  player.playVideo();
-  btn.addClass('paused');
+    player.playVideo();
+    btn.addClass('paused');
   }
 });
 
@@ -302,7 +324,7 @@ function onPlayerReady(event) {
 
   const duration = player.getDuration();
   let interval;
- 
+
   clearInterval(interval);
 
   interval = setInterval(() => {
@@ -317,7 +339,7 @@ function onPlayerReady(event) {
 
   }, 1000);
 }
-  
+
 
 $(".player__line").on("click", e => {
   console.log(e)
@@ -346,14 +368,14 @@ function onPlayerStateChange(event) {
       $(".player__wrapper").addClass("active");
       playerButton.addClass("paused");
       break;
-    case 2: 
+    case 2:
       playerButton.removeClass("paused");
       break;
   }
 }
 
 
-$('.player__volume').on('click', e =>{
+$('.player__volume').on('click', e => {
   const btn_vol = $(e.currentTarget);
 
   if (btn_vol.hasClass('volume__active')) {
@@ -361,8 +383,8 @@ $('.player__volume').on('click', e =>{
     btn_vol.removeClass('volume__active');
   } else {
 
-  player.mute();
-  btn_vol.addClass('volume__active');
+    player.mute();
+    btn_vol.addClass('volume__active');
   }
 });
 //форма
