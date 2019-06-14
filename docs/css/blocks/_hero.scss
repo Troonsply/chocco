@@ -101,6 +101,7 @@
 .hero__content-pic {
   position: absolute;
   right: 0;
+  width: 40%;
 
   @include tablets {
     position: inherit;

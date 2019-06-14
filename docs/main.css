@@ -666,7 +666,8 @@ template {
 
 .hero__content-pic {
   position: absolute;
-  right: 0; }
+  right: 0;
+  width: 40%; }
   @media screen and (max-width: 768px) {
     .hero__content-pic {
       position: inherit; } }
@@ -1582,8 +1583,8 @@ template {
   border-radius: 50%; }
 
 video {
-  width: 591px;
-  height: 331px; }
+  width: 800px;
+  height: 450px; }
   @media screen and (max-width: 768px) {
     video {
       width: 100%;
@@ -1604,16 +1605,16 @@ video {
   height: 100%; }
   .player-picture__position__absolute-leaf1 {
     position: absolute;
-    bottom: 5%;
-    left: 5%; }
+    bottom: 0;
+    left: 15%; }
     @media screen and (max-width: 768px) {
       .player-picture__position__absolute-leaf1 {
         width: 10%;
         top: -12.14286rem; } }
   .player-picture__position__absolute-leaf2 {
     position: absolute;
-    top: 10%;
-    right: 5%; }
+    top: 15%;
+    right: 15%; }
     @media screen and (max-width: 768px) {
       .player-picture__position__absolute-leaf2 {
         width: 10%;

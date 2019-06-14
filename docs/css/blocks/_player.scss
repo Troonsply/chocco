@@ -7,8 +7,8 @@ video {
     width: 100%;
     height: auto;
   }
-width: 591px;
-height: 331px;
+width: 800px;
+height: 450px;
 }
 
 .container-video{
@@ -21,8 +21,8 @@ height: 100%;
 
   &-leaf1{
     position: absolute;
-    bottom: 5%;
-    left: 5%;
+    bottom: 0;
+    left: 15%;
     
     
     @include tablets{
@@ -32,8 +32,8 @@ height: 100%;
     }
     &-leaf2{
     position: absolute;
-    top: 10%;
-    right: 5%;
+    top: 15%;
+    right: 15%;
   
     
     @include tablets{
