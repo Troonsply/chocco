@@ -19,6 +19,20 @@
         margin-top:0;
     }
 }
+.form-picture__position__absolute {
+
+
+&-blackberry {
+    position: absolute;
+    top: -6em;
+    right: 0;
+}
+&-leaf {
+    position: absolute;
+    bottom: 0;
+    right: 2em;
+}
+}
 .form .form__row-adress label input {
     margin-top: 0.3125rem;
     width: 100%;

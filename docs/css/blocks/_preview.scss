@@ -79,9 +79,9 @@
 .preview__avatars{
   display: flex;
   justify-content: center;
+  margin-bottom: 2rem;
   @include tablets {
     margin-left: 3rem;
-    margin-bottom: 2rem;
   }
 }
 

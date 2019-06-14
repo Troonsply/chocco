@@ -1438,11 +1438,11 @@ template {
   display: flex;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
-  justify-content: center; }
+  justify-content: center;
+  margin-bottom: 2rem; }
   @media screen and (max-width: 768px) {
     .preview__avatars {
-      margin-left: 3rem;
-      margin-bottom: 2rem; } }
+      margin-left: 3rem; } }
 
 .preview__avatar {
   background-position: center center;
@@ -1538,123 +1538,22 @@ template {
   border: 8px solid #0f5a47;
   border-radius: 50%; }
 
-.panel {
-  position: absolute;
-  bottom: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 47.14286rem;
-  height: 2.85714rem;
-  background: #3e3e3e;
-  margin-top: -5px;
-  border: 1px solid #aaa; }
-
-.play {
-  position: absolute;
-  left: 3%;
-  top: 1%;
-  margin-left: 10px;
-  margin-top: 5px;
-  width: 0;
-  height: 0;
-  border: 11px solid transparent;
-  border-left-color: #fff;
-  padding: 0;
-  border-right-width: 0;
-  background: transparent; }
-  .play.paused {
-    width: 14px;
-    height: 22px;
-    border: none; }
-    .play.paused:after, .play.paused:before {
-      content: "";
-      display: block;
-      position: absolute;
-      width: 5px;
-      top: 0;
-      bottom: 0;
-      background: #fff; }
-    .play.paused:after {
-      right: 0; }
-    .play.paused:before {
-      left: 0; }
-
-.player__time {
-  position: absolute;
-  left: 5%;
-  top: 1%;
-  width: 3.57143rem;
-  height: 2.14286rem;
-  color: #fff;
-  padding-top: 5px;
-  margin-left: 10px; }
-
-.player__line {
-  position: absolute;
-  left: 18%;
-  top: 1%;
-  margin-top: 15px;
-  height: 0.28571rem;
-  width: 32.14286rem;
-  background: #fff;
-  margin-right: 15px; }
-  @media screen and (max-width: 480px) {
-    .player__line {
-      width: 24.28571rem; } }
-
-.player__volume {
-  position: absolute;
-  right: 5%;
-  top: 25%;
-  opacity: 1; }
-
-.volume__active {
-  opacity: 0.5; }
-
-.player__fader {
-  position: absolute;
-  background: black;
-  border-radius: 50px;
-  border: none;
-  width: 12px;
-  height: 12px;
-  padding: 0;
-  position: absolute;
-  top: -4px;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-  left: 0; }
+video {
+  width: 660px;
+  height: 370px; }
   @media screen and (max-width: 768px) {
-    .player__fader {
-      width: 9px;
-      height: 9px;
-      top: -3px; } }
+    video {
+      width: 95%;
+      height: auto; } }
+  @media screen and (max-width: 480px) {
+    video {
+      width: 100%;
+      height: auto; } }
 
-.player__image {
-  opacity: 1;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  background: url("./img/granola.jpg") center center no-repeat;
-  cursor: pointer; }
-
-.player__wrapper.active .player__image {
-  opacity: 0;
-  -webkit-transition: .3s;
-  -o-transition: .3s;
-  transition: .3s;
-  display: none; }
-
-.player {
-  background-color: #f8faf9;
-  text-align: center; }
-
-.container--player {
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  justify-content: flex-start; }
+.container-video {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
 
 .player-picture__position__absolute {
   position: absolute;
@@ -1682,19 +1581,6 @@ template {
   font-weight: bold;
   text-transform: uppercase; }
 
-.video_player {
-  margin-top: 10%;
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center; }
-
 .form {
   background: url("./img/pattern.jpg");
   background-size: cover;
@@ -1715,6 +1601,16 @@ template {
   @media screen and (max-width: 768px) {
     .section__title-form {
       margin-top: 0; } }
+
+.form-picture__position__absolute-blackberry {
+  position: absolute;
+  top: -6em;
+  right: 0; }
+
+.form-picture__position__absolute-leaf {
+  position: absolute;
+  bottom: 0;
+  right: 2em; }
 
 .form .form__row-adress label input {
   margin-top: 0.3125rem;

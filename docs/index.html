@@ -418,62 +418,53 @@
                             </div>
                         </div>
                     </section>
-                    <section class="section player" id="7">
+                    <section class="section video" id="7">
                         <div class="player-picture__position__absolute">
                             <img class="player-picture__position__absolute-leaf1" src="./img/sheet1.png">
                             <img class="player-picture__position__absolute-leaf2" src="./img/sheet1.png">
                         </div>
-                        <div class="container container-player">
-                            <h2 class="player__title">Как мы работаем</h2>
-                            <div class="video_player">
-                                <div class="player__wrapper">
-                                    <div id="player"></div>
-                                    <div class="player__image"></div>
-                                </div>
-                                <div class="panel">
-                                    <button class="play"></button>
-                                    <div class="player__time">00:00</div>
-                                    <div class="player__line">
-                                        <div class="player__fader"></div>
-                                    </div>
-                                    <button class="player__volume">&#128266</button>
-                                </div>
+                            <div class="container container-video">
+                                <h2 class="player__title">Как мы работаем</h2>
+                                <video id="video" controls src="src/granola.mp4"></video>
                             </div>
-                        </div>
                     </section>
-                <section class="section form" id="8">
-                    <div class="container container-form">
-                        <h2 class="section__title section__title-form">Закажите доставку</h2>
-                        <form action="" class="form__tag" method="POST" name="orderForm" >
-                            <div class="form__row-left">
-                                <div class="form__row-name">
-                                    <label class="form__label">Имя<input type="text" class="form__input" id="name" name="name"placeholder=""required>
-                                        <div class="error"></div>
-                                    </label>
-                                    <label class="form__label">Телефон<input type="text" class="form__input" id="phone" name="phone" placeholder=""required>
-                                        <div class="error"></div>
-                                    </label>
+                    <section class="section form" id="8">
+                        <div class="form-picture__position__absolute">
+                            <img class="form-picture__position__absolute-blackberry" src="./img/blackberry.png">
+                            <img class="form-picture__position__absolute-leaf" src="./img/leafforma.png">
+                        </div>
+                        <div class="container container-form">
+                            <h2 class="section__title section__title-form">Закажите доставку</h2>
+                            <form action="" class="form__tag" method="POST" name="orderForm" >
+                                <div class="form__row-left">
+                                    <div class="form__row-name">
+                                        <label class="form__label">Имя<input type="text" class="form__input" id="name" name="name"placeholder=""required>
+                                            <div class="error"></div>
+                                        </label>
+                                        <label class="form__label">Телефон<input type="text" class="form__input" id="phone" name="phone" placeholder=""required>
+                                            <div class="error"></div>
+                                        </label>
+                                    </div>
+                                    <div class="form_row-street">
+                                        <label class="form__label">Улица<input type="text" class="form__input" id="street" placeholder=""></label>
+                                    </div>
+                                    <div class="form__row-adress">
+                                        <label class="form__label">Дом<input type="text" class="form__input" id="home" placeholder=""></label>
+                                        <label class="form__label">Корпус<input type="text" class="form__input" id="housing" placeholder=""></label>
+                                        <label class="form__label">Квартира<input type="text" class="form__input" id="apartament" placeholder=""></label>
+                                        <label class="form__label">Этаж<input type="text" class="form__input" id="floor" placeholder=""></label>
+                                    </div>
                                 </div>
-                                <div class="form_row-street">
-                                    <label class="form__label">Улица<input type="text" class="form__input" id="street" placeholder=""></label>
-                                </div>
-                                <div class="form__row-adress">
-                                    <label class="form__label">Дом<input type="text" class="form__input" id="home" placeholder=""></label>
-                                    <label class="form__label">Корпус<input type="text" class="form__input" id="housing" placeholder=""></label>
-                                    <label class="form__label">Квартира<input type="text" class="form__input" id="apartament" placeholder=""></label>
-                                    <label class="form__label">Этаж<input type="text" class="form__input" id="floor" placeholder=""></label>
-                                </div>
-                            </div>
-                            <div class="form__row-right">
-                                <div class="form__row-comment">
-                                    <label class="form__label">Комментарии<textarea type="text" name="comment" name="comment" placeholder="" class=" form__input form__input--textarea" required></textarea>
-                                        <div class="error"></div>
-                                    </label>
-                                    <div class="form__radio">
-                                        <label class="form__radio-btn" tabindex="0">
-                                            <input class="form__answer" type="radio" name="payment" value="cash" tabindex="0">
-                                            <div class="form__radio-custom"></div>
-                                            <div class="form__radio-text">Потребуется сдача</div>
+                                <div class="form__row-right">
+                                    <div class="form__row-comment">
+                                        <label class="form__label">Комментарии<textarea type="text" name="comment" name="comment" placeholder="" class=" form__input form__input--textarea" required></textarea>
+                                            <div class="error"></div>
+                                        </label>
+                                        <div class="form__radio">
+                                            <label class="form__radio-btn" tabindex="0">
+                                                <input class="form__answer" type="radio" name="payment" value="cash" tabindex="0">
+                                                <div class="form__radio-custom"></div>
+                                                <div class="form__radio-text">Потребуется сдача</div>
                                         </label>
                                         <label class="form__radio-btn" tabindex="0">
                                             <input class="form__answer" type="radio" name="payment" value="bycard" checked>
@@ -518,7 +509,6 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.3.6/mobile-detect.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js"></script>
         <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
-        <script src="https://www.youtube.com/iframe_api"></script>
         <script src="main.js"></script>
     </body>
 </html>
