@@ -18,6 +18,9 @@
     margin-right: rem(40px);
     margin-top: rem(40px);
     display: block;
+    @include tablets {
+      margin-top: 0;
+    }
   }
 
   .avatar_one{

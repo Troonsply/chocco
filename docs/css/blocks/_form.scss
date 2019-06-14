@@ -26,6 +26,9 @@
     position: absolute;
     top: -6em;
     right: 0;
+    @include tablets {
+        width: 40%;
+    }
 }
 &-leaf {
     position: absolute;

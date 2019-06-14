@@ -3,7 +3,8 @@
   justify-content: flex-start;
   background-image: url('./img/reviewyagoda.png');
   background-repeat: no-repeat;
-  background-position: 100% 5%;
+  background-size: 50%;
+  background-position: 100% 0%;
   @include tablets {
     background-size: 25%;
     padding: 0;
@@ -14,6 +15,7 @@
 .container-preview{
   @include tablets {
     height: 100%;
+    width: 100%;
     flex-flow: column wrap;
   }
 }
@@ -50,6 +52,7 @@
   @include tablets {
     font-size: rem(36px);
     margin-top: 0;
+    margin-bottom: 0;
   }
 }
 
@@ -80,7 +83,6 @@
       flex-direction: column;
       background-color: #f8faf9;
       padding: 4rem 0;
-      margin-left: 0.8rem;
     }
 }
 
@@ -93,9 +95,7 @@
   display: flex;
   justify-content: center;
   margin-bottom: 2rem;
-  @include tablets {
-    margin-left: 3rem;
-  }
+
 }
 
 .preview__avatar {

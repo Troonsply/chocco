@@ -3,9 +3,6 @@
     align-items: center;
     justify-content: space-between;
     background: $blue;
-    @include tablets {
-        margin-top:4rem;
-    }
 }
 .header__buttons {
     display: flex;
