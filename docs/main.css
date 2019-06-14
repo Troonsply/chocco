@@ -32,7 +32,7 @@ body {
   margin: 0 auto; }
   @media screen and (max-width: 768px) {
     .section {
-      height: auto;
+      height: 100%;
       padding: 2rem 0; } }
 
 .container {
@@ -636,7 +636,8 @@ template {
   @media screen and (max-width: 768px) {
     .section-title__hero {
       text-align: center;
-      font-size: 3.28571rem; } }
+      font-size: 2.2rem;
+      margin-top: 0; } }
 
 .hero__desc {
   font-family: "Alegreya Sans";
@@ -805,6 +806,9 @@ template {
   -ms-flex-pack: justify;
   justify-content: space-between;
   background: #61c4d9; }
+  @media screen and (max-width: 768px) {
+    .header {
+      margin-top: 4rem; } }
 
 .header__buttons {
   display: -webkit-box;
@@ -871,6 +875,10 @@ template {
 .special {
   position: relative;
   margin-top: 4rem; }
+  @media screen and (max-width: 768px) {
+    .special {
+      margin-top: 1rem;
+      margin-bottom: 2rem; } }
 
 .special-list {
   display: -webkit-box;
@@ -1019,6 +1027,9 @@ template {
   -ms-flex-direction: row;
   flex-direction: row;
   padding-top: 4rem; }
+  @media screen and (max-width: 768px) {
+    .container-sale {
+      padding-top: 0; } }
 
 .sale__picpicture_position_absolut_berry {
   position: absolute;
@@ -1027,13 +1038,18 @@ template {
   @media screen and (max-width: 768px) {
     .sale__picpicture_position_absolut_berry {
       height: 30%;
-      bottom: -5rem; } }
+      bottom: -5rem;
+      width: 40%; } }
 
 .sale__picpicture_position_absolut_malina {
   width: 100%;
   position: absolute;
   top: -12rem;
   text-align: left; }
+  @media screen and (max-width: 768px) {
+    .sale__picpicture_position_absolut_malina {
+      width: 35%;
+      top: -6rem; } }
 
 .section-title__sale {
   text-align: left;
@@ -1043,7 +1059,8 @@ template {
   font-weight: 600; }
   @media screen and (max-width: 768px) {
     .section-title__sale {
-      text-align: center; } }
+      text-align: center;
+      font-size: 1.5em; } }
 
 .sale__composition {
   margin: 2rem 0;
@@ -1101,6 +1118,9 @@ template {
   font-size: 4em;
   font-weight: 200;
   padding-right: 0.7em; }
+  @media screen and (max-width: 768px) {
+    .sale__price {
+      font-size: 3em; } }
 
 .sale__btn {
   background-color: #0f5a47;
@@ -1180,8 +1200,10 @@ template {
   position: relative; }
 
 @media screen and (max-width: 768px) {
-  .container-team {
-    margin-top: 5em; } }
+  .team__feature {
+    padding-left: 2rem; }
+    .team__feature:last-child {
+      padding-left: 0; } }
 
 .team-acco {
   display: -webkit-box;
@@ -1358,7 +1380,8 @@ template {
   background-position: 100% 5%; }
   @media screen and (max-width: 768px) {
     .preview {
-      background-position: 120% 2%; } }
+      background-size: 25%;
+      padding: 0; } }
 
 @media screen and (max-width: 768px) {
   .container-preview {
@@ -1374,6 +1397,9 @@ template {
   left: 0;
   right: 0;
   z-index: 1; }
+  @media screen and (max-width: 768px) {
+    .preview-picture__position__absolute-sheet {
+      width: 15%; } }
 
 .preview-picture__position__absolute-berries {
   position: absolute;
@@ -1381,6 +1407,9 @@ template {
   left: 0;
   right: 0;
   z-index: 1; }
+  @media screen and (max-width: 768px) {
+    .preview-picture__position__absolute-berries {
+      width: 15%; } }
 
 .preview__title {
   font-weight: 700;
@@ -1390,12 +1419,17 @@ template {
   text-transform: uppercase; }
   @media screen and (max-width: 768px) {
     .preview__title {
-      font-size: 2.57143rem; } }
+      font-size: 2.57143rem;
+      margin-top: 0; } }
 
 .preview__body {
   height: 80%;
   position: relative;
   margin-bottom: 2rem; }
+  @media screen and (max-width: 768px) {
+    .preview__body {
+      height: 75%;
+      margin-bottom: 0; } }
 
 .preview__slider {
   display: -webkit-box;
@@ -1414,6 +1448,7 @@ template {
   background-position: 100% 0%; }
   @media screen and (max-width: 768px) {
     .preview__slider {
+      background-size: 30%;
       height: 100%;
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
@@ -1457,7 +1492,8 @@ template {
   min-width: 18.14286rem; }
   @media screen and (max-width: 768px) {
     .preview__pic {
-      min-width: 10.71429rem; } }
+      min-width: 7.14286rem;
+      padding-top: 2rem; } }
 
 .preview__desc {
   display: -webkit-box;
@@ -1480,6 +1516,9 @@ template {
   font-size: 2.14286rem;
   font-weight: 500;
   margin-bottom: 1.42857rem; }
+  @media screen and (max-width: 768px) {
+    .preview__desc-title {
+      font-size: 2rem; } }
 
 .preview__desc-text {
   width: 70%;
@@ -1488,7 +1527,9 @@ template {
   font-size: 1.28571rem; }
   @media screen and (max-width: 768px) {
     .preview__desc-text {
-      width: 100%; } }
+      width: 70%;
+      margin-left: 4rem;
+      font-size: 1rem; } }
 
 .preview__desc-username {
   font-size: 1.28571rem; }
@@ -1501,6 +1542,9 @@ template {
   -ms-flex-pack: center;
   justify-content: center;
   margin-top: 4rem; }
+  @media screen and (max-width: 768px) {
+    .avatars {
+      margin-top: 0; } }
 
 .avatar__item {
   width: 6.78571rem;

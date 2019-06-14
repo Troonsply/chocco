@@ -2,6 +2,9 @@
     display: flex;
     justify-content: center;
     margin-top: 4rem;
+    @include tablets {
+      margin-top: 0;
+    }
   }
   .avatar__item{
     width: rem(95px);

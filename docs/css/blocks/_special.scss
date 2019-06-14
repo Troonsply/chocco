@@ -1,6 +1,10 @@
 .special {
     position: relative;
     margin-top: 4rem;
+    @include tablets {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    }
 }
 .special-list {
     display: flex;

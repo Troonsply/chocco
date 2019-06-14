@@ -2,11 +2,13 @@
     position: relative;
 
 }
-.container-team {
-  @include tablets {
-    margin-top: 5em;
+.team__feature {
+  @include tablets{
+padding-left: 2rem;
+&:last-child{
+  padding-left: 0;
 }
-}
+}}
 .team-acco {
     display: flex;
     justify-content: space-between;

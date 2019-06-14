@@ -5,7 +5,8 @@
   background-repeat: no-repeat;
   background-position: 100% 5%;
   @include tablets {
-    background-position: 120% 2%;
+    background-size: 25%;
+    padding: 0;
   }
 
 }
@@ -24,6 +25,9 @@
   left: 0;
   right: 0;
   z-index: 1;
+  @include tablets {
+    width: 15%;
+  }
   }
   &-berries{
   position: absolute;
@@ -31,6 +35,9 @@
   left: 0;
   right: 0;
   z-index: 1;
+  @include tablets {
+    width: 15%;
+  }
 }
 }
 
@@ -42,6 +49,7 @@
   text-transform: uppercase;
   @include tablets {
     font-size: rem(36px);
+    margin-top: 0;
   }
 }
 
@@ -49,6 +57,10 @@
   height: 80%;
   position: relative;
   margin-bottom: 2rem;
+  @include tablets {
+    height: 75%;
+    margin-bottom: 0;
+  }
 }
 .preview__slider {
   display: flex;
@@ -63,6 +75,7 @@
   background-position: 100% 0%;
 
   @include tablets {
+    background-size: 30%;
       height: 100%;
       flex-direction: column;
       background-color: #f8faf9;
@@ -98,7 +111,8 @@
   min-width: rem(254px);
 
   @include tablets {
-    min-width: rem(150px);
+    min-width: rem(100px);
+    padding-top: 2rem;
   }
 }
 
@@ -117,6 +131,9 @@
   font-size: rem(30px);
   font-weight: 500;
   margin-bottom: rem(20px);
+  @include tablets {
+    font-size: 2rem;
+  }
 }
 
 .preview__desc-text {
@@ -125,7 +142,9 @@
   line-height: 1.3;
   font-size: rem(18px);
   @include tablets {
-    width: 100%;
+    width: 70%;
+    margin-left: 4rem;
+    font-size: rem(14px);
   }
 }
 

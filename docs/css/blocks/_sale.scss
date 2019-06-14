@@ -11,6 +11,9 @@
     justify-content: space-between;
     flex-direction:row;
     padding-top:4rem;
+    @include tablets {
+        padding-top: 0;
+    }
 
 }
 .sale__picpicture_position_absolut_berry {
@@ -20,6 +23,7 @@
     @include tablets {
     height: 30%;
     bottom: -5rem;
+    width: 40%;
     }
 }
 .sale__picpicture_position_absolut_malina {
@@ -27,6 +31,10 @@
     position: absolute;
     top: -12rem;
     text-align: left;
+    @include tablets {
+        width: 25%;
+        top:-6rem;
+        }
 }
 
 .section-title__sale {
@@ -37,6 +45,7 @@
     font-weight: 600;
     @include tablets {
         text-align: center;
+        font-size: 1.5em;
     }
 }
 .sale__composition {
@@ -88,6 +97,9 @@
     font-size: 4em;
     font-weight: 200;
     padding-right: 0.7em;
+    @include tablets {
+        font-size: 3em;
+    }
 }
 .sale__btn {
     background-color: #0f5a47;
