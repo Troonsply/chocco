@@ -34,6 +34,9 @@
     position: absolute;
     bottom: 0;
     right: 2em;
+    @include tablets {
+        display: none;
+    }
 }
 }
 .form .form__row-adress label input {

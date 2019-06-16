@@ -6,6 +6,9 @@
 }
 .contacts{
   position: relative;
+  @include tablets {
+    padding: 0;
+  }
 }
 
 .footer{
