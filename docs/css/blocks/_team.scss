@@ -1,0 +1,96 @@
+.team {
+    position: relative;
+
+}
+.team__feature {
+  @include tablets{
+padding-left: 2rem;
+&:last-child{
+  padding-left: 0;
+}
+}}
+.team-acco {
+    display: flex;
+    justify-content: space-between;
+    margin-top: rem(50px);
+
+    @include tablets {
+        padding-bottom: rem(20px);
+        flex-flow: row wrap;
+    }
+}
+
+.team-acco__item {
+  @include tablets {
+    flex-flow: row wrap;
+      height: 50%;
+      width: 50%;
+}
+}
+.team__photo {
+  @include tablets {
+    padding: 0 1rem;
+}
+}
+.team-acco__item:nth-child(2n) {
+padding-top: rem(50px);
+@include tablets {
+  padding-top:inherit;
+}
+
+
+}
+.team-acco__name {
+    color: #323232;
+    font-size: 1.3125rem;
+    font-weight: 500;
+    position: relative;
+    margin: 1rem auto;
+    width: fit-content;
+    text-decoration: none;
+    
+   &:after {
+    content: "";
+    border: rem(5px) solid transparent;
+    border-top: rem(7px) solid #0f5a47;
+    position: absolute;
+    right: - rem(16px);
+    top: rem(11px);
+   }
+}
+.team-acco__desc {
+  text-align: center;
+  height: 0;
+  opacity: 0;
+  font-weight: lighter;
+  transition: all 0.4s ease-out;
+}
+
+.team-acco__title {
+    color: #281e1e;
+    font-size: 1.125rem;
+    font-weight: 400;
+    margin-top: 0;
+    margin-bottom: 0.3125rem;
+  }
+  
+  .team-acco__text {
+    color: #666666;
+    font-size: 1.125rem;
+    font-weight: 300;
+    margin: 0;
+  }
+  .team-acco__name--active {
+  
+    & h3:after{
+      transform: rotate(180deg);
+      
+    }
+  }
+  .team-acco__name--active + .team-acco__desc{
+    transition: 0.4s;
+    opacity: 1;
+    height: 10%;
+      
+  }
+  

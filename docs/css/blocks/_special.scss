@@ -1,0 +1,35 @@
+.special {
+    position: relative;
+    margin-top: 4rem;
+    @include tablets {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    }
+}
+.special-list {
+    display: flex;
+    justify-content: flex-start;
+}
+.special-item {
+    display: flex;
+    width: 33%;
+    align-items: center;
+}
+.special-text {
+    color: #ffffff;
+    font-family: "Alegreya Sans";
+    font-size: rem(16px);
+    font-weight: 400;
+}
+.special-img {
+
+    &:last-child {
+        padding-right: none;
+    }
+    
+    @include tablets {
+        padding-right: 2em;
+    }
+}
+
+

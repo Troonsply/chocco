@@ -1,0 +1,113 @@
+.container-footer{
+  flex-direction: row;
+  @include phones{
+    flex-direction: column;
+  }
+}
+.contacts{
+  position: relative;
+  @include tablets {
+    padding: 0;
+  }
+}
+
+.footer{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  min-height: rem(90px);
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+
+  @include phones{
+    flex-direction: column;
+    justify-content: center;
+    min-height: rem(150px);
+   }
+}
+.address{
+  width: 50%;
+  @include phones{
+    text-align: center;
+    align-self: center;
+    margin-bottom: 5%;
+    margin-left: 0;
+   }
+}
+.phone-number--footer{
+  display: block;
+  margin-top: 1%;
+  color: #0f5a47;
+  font-size: rem(18px);
+  line-height: 0;
+  &:before {
+    content: " ";
+    width: rem(12px);
+    height: rem(12px);
+    margin-right: rem(10px);
+    display: inline-flex;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url('./img/phone.png');
+
+    @include phones{
+      background-size: cover;
+     }
+  }
+
+  @include phones{
+    margin-top: 5%;
+    
+  }
+}
+.socials{
+  width:50%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  
+
+  @include tablets{
+    width: 100%;
+    justify-content: center;
+   }
+}
+.socials__icon{
+  margin-left: rem(20px);
+  transition: 0.3ms;
+  opacity: 0.5;
+
+  @include phones{
+    background-size: cover;
+   }
+
+}
+.socials__icon:hover{
+  opacity: 1;
+}
+.socials__icon--vk{
+  width: rem(23px);
+  height: rem(13px);
+  background-image: url('./img/vk.png');
+  background-repeat: no-repeat;
+}
+.socials__icon--fb{
+  width: rem(20px);
+  height: rem(20px);
+  background-image: url('./img/fb.png');
+  background-repeat: no-repeat;
+}
+.socials__icon--inst{
+  width: rem(20px);
+  height: rem(20px);
+  background-image: url('./img/inst.png');
+  background-repeat: no-repeat;
+}
+.socials__icon--twit{
+  width: rem(20px);
+  height: rem(16px);
+  background-image: url('./img/twitter.png');
+  background-repeat: no-repeat;
+}

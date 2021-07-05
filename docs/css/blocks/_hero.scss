@@ -1,0 +1,109 @@
+.hero {
+    position: relative;
+    background: $blue;
+
+    @include tablets {
+      background-position: top center;
+      width: 100%;
+  }
+}
+
+.hero__picture_position_absolut_tablets {
+  display: none;
+  
+  @include tablets {
+    display:inherit;
+    width: 100%;
+    position: absolute;
+    top: 14rem;
+    margin: 0 auto;
+}
+}
+.hero__picture_position_absolut{
+    width: 100%;
+    position: absolute;
+    bottom: -4rem;
+    text-align: center;
+    z-index: 100;
+
+    @include tablets {
+    display: none;
+  }
+  }
+
+.hero__content {
+  flex: 1;
+  display: flex;
+  text-align: center;
+
+    @include tablets {
+      text-align: center;
+      width: 100%;
+      flex-wrap: wrap-reverse;
+  }
+}
+.hero__content-left,
+.hero__content-right {
+  width: 50%;
+  @include tablets {
+    width: 100%;
+  }
+}
+.hero__content-text {
+  color: #ffffff;
+  text-align: left;
+
+  @include tablets {
+    text-align: center;
+    width: 100%;
+  }
+}
+.section-title__hero {
+  color: #ffffff;
+  font-family: "AlegreyaSans-Bold";
+  font-size: 3.5rem;
+  line-height: inherit;
+  text-transform: uppercase;
+  text-align: left;
+  
+  @include tablets {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-top: 0;
+  }
+}
+.hero__desc {
+    font-family: "Alegreya Sans";
+    font-weight: 400;
+    margin-bottom: 3rem;
+}
+
+.hero-button {
+  text-align: left;
+
+  @include tablets {
+    text-align: center;
+ }
+}
+.hero-button__btn {
+    background-color: #ffffff;
+    color: #0f5a47;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 50px;
+    padding: 18px 31px 18px 31px;
+    box-shadow: 0 0 10px rgba(63, 63, 63, 0.25);
+    text-decoration: none;
+}
+.hero__content-pic {
+  position: absolute;
+  right: 0;
+  width: 40%;
+
+  @include tablets {
+    position: inherit;
+  }
+}

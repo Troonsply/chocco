@@ -1,0 +1,47 @@
+#overlay {
+    display: none;
+    background-color: #000000d0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+}
+#modal {
+    display: none;
+    position: fixed;
+    width: 50%;
+    max-width: 31.25rem;
+    height: auto;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    background-color: #ffffff;
+    border-radius: 0.3125rem;
+    padding: 1.875rem 1.25rem;
+}
+#modal header {
+    margin-bottom: 1.875rem;
+    position: relative;
+}
+#modal header #modalClose {
+    color: #e35028;
+    opacity: 0.7;
+    font-size: 1.875rem;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: absolute;
+    top: -0.625rem;
+    right: 0;
+    cursor: pointer;
+}
+#modal #modalContent {
+    font-size: 0.875rem;
+    font-weight: 300;
+    line-height: 1.5rem;
+}

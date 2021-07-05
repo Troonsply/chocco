@@ -1,0 +1,51 @@
+.pretty {
+    position: relative;
+
+}
+.pretty__picture_position_absolut {
+    width: 100%;
+    position: absolute;
+    top: 4rem;
+    text-align: left;
+    @include tablets {
+    width: 40%;
+    top: 8rem;
+    }
+}
+.pretty__picture_position_absolutbottom {
+    width: 100%;
+    position: absolute;
+    bottom: -6rem;
+    text-align: left;
+    @include tablets {
+    width: 40%;
+    bottom: -15rem;
+  }
+}
+.pretty-text {
+    text-align: center;
+    margin-bottom: 15%;
+    color: #666666;
+    font-family: "Alegreya Sans";
+    font-weight: 500;
+    z-index: 100;
+    @include tablets {
+        font-size: 14px;
+    }
+}
+.pretty__list {
+    display: flex;
+    align-items: center;
+
+    @include tablets {
+        flex-flow: column;
+        text-align: center;
+        width: 100%;
+        margin-bottom: 4rem;
+    }
+}
+
+.pretty__item {
+    flex: 1;
+
+}

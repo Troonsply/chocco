@@ -1,0 +1,50 @@
+.player{
+  background-color: #f8faf9;
+  text-align: center;
+}
+.container--player{
+  justify-content: flex-start;
+}
+.player-picture__position__absolute{
+position: absolute;
+width: 100%;
+height: 100%;
+
+  &-leaf1{
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    
+    
+    @include tablets{
+      width: 10%;
+     }
+    }
+    &-leaf2{
+    position: absolute;
+    top: 10%;
+    
+    right: 5%;
+  
+    
+    @include tablets{
+     width: 10%;
+     bottom: rem(-170px);
+     
+    }
+  }
+  }
+
+.player__title{
+  margin-top: 3rem;
+  font-size: rem(48px);
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.video_player{
+  margin-top: 10%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

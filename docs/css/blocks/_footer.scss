@@ -1,0 +1,97 @@
+  
+.footer{
+    max-height: rem(90px);
+    display: flex;
+    align-items: center;
+  
+    @include tablets {
+      flex-direction: column;
+      justify-content: center;
+     }
+  }
+      
+.container-footer{
+  margin-top: 1rem;
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    @include phones{
+      flex-direction: column;
+    }
+  }
+  .address{
+    width: 50%;
+    @include phones{
+      text-align: center;
+      align-self: center;
+      margin-bottom: 5%;
+      margin-left: 0;
+     }
+  }
+  .contact__link{
+    display: block;
+    margin-top: 1%;
+    color: #0f5a47;
+    font-size: 1rem;
+    line-height: 0;
+    text-decoration: none;
+    &:before {
+      content: " ";
+      width: rem(12px);
+      height: rem(12px);
+      margin-right: rem(10px);
+      display: inline-flex;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-image: url('./img/phone.png');
+  
+      @include tablets {
+        background-size: cover;
+       }
+    }
+  
+    @include tablets{
+      margin-top: 5%;
+      
+    }
+  }
+  .network__list {
+    display: flex;
+}
+  .network__item {
+      display: flex;
+      padding-left: 1rem;
+
+      &:first-child {
+        padding-left: 0;
+      }
+}
+.network__link--vk {
+width: 20px;
+height: 20px;
+background-image: url('./img/vk.png');
+background-repeat: no-repeat;
+}
+.network__link--facebook {
+  width: 20px;
+  height: 20px;
+  background-image: url('./img/fb_hover.png');
+  background-repeat: no-repeat;
+
+}
+.network__link--insta {
+  width: 20px;
+  height: 20px;
+  background-image: url('./img/inst.png');
+  background-repeat: no-repeat;
+}
+.network__link--twitter {
+  width: 20px;
+  height: 20px;
+  background-image: url('./img/twitter.png');
+  background-repeat: no-repeat;
+}
+.network__item:hover {
+  color: black;
+  filter: grayscale(100%);
+}
